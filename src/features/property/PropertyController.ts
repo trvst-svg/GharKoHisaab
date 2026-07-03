@@ -200,5 +200,6 @@ export function usePropertyController() {
     handleCreateRoom,
     handleDeleteRoom,
     triggerAddAnotherHouse,
+    loadRooms,
   };
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
   View,
@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 import { usePropertyController } from './PropertyController';
+import TenantScreen from '../tenant/TenantScreen';
 
 export default function PropertyScreen() {
   const {
@@ -39,13 +40,34 @@ export default function PropertyScreen() {
     handleCreateRoom,
     handleDeleteRoom,
     triggerAddAnotherHouse,
+    loadRooms,
   } = usePropertyController();
+
+  // Navigation/Routing state for active room tenant management
+  const [activeRoomForTenant, setActiveRoomForTenant] = useState<{ id: string; roomNumber: string } | null>(null);
 
   if (!dbReady) {
     return (
       <View style={styles.loadingContainer}>
         <Text style={styles.loadingText}>Initializing system...</Text>
       </View>
+    );
+  }
+
+  // Render Tenant details or onboarding screen if selected
+  if (activeRoomForTenant) {
+    return (
+      <TenantScreen
+        roomId={activeRoomForTenant.id}
+        roomNumber={activeRoomForTenant.roomNumber}
+        onBack={async () => {
+          setActiveRoomForTenant(null);
+          // Reload room list to show updated occupancy status
+          if (selectedHouse) {
+            await loadRooms(selectedHouse.id);
+          }
+        }}
+      />
     );
   }
 
@@ -165,11 +187,15 @@ export default function PropertyScreen() {
             contentContainerStyle={styles.listContainer}
             renderItem={({ item }) => (
               <View style={styles.roomCard}>
-                <View style={{ flex: 1 }}>
-                  <Text style={styles.roomNumber}>Room / Flat {item.room_number}</Text>
-                  <Text style={styles.roomRent}>Rent: Rs. {item.base_rent.toLocaleString()}</Text>
-                </View>
-                <View style={styles.rightAction}>
+                <TouchableOpacity
+                  style={styles.roomInfoContainer}
+                  onPress={() => setActiveRoomForTenant({ id: item.id, roomNumber: item.room_number })}
+                  activeOpacity={0.7}
+                >
+                  <View style={{ flex: 1 }}>
+                    <Text style={styles.roomNumber}>Room / Flat {item.room_number}</Text>
+                    <Text style={styles.roomRent}>Rent: Rs. {item.base_rent.toLocaleString()}</Text>
+                  </View>
                   <View
                     style={[
                       styles.badge,
@@ -185,6 +211,8 @@ export default function PropertyScreen() {
                       {item.status.toUpperCase()}
                     </Text>
                   </View>
+                </TouchableOpacity>
+                <View style={styles.rightAction}>
                   <TouchableOpacity
                     onPress={() => handleDeleteRoom(item.id, item.room_number)}
                     style={styles.deleteBtn}
@@ -469,10 +497,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: COLORS.cardBackground,
     borderRadius: 10,
-    padding: 16,
+    paddingRight: 16,
     marginBottom: 12,
     borderWidth: 1,
     borderColor: COLORS.border,
+    overflow: 'hidden',
+  },
+  roomInfoContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingVertical: 16,
+    paddingLeft: 16,
   },
   roomNumber: {
     fontSize: 16,
@@ -485,13 +521,15 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   rightAction: {
+    justifyContent: 'center',
     alignItems: 'flex-end',
   },
   badge: {
     paddingVertical: 4,
     paddingHorizontal: 8,
     borderRadius: 4,
-    marginBottom: 8,
+    alignSelf: 'center',
+    marginRight: 12,
   },
   badgeVacant: {
     backgroundColor: 'rgba(39, 174, 96, 0.1)',
@@ -510,7 +548,7 @@ const styles = StyleSheet.create({
     color: COLORS.accentOrange,
   },
   deleteBtn: {
-    paddingVertical: 4,
+    paddingVertical: 8,
     paddingHorizontal: 8,
   },
   deleteBtnText: {
