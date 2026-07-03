@@ -13,7 +13,7 @@ import {
   Platform,
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
-import { usePropertyController } from '../../controllers/usePropertyController';
+import { usePropertyController } from './PropertyController';
 
 export default function PropertyScreen() {
   const {

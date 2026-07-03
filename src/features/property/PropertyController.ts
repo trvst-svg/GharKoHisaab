@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
+import { initConnection } from '../../database/connection';
 import {
-  initDatabase,
+  initPropertySchema,
   getHouses,
   addHouse,
   getRoomsForHouse,
@@ -9,7 +10,7 @@ import {
   deleteRoom,
   House,
   Room,
-} from '../database/db';
+} from './PropertyModel';
 
 export function usePropertyController() {
   const [dbReady, setDbReady] = useState(false);
@@ -17,33 +18,33 @@ export function usePropertyController() {
   const [selectedHouse, setSelectedHouse] = useState<House | null>(null);
   const [rooms, setRooms] = useState<Room[]>([]);
 
-  // Onboarding Setup Wizard Form
+  // Wizard Setup Form
   const [housekeeperName, setHousekeeperName] = useState('');
   const [customHouseName, setCustomHouseName] = useState('');
   const [address, setAddress] = useState('');
 
-  // Add Room Modal Form
+  // Add Room Form
   const [isRoomModalVisible, setIsRoomModalVisible] = useState(false);
   const [roomNumber, setRoomNumber] = useState('');
   const [baseRent, setBaseRent] = useState('');
   const [roomStatus, setRoomStatus] = useState<'vacant' | 'occupied'>('vacant');
 
-  // Initialize DB
+  // Bootstrapping the database connections and schemas
   useEffect(() => {
     async function setup() {
       try {
-        await initDatabase();
+        await initConnection();
+        await initPropertySchema();
         setDbReady(true);
         await loadHouses();
       } catch (error) {
-        console.error('Database initialization failed:', error);
-        Alert.alert('Error', 'Failed to initialize database.');
+        console.error('Feature Property initialization failed:', error);
+        Alert.alert('Error', 'Failed to initialize database connection.');
       }
     }
     setup();
   }, []);
 
-  // Fetch houses from local database
   const loadHouses = async () => {
     try {
       const allHouses = await getHouses();
@@ -54,11 +55,10 @@ export function usePropertyController() {
         setSelectedHouse(null);
       }
     } catch (error) {
-      console.error('Failed to load properties:', error);
+      console.error('Failed to load houses:', error);
     }
   };
 
-  // Fetch rooms whenever selected house changes
   useEffect(() => {
     if (selectedHouse) {
       loadRooms(selectedHouse.id);
@@ -76,7 +76,6 @@ export function usePropertyController() {
     }
   };
 
-  // On housekeeper name change, dynamically suggest property name
   const handleHousekeeperNameChange = (name: string) => {
     setHousekeeperName(name);
     if (name.trim()) {
@@ -87,7 +86,6 @@ export function usePropertyController() {
     }
   };
 
-  // Save new property
   const handleCreateProperty = async () => {
     if (!housekeeperName.trim() || !address.trim() || !customHouseName.trim()) {
       Alert.alert('Validation Error', 'Please fill in all details.');
@@ -115,7 +113,6 @@ export function usePropertyController() {
     }
   };
 
-  // Save new room
   const handleCreateRoom = async () => {
     if (!selectedHouse) return;
     if (!roomNumber.trim() || !baseRent.trim()) {
@@ -152,7 +149,6 @@ export function usePropertyController() {
     }
   };
 
-  // Delete a room with confirmation dialog
   const handleDeleteRoom = (roomId: string, roomNum: string) => {
     Alert.alert(
       'Delete Room',
@@ -176,7 +172,6 @@ export function usePropertyController() {
     );
   };
 
-  // Manually trigger wizard for adding another house
   const triggerAddAnotherHouse = () => {
     setHouses([]);
     setSelectedHouse(null);

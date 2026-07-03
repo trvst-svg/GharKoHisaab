@@ -1,21 +1,25 @@
-import * as SQLite from 'expo-sqlite';
+import { getDB } from '../../database/connection';
 
-let dbInstance: SQLite.SQLiteDatabase | null = null;
-
-export async function getDB(): Promise<SQLite.SQLiteDatabase> {
-  if (!dbInstance) {
-    dbInstance = await SQLite.openDatabaseAsync('gharkohisaab.db');
-  }
-  return dbInstance;
+export interface House {
+  id: string;
+  housekeeper_name: string;
+  name: string;
+  address: string;
+  created_at: string;
 }
 
-export async function initDatabase(): Promise<void> {
+export interface Room {
+  id: string;
+  house_id: string;
+  room_number: string;
+  base_rent: number;
+  status: 'vacant' | 'occupied';
+  created_at: string;
+}
+
+// SQL Schema definitions to bootstrap this feature's database tables
+export async function initPropertySchema(): Promise<void> {
   const db = await getDB();
-  
-  // Enable foreign key support
-  await db.execAsync('PRAGMA foreign_keys = ON;');
-  
-  // Create tables
   await db.execAsync(`
     CREATE TABLE IF NOT EXISTS houses (
       id TEXT PRIMARY KEY NOT NULL,
@@ -37,38 +41,20 @@ export async function initDatabase(): Promise<void> {
   `);
 }
 
-export interface House {
-  id: string;
-  housekeeper_name: string;
-  name: string;
-  address: string;
-  created_at: string;
-}
-
-export interface Room {
-  id: string;
-  house_id: string;
-  room_number: string;
-  base_rent: number;
-  status: 'vacant' | 'occupied';
-  created_at: string;
-}
-
-// Houses queries
+// Model Query Executors
 export async function getHouses(): Promise<House[]> {
   const db = await getDB();
   return await db.getAllAsync<House>('SELECT * FROM houses ORDER BY created_at ASC;');
 }
 
-export async function addHouse(house: Omit<House, 'created_at'>): Promise<void> {
+export async function addHouse(house: House): Promise<void> {
   const db = await getDB();
   await db.runAsync(
-    'INSERT INTO houses (id, housekeeper_name, name, address) VALUES (?, ?, ?, ?);',
-    [house.id, house.housekeeper_name, house.name, house.address]
+    'INSERT INTO houses (id, housekeeper_name, name, address, created_at) VALUES (?, ?, ?, ?, ?);',
+    [house.id, house.housekeeper_name, house.name, house.address, house.created_at]
   );
 }
 
-// Rooms queries
 export async function getRoomsForHouse(houseId: string): Promise<Room[]> {
   const db = await getDB();
   return await db.getAllAsync<Room>(
@@ -77,11 +63,11 @@ export async function getRoomsForHouse(houseId: string): Promise<Room[]> {
   );
 }
 
-export async function addRoom(room: Omit<Room, 'created_at'>): Promise<void> {
+export async function addRoom(room: Room): Promise<void> {
   const db = await getDB();
   await db.runAsync(
-    'INSERT INTO rooms (id, house_id, room_number, base_rent, status) VALUES (?, ?, ?, ?, ?);',
-    [room.id, room.house_id, room.room_number, room.base_rent, room.status]
+    'INSERT INTO rooms (id, house_id, room_number, base_rent, status, created_at) VALUES (?, ?, ?, ?, ?, ?);',
+    [room.id, room.house_id, room.room_number, room.base_rent, room.status, room.created_at]
   );
 }
 
