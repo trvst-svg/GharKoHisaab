@@ -15,6 +15,7 @@ import { COLORS } from '../../constants/colors';
 import { useTenantController } from './TenantController';
 import NepaliDate from 'nepali-date-converter';
 import InvoiceSection from '../invoice/InvoiceSection';
+import CheckoutModal from '../checkout/CheckoutModal';
 
 interface TenantScreenProps {
   roomId: string;
@@ -46,6 +47,8 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
     handlePickPhoto,
     handleOnboardTenant,
   } = useTenantController(roomId, onBack);
+
+  const [isCheckoutVisible, setIsCheckoutVisible] = React.useState(false);
 
   if (!dbReady) {
     return (
@@ -97,6 +100,13 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
                 Rs. {activeTenancy.security_deposit_amount.toLocaleString()}
               </Text>
             </View>
+
+            <TouchableOpacity
+              style={styles.checkoutBtn}
+              onPress={() => setIsCheckoutVisible(true)}
+            >
+              <Text style={styles.checkoutBtnText}>🚪 Checkout / End Tenancy</Text>
+            </TouchableOpacity>
           </View>
 
           {activeTenancy.tenant_id_url && (
@@ -114,6 +124,21 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
             baseRent={activeTenancy.base_rent}
             startDate={activeTenancy.start_date}
             tenantPhone={activeTenancy.tenant_phone}
+          />
+
+          <CheckoutModal
+            visible={isCheckoutVisible}
+            onClose={() => setIsCheckoutVisible(false)}
+            onSuccess={() => {
+              setIsCheckoutVisible(false);
+              onBack();
+            }}
+            tenancyId={activeTenancy.id}
+            roomId={roomId}
+            roomNumber={roomNumber}
+            baseRent={activeTenancy.base_rent}
+            startDate={activeTenancy.start_date}
+            securityDeposit={activeTenancy.security_deposit_amount}
           />
 
           <TouchableOpacity onPress={onBack} style={styles.backButton}>
@@ -485,6 +510,21 @@ const styles = StyleSheet.create({
   saveBtnText: {
     color: COLORS.white,
     fontSize: 16,
+    fontWeight: 'bold',
+  },
+  checkoutBtn: {
+    marginTop: 14,
+    height: 40,
+    backgroundColor: COLORS.white,
+    borderWidth: 1.5,
+    borderColor: COLORS.red,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  checkoutBtnText: {
+    color: COLORS.red,
+    fontSize: 13,
     fontWeight: 'bold',
   },
 });
