@@ -16,14 +16,16 @@ import { useTenantController } from './TenantController';
 import NepaliDate from 'nepali-date-converter';
 import InvoiceSection from '../invoice/InvoiceSection';
 import CheckoutModal from '../checkout/CheckoutModal';
+import { useListingController } from '../postings/PostingController';
 
 interface TenantScreenProps {
   roomId: string;
   roomNumber: string;
+  houseId: string;
   onBack: () => void;
 }
 
-export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScreenProps) {
+export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: TenantScreenProps) {
   const {
     dbReady,
     activeTenancy,
@@ -49,8 +51,24 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
   } = useTenantController(roomId, onBack);
 
   const [isCheckoutVisible, setIsCheckoutVisible] = React.useState(false);
+  const [vacantTab, setVacantTab] = React.useState<'onboard' | 'post'>('onboard');
 
-  if (!dbReady) {
+  const {
+    dbReady: listingDbReady,
+    existingPosting,
+    title: postTitle,
+    setTitle: setPostTitle,
+    description: postDesc,
+    setDescription: setPostDesc,
+    contactPhone,
+    setContactPhone,
+    isSaving: isPostSaving,
+    handlePublish,
+    handleUpdate,
+    handleRemove,
+  } = useListingController(roomId, houseId, onBack);
+
+  if (!dbReady || !listingDbReady) {
     return (
       <View style={styles.loadingContainer}>
         <Text style={styles.loadingText}>Loading...</Text>
@@ -149,7 +167,7 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
     );
   }
 
-  // Render onboarding wizard form if room is vacant
+  // Render onboarding wizard form or public posting if room is vacant
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -160,139 +178,225 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
         <View style={{ width: 60 }} />
       </View>
 
+      {/* Vacant Room Tab Selector */}
+      <View style={styles.tabContainer}>
+        <TouchableOpacity
+          style={[styles.tabBtn, vacantTab === 'onboard' && styles.tabBtnActive]}
+          onPress={() => setVacantTab('onboard')}
+        >
+          <Text style={[styles.tabText, vacantTab === 'onboard' && styles.tabTextActive]}>
+            Onboard Tenant
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.tabBtn, vacantTab === 'post' && styles.tabBtnActive]}
+          onPress={() => setVacantTab('post')}
+        >
+          <Text style={[styles.tabText, vacantTab === 'post' && styles.tabTextActive]}>
+            Post Publicly
+          </Text>
+        </TouchableOpacity>
+      </View>
+
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={{ flex: 1 }}
       >
-        <ScrollView contentContainerStyle={styles.contentScroll}>
-          <View style={styles.card}>
-            <Text style={styles.sectionHeader}>Tenant Information</Text>
+        {vacantTab === 'onboard' ? (
+          <ScrollView contentContainerStyle={styles.contentScroll}>
+            <View style={styles.card}>
+              <Text style={styles.sectionHeader}>Tenant Information</Text>
 
-            <Text style={styles.label}>Tenant Name *</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="e.g., Ram Kumar Shrestha"
-              value={name}
-              onChangeText={setName}
-              placeholderTextColor={COLORS.textSecondary}
-            />
+              <Text style={styles.label}>Tenant Name *</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="e.g., Ram Kumar Shrestha"
+                value={name}
+                onChangeText={setName}
+                placeholderTextColor={COLORS.textSecondary}
+              />
 
-            <Text style={styles.label}>Phone Number *</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="e.g., 98XXXXXXXX"
-              keyboardType="phone-pad"
-              value={phone}
-              onChangeText={setPhone}
-              placeholderTextColor={COLORS.textSecondary}
-            />
-          </View>
-
-          <View style={styles.card}>
-            <Text style={styles.sectionHeader}>Rental Terms</Text>
-
-            <Text style={styles.label}>Tenancy Start Date (B.S. Calendar) *</Text>
-            <View style={styles.dateInputsContainer}>
-              <View style={styles.dateField}>
-                <Text style={styles.dateLabel}>Year (YYYY)</Text>
-                <TextInput
-                  style={[styles.input, styles.dateInput]}
-                  placeholder="2083"
-                  keyboardType="numeric"
-                  maxLength={4}
-                  value={bsYear}
-                  onChangeText={setBsYear}
-                />
-              </View>
-              <View style={styles.dateField}>
-                <Text style={styles.dateLabel}>Month (MM)</Text>
-                <TextInput
-                  style={[styles.input, styles.dateInput]}
-                  placeholder="03"
-                  keyboardType="numeric"
-                  maxLength={2}
-                  value={bsMonth}
-                  onChangeText={setBsMonth}
-                />
-              </View>
-              <View style={styles.dateField}>
-                <Text style={styles.dateLabel}>Day (DD)</Text>
-                <TextInput
-                  style={[styles.input, styles.dateInput]}
-                  placeholder="15"
-                  keyboardType="numeric"
-                  maxLength={2}
-                  value={bsDay}
-                  onChangeText={setBsDay}
-                />
-              </View>
+              <Text style={styles.label}>Phone Number *</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="e.g., 98XXXXXXXX"
+                keyboardType="phone-pad"
+                value={phone}
+                onChangeText={setPhone}
+                placeholderTextColor={COLORS.textSecondary}
+              />
             </View>
 
-            <Text style={styles.label}>Security Deposit (Dharauti - Rs.)</Text>
-            <TextInput
-              style={styles.input}
-              placeholder="e.g., 10000 (leave 0 if none)"
-              keyboardType="numeric"
-              value={deposit}
-              onChangeText={setDeposit}
-              placeholderTextColor={COLORS.textSecondary}
-            />
-          </View>
+            <View style={styles.card}>
+              <Text style={styles.sectionHeader}>Rental Terms</Text>
 
-          <View style={styles.card}>
-            <Text style={styles.sectionHeader}>Government ID Proof</Text>
+              <Text style={styles.label}>Tenancy Start Date (B.S. Calendar) *</Text>
+              <View style={styles.dateInputsContainer}>
+                <View style={styles.dateField}>
+                  <Text style={styles.dateLabel}>Year (YYYY)</Text>
+                  <TextInput
+                    style={[styles.input, styles.dateInput]}
+                    placeholder="2083"
+                    keyboardType="numeric"
+                    maxLength={4}
+                    value={bsYear}
+                    onChangeText={setBsYear}
+                  />
+                </View>
+                <View style={styles.dateField}>
+                  <Text style={styles.dateLabel}>Month (MM)</Text>
+                  <TextInput
+                    style={[styles.input, styles.dateInput]}
+                    placeholder="03"
+                    keyboardType="numeric"
+                    maxLength={2}
+                    value={bsMonth}
+                    onChangeText={setBsMonth}
+                  />
+                </View>
+                <View style={styles.dateField}>
+                  <Text style={styles.dateLabel}>Day (DD)</Text>
+                  <TextInput
+                    style={[styles.input, styles.dateInput]}
+                    placeholder="15"
+                    keyboardType="numeric"
+                    maxLength={2}
+                    value={bsDay}
+                    onChangeText={setBsDay}
+                  />
+                </View>
+              </View>
 
-            <Text style={styles.label}>ID Document Type</Text>
-            <View style={styles.toggleContainer}>
-              <TouchableOpacity
-                style={[styles.toggleBtn, idType === 'citizenship' && styles.toggleBtnActive]}
-                onPress={() => setIdType('citizenship')}
-              >
-                <Text style={[styles.toggleText, idType === 'citizenship' && styles.toggleTextActive]}>
-                  Citizenship
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[styles.toggleBtn, idType === 'license' && styles.toggleBtnActive]}
-                onPress={() => setIdType('license')}
-              >
-                <Text style={[styles.toggleText, idType === 'license' && styles.toggleTextActive]}>
-                  License
-                </Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[styles.toggleBtn, idType === 'passport' && styles.toggleBtnActive]}
-                onPress={() => setIdType('passport')}
-              >
-                <Text style={[styles.toggleText, idType === 'passport' && styles.toggleTextActive]}>
-                  Passport
-                </Text>
-              </TouchableOpacity>
+              <Text style={styles.label}>Security Deposit (Dharauti - Rs.)</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="e.g., 10000 (leave 0 if none)"
+                keyboardType="numeric"
+                value={deposit}
+                onChangeText={setDeposit}
+                placeholderTextColor={COLORS.textSecondary}
+              />
             </View>
 
-            {idPhotoUri ? (
-              <View style={styles.photoPreviewContainer}>
-                <Image source={{ uri: idPhotoUri }} style={styles.imagePreview} />
-                <TouchableOpacity onPress={() => setIdPhotoUri(null)} style={styles.removePhotoBtn}>
-                  <Text style={styles.removePhotoText}>Remove Photo</Text>
+            <View style={styles.card}>
+              <Text style={styles.sectionHeader}>Government ID Proof</Text>
+
+              <Text style={styles.label}>ID Document Type</Text>
+              <View style={styles.toggleContainer}>
+                <TouchableOpacity
+                  style={[styles.toggleBtn, idType === 'citizenship' && styles.toggleBtnActive]}
+                  onPress={() => setIdType('citizenship')}
+                >
+                  <Text style={[styles.toggleText, idType === 'citizenship' && styles.toggleTextActive]}>
+                    Citizenship
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.toggleBtn, idType === 'license' && styles.toggleBtnActive]}
+                  onPress={() => setIdType('license')}
+                >
+                  <Text style={[styles.toggleText, idType === 'license' && styles.toggleTextActive]}>
+                    License
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.toggleBtn, idType === 'passport' && styles.toggleBtnActive]}
+                  onPress={() => setIdType('passport')}
+                >
+                  <Text style={[styles.toggleText, idType === 'passport' && styles.toggleTextActive]}>
+                    Passport
+                  </Text>
+                </TouchableOpacity>
+              </View>
+
+              {idPhotoUri ? (
+                <View style={styles.photoPreviewContainer}>
+                  <Image source={{ uri: idPhotoUri }} style={styles.imagePreview} />
+                  <TouchableOpacity onPress={() => setIdPhotoUri(null)} style={styles.removePhotoBtn}>
+                    <Text style={styles.removePhotoText}>Remove Photo</Text>
+                  </TouchableOpacity>
+                </View>
+              ) : (
+                <View style={styles.photoActionsContainer}>
+                  <TouchableOpacity style={styles.photoBtn} onPress={handleTakePhoto}>
+                    <Text style={styles.photoBtnText}>📸 Take ID Photo</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={styles.photoBtn} onPress={handlePickPhoto}>
+                    <Text style={styles.photoBtnText}>🖼️ Upload from Gallery</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
+            </View>
+
+            <TouchableOpacity style={styles.saveBtn} onPress={handleOnboardTenant}>
+              <Text style={styles.saveBtnText}>Save & Onboard Tenant</Text>
+            </TouchableOpacity>
+          </ScrollView>
+        ) : (
+          <ScrollView contentContainerStyle={styles.contentScroll}>
+            <View style={styles.card}>
+              <Text style={styles.sectionHeader}>Marketplace Listing Details</Text>
+              
+              <Text style={[styles.label, { marginTop: 0 }]}>Listing Title *</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="e.g. Spacious 1 BHK Flat in Sanepa"
+                value={postTitle}
+                onChangeText={setPostTitle}
+                placeholderTextColor={COLORS.textSecondary}
+              />
+
+              <Text style={styles.label}>Description</Text>
+              <TextInput
+                style={[styles.input, styles.textArea]}
+                placeholder="e.g. Sunny rooms, attached bathroom, 24/7 water supply. Family preferred."
+                value={postDesc}
+                onChangeText={setPostDesc}
+                placeholderTextColor={COLORS.textSecondary}
+                multiline
+                numberOfLines={4}
+              />
+
+              <Text style={styles.label}>Inquiry Contact Phone *</Text>
+              <TextInput
+                style={styles.input}
+                placeholder="e.g. 98XXXXXXXX"
+                keyboardType="phone-pad"
+                value={contactPhone}
+                onChangeText={setContactPhone}
+                placeholderTextColor={COLORS.textSecondary}
+              />
+            </View>
+
+            {existingPosting ? (
+              <View style={styles.actionRow}>
+                <TouchableOpacity
+                  style={[styles.saveBtn, { flex: 1, backgroundColor: COLORS.primary, marginRight: 8 }]}
+                  onPress={handleUpdate}
+                  disabled={isPostSaving}
+                >
+                  <Text style={styles.saveBtnText}>Update Listing</Text>
+                </TouchableOpacity>
+                
+                <TouchableOpacity
+                  style={[styles.saveBtn, { flex: 1, backgroundColor: COLORS.red, marginLeft: 8 }]}
+                  onPress={handleRemove}
+                  disabled={isPostSaving}
+                >
+                  <Text style={styles.saveBtnText}>Remove Listing</Text>
                 </TouchableOpacity>
               </View>
             ) : (
-              <View style={styles.photoActionsContainer}>
-                <TouchableOpacity style={styles.photoBtn} onPress={handleTakePhoto}>
-                  <Text style={styles.photoBtnText}>📸 Take ID Photo</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.photoBtn} onPress={handlePickPhoto}>
-                  <Text style={styles.photoBtnText}>🖼️ Upload from Gallery</Text>
-                </TouchableOpacity>
-              </View>
+              <TouchableOpacity
+                style={styles.saveBtn}
+                onPress={handlePublish}
+                disabled={isPostSaving}
+              >
+                <Text style={styles.saveBtnText}>Publish Room Listing</Text>
+              </TouchableOpacity>
             )}
-          </View>
-
-          <TouchableOpacity style={styles.saveBtn} onPress={handleOnboardTenant}>
-            <Text style={styles.saveBtnText}>Save & Onboard Tenant</Text>
-          </TouchableOpacity>
-        </ScrollView>
+          </ScrollView>
+        )}
       </KeyboardAvoidingView>
     </SafeAreaView>
   );
@@ -526,5 +630,41 @@ const styles = StyleSheet.create({
     color: COLORS.red,
     fontSize: 13,
     fontWeight: 'bold',
+  },
+  tabContainer: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.border,
+    backgroundColor: COLORS.cardBackground,
+  },
+  tabBtn: {
+    flex: 1,
+    paddingVertical: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 3,
+    borderBottomColor: 'transparent',
+  },
+  tabBtnActive: {
+    borderBottomColor: COLORS.primary,
+  },
+  tabText: {
+    fontSize: 13,
+    color: COLORS.textSecondary,
+    fontWeight: '600',
+  },
+  tabTextActive: {
+    color: COLORS.primary,
+    fontWeight: 'bold',
+  },
+  textArea: {
+    height: 100,
+    textAlignVertical: 'top',
+    paddingTop: 10,
+  },
+  actionRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 40,
   },
 });

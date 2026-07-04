@@ -15,6 +15,7 @@ import {
 import { COLORS } from '../../constants/colors';
 import { usePropertyController } from './PropertyController';
 import TenantScreen from '../tenant/TenantScreen';
+import MarketplaceFeed from '../postings/MarketplaceFeed';
 
 export default function PropertyScreen() {
   const {
@@ -45,6 +46,7 @@ export default function PropertyScreen() {
 
   // Navigation/Routing state for active room tenant management
   const [activeRoomForTenant, setActiveRoomForTenant] = useState<{ id: string; roomNumber: string } | null>(null);
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'marketplace'>('dashboard');
 
   if (!dbReady) {
     return (
@@ -60,6 +62,7 @@ export default function PropertyScreen() {
       <TenantScreen
         roomId={activeRoomForTenant.id}
         roomNumber={activeRoomForTenant.roomNumber}
+        houseId={selectedHouse?.id || ''}
         onBack={async () => {
           setActiveRoomForTenant(null);
           // Reload room list to show updated occupancy status
@@ -140,90 +143,118 @@ export default function PropertyScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <View style={{ flex: 1 }}>
-          <Text style={styles.headerSubtitle}>Property Dashboard</Text>
-          <Text style={styles.headerTitle} numberOfLines={1}>
-            {selectedHouse?.name}
-          </Text>
-        </View>
-        <TouchableOpacity
-          onPress={triggerAddAnotherHouse}
-          style={styles.headerBtn}
-        >
-          <Text style={styles.headerBtnText}>+ Add House</Text>
-        </TouchableOpacity>
-      </View>
+      <View style={{ flex: 1 }}>
+        {activeTab === 'dashboard' ? (
+          <>
+            <View style={styles.header}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.headerSubtitle}>Property Dashboard</Text>
+                <Text style={styles.headerTitle} numberOfLines={1}>
+                  {selectedHouse?.name}
+                </Text>
+              </View>
+              <TouchableOpacity
+                onPress={triggerAddAnotherHouse}
+                style={styles.headerBtn}
+              >
+                <Text style={styles.headerBtnText}>+ Add House</Text>
+              </TouchableOpacity>
+            </View>
 
-      <View style={styles.addressBar}>
-        <Text style={styles.addressText}>📍 {selectedHouse?.address}</Text>
-      </View>
+            <View style={styles.addressBar}>
+              <Text style={styles.addressText}>📍 {selectedHouse?.address}</Text>
+            </View>
 
-      <View style={styles.content}>
-        <View style={styles.sectionHeader}>
-          <Text style={styles.sectionTitle}>Rooms & Flats ({rooms.length})</Text>
-          <TouchableOpacity
-            style={styles.addRoomBtn}
-            onPress={() => setIsRoomModalVisible(true)}
-          >
-            <Text style={styles.addRoomBtnText}>+ Add Room</Text>
-          </TouchableOpacity>
-        </View>
-
-        {rooms.length === 0 ? (
-          <View style={styles.emptyState}>
-            <Text style={styles.emptyText}>No rooms added to this house yet.</Text>
-            <TouchableOpacity
-              style={[styles.button, { marginTop: 16 }]}
-              onPress={() => setIsRoomModalVisible(true)}
-            >
-              <Text style={styles.buttonText}>Add Your First Room</Text>
-            </TouchableOpacity>
-          </View>
-        ) : (
-          <FlatList
-            data={rooms}
-            keyExtractor={(item) => item.id}
-            contentContainerStyle={styles.listContainer}
-            renderItem={({ item }) => (
-              <View style={styles.roomCard}>
+            <View style={styles.content}>
+              <View style={styles.sectionHeader}>
+                <Text style={styles.sectionTitle}>Rooms & Flats ({rooms.length})</Text>
                 <TouchableOpacity
-                  style={styles.roomInfoContainer}
-                  onPress={() => setActiveRoomForTenant({ id: item.id, roomNumber: item.room_number })}
-                  activeOpacity={0.7}
+                  style={styles.addRoomBtn}
+                  onPress={() => setIsRoomModalVisible(true)}
                 >
-                  <View style={{ flex: 1 }}>
-                    <Text style={styles.roomNumber}>Room / Flat {item.room_number}</Text>
-                    <Text style={styles.roomRent}>Rent: Rs. {item.base_rent.toLocaleString()}</Text>
-                  </View>
-                  <View
-                    style={[
-                      styles.badge,
-                      item.status === 'vacant' ? styles.badgeVacant : styles.badgeOccupied,
-                    ]}
-                  >
-                    <Text
-                      style={[
-                        styles.badgeText,
-                        item.status === 'vacant' ? styles.badgeTextVacant : styles.badgeTextOccupied,
-                      ]}
-                    >
-                      {item.status.toUpperCase()}
-                    </Text>
-                  </View>
+                  <Text style={styles.addRoomBtnText}>+ Add Room</Text>
                 </TouchableOpacity>
-                <View style={styles.rightAction}>
+              </View>
+
+              {rooms.length === 0 ? (
+                <View style={styles.emptyState}>
+                  <Text style={styles.emptyText}>No rooms added to this house yet.</Text>
                   <TouchableOpacity
-                    onPress={() => handleDeleteRoom(item.id, item.room_number)}
-                    style={styles.deleteBtn}
+                    style={[styles.button, { marginTop: 16 }]}
+                    onPress={() => setIsRoomModalVisible(true)}
                   >
-                    <Text style={styles.deleteBtnText}>Delete</Text>
+                    <Text style={styles.buttonText}>Add Your First Room</Text>
                   </TouchableOpacity>
                 </View>
-              </View>
-            )}
-          />
+              ) : (
+                <FlatList
+                  data={rooms}
+                  keyExtractor={(item) => item.id}
+                  contentContainerStyle={styles.listContainer}
+                  renderItem={({ item }) => (
+                    <View style={styles.roomCard}>
+                      <TouchableOpacity
+                        style={styles.roomInfoContainer}
+                        onPress={() => setActiveRoomForTenant({ id: item.id, roomNumber: item.room_number })}
+                        activeOpacity={0.7}
+                      >
+                        <View style={{ flex: 1 }}>
+                          <Text style={styles.roomNumber}>Room / Flat {item.room_number}</Text>
+                          <Text style={styles.roomRent}>Rent: Rs. {item.base_rent.toLocaleString()}</Text>
+                        </View>
+                        <View
+                          style={[
+                            styles.badge,
+                            item.status === 'vacant' ? styles.badgeVacant : styles.badgeOccupied,
+                          ]}
+                        >
+                          <Text
+                            style={[
+                              styles.badgeText,
+                              item.status === 'vacant' ? styles.badgeTextVacant : styles.badgeTextOccupied,
+                            ]}
+                          >
+                            {item.status.toUpperCase()}
+                          </Text>
+                        </View>
+                      </TouchableOpacity>
+                      <View style={styles.rightAction}>
+                        <TouchableOpacity
+                          onPress={() => handleDeleteRoom(item.id, item.room_number)}
+                          style={styles.deleteBtn}
+                        >
+                          <Text style={styles.deleteBtnText}>Delete</Text>
+                        </TouchableOpacity>
+                      </View>
+                    </View>
+                  )}
+                />
+              )}
+            </View>
+          </>
+        ) : (
+          <MarketplaceFeed />
         )}
+      </View>
+
+      {/* Bottom Navigation Tab Bar */}
+      <View style={styles.bottomTabBar}>
+        <TouchableOpacity
+          style={[styles.tabItem, activeTab === 'dashboard' && styles.tabItemActive]}
+          onPress={() => setActiveTab('dashboard')}
+        >
+          <Text style={[styles.tabItemText, activeTab === 'dashboard' && styles.tabItemTextActive]}>
+            🏠 Dashboard
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.tabItem, activeTab === 'marketplace' && styles.tabItemActive]}
+          onPress={() => setActiveTab('marketplace')}
+        >
+          <Text style={[styles.tabItemText, activeTab === 'marketplace' && styles.tabItemTextActive]}>
+            🌐 Marketplace
+          </Text>
+        </TouchableOpacity>
       </View>
 
       {/* Add Room Modal */}
@@ -254,7 +285,7 @@ export default function PropertyScreen() {
               placeholderTextColor={COLORS.textSecondary}
             />
 
-            <Text style={styles.label}>Initial Status</Text>
+            <Text style={styles.label}>Room Occupancy Status</Text>
             <View style={styles.statusToggleContainer}>
               <TouchableOpacity
                 style={[
@@ -632,6 +663,31 @@ const styles = StyleSheet.create({
   modalBtnSaveText: {
     color: COLORS.white,
     fontSize: 14,
+    fontWeight: 'bold',
+  },
+  bottomTabBar: {
+    flexDirection: 'row',
+    height: 56,
+    borderTopWidth: 1,
+    borderTopColor: COLORS.border,
+    backgroundColor: COLORS.white,
+    elevation: 4,
+  },
+  tabItem: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  tabItemActive: {
+    backgroundColor: COLORS.cardBackground,
+  },
+  tabItemText: {
+    fontSize: 13,
+    color: COLORS.textSecondary,
+    fontWeight: '600',
+  },
+  tabItemTextActive: {
+    color: COLORS.primary,
     fontWeight: 'bold',
   },
 });
