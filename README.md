@@ -9,7 +9,7 @@
 ### 1. 🎛️ Intelligent Billing & Meter Calculations
 *   **Automatic Sub-Meter Math:** Input current and previous electricity sub-meter readings, and the app automatically calculates the total based on custom rates (e.g., Rs. 10 - 15/unit).
 *   **Flexible Utilities:** Supports flat-rate or split bills for community water, waste management, and internet.
-*   **Automated Scheduling:** Invoice notifications trigger automatically on the monthly anniversary of a tenant's tenancy start date.
+*   **Bikram Sambat Scheduling:** Invoice notifications trigger automatically on the monthly anniversary of a tenant's tenancy start date according to the Bikram Sambat (B.S.) calendar.
 
 ### 2. 🔒 Secure Cash Receipts (Double-Confirmation Flow)
 To eliminate disputes over cash rent payments:
@@ -36,7 +36,7 @@ To eliminate disputes over cash rent payments:
 *   **Frontend:** React Native (Expo SDK 57)
 *   **Engine:** Hermes JavaScript Engine (optimized for memory efficiency on budget Android devices)
 *   **Language:** TypeScript
-*   **Local Database:** SQLite / WatermelonDB (Offline-first local cache)
+*   **Local Database:** SQLite (Offline-first local cache)
 *   **Backend & Sync Engine:** Supabase (PostgreSQL with RLS policy security)
 *   **Styling Theme:** Warm Neutrals (Slate Blue primary, Forest Green/Terracotta accents, Soft Cream backgrounds)
 
@@ -44,21 +44,34 @@ To eliminate disputes over cash rent payments:
 
 ## 📂 Directory Structure
 
+The project follows a modular, feature-sliced MVC architecture:
+
 ```
 GharKoHisaab/
 ├── assets/                  # Icons, splash screen, and app assets
 ├── src/
-│   ├── components/          # Shared atom UI elements (Button, Input, Card, Text)
-│   ├── constants/           # Styling tokens, colors, themes, layout sizes
-│   ├── database/            # SQLite schema configuration and migrations
-│   ├── features/            # Feature-sliced modules (Auth, Property, Billing, Reviews)
-│   ├── hooks/               # Custom React hooks (useCamera, useSync, etc.)
-│   ├── navigation/          # React Navigation setup
-│   ├── services/            # Supabase and SMS API connection wrappers
-│   └── utils/               # Billing arithmetic, date utilities, conversion helpers
-├── App.tsx                  # Root component
+│   ├── constants/
+│   │   └── colors.ts        # Styling color tokens
+│   ├── database/
+│   │   └── connection.ts    # Global SQLite database connection
+│   ├── features/            # Feature-sliced MVC modules
+│   │   ├── property/        # Property & Room Manager
+│   │   │   ├── PropertyModel.ts
+│   │   │   ├── PropertyController.ts
+│   │   │   └── PropertyScreen.tsx
+│   │   ├── tenant/          # Tenant Onboarding & KYC
+│   │   │   ├── TenantModel.ts
+│   │   │   ├── TenantController.ts
+│   │   │   └── TenantScreen.tsx
+│   │   └── invoice/         # Invoicing & Billing
+│   │       ├── InvoiceModel.ts
+│   │       ├── InvoiceController.ts
+│   │       └── InvoiceSection.tsx
+│   └── types/
+│       └── nepali-date-converter.d.ts # TypeScript types for B.S. date conversions
+├── App.tsx                  # App entry rendering views
 ├── app.json                 # Expo configuration
-├── index.ts                 # Main app entrypoint
+├── package.json             # Dependencies and scripts
 └── tsconfig.json            # TypeScript configuration
 ```
 
