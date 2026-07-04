@@ -25,6 +25,10 @@ To eliminate disputes over cash rent payments:
 *   **Property Reviews:** Tenants can leave public feedback on properties and landlord responsiveness, helping future renters make informed decisions.
 *   Reviews are safeguarded by requiring a verified, active, or past tenancy agreement.
 
+### 5. 📣 Public Room Postings (Posting Vacant Rooms)
+*   **Post Publicly:** Housekeepers can flag any vacant room as "Post Publicly" (सार्वजनिक विज्ञापन) to list it on a public search feed.
+*   **Search and Discover:** Prospective tenants in Kathmandu can query and discover vacant rooms, complete with rent, location, and owner contact details.
+
 ---
 
 ## 🛠️ Tech Stack
