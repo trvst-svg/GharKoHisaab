@@ -14,6 +14,7 @@ import {
 import { COLORS } from '../../constants/colors';
 import { useTenantController } from './TenantController';
 import NepaliDate from 'nepali-date-converter';
+import InvoiceSection from '../invoice/InvoiceSection';
 
 interface TenantScreenProps {
   roomId: string;
@@ -106,6 +107,13 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
               <Image source={{ uri: activeTenancy.tenant_id_url }} style={styles.idImagePreview} />
             </View>
           )}
+
+          {/* Billing & Invoice Management Section */}
+          <InvoiceSection
+            tenancyId={activeTenancy.id}
+            baseRent={activeTenancy.base_rent}
+            startDate={activeTenancy.start_date}
+          />
 
           <TouchableOpacity onPress={onBack} style={styles.backButton}>
             <Text style={styles.backButtonText}>Close Profile</Text>

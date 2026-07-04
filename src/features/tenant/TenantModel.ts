@@ -92,12 +92,13 @@ export async function addTenancy(tenancy: Tenancy): Promise<void> {
   await db.runAsync('UPDATE rooms SET status = ? WHERE id = ?;', ['occupied', tenancy.room_id]);
 }
 
-export async function getActiveTenancyForRoom(roomId: string): Promise<(Tenancy & { tenant_name: string; tenant_phone: string; tenant_id_url: string | null; tenant_id_type: string }) | null> {
+export async function getActiveTenancyForRoom(roomId: string): Promise<(Tenancy & { tenant_name: string; tenant_phone: string; tenant_id_url: string | null; tenant_id_type: string; base_rent: number }) | null> {
   const db = await getDB();
   const result = await db.getFirstAsync<any>(
-    `SELECT t.*, tn.name as tenant_name, tn.phone_number as tenant_phone, tn.government_id_url as tenant_id_url, tn.government_id_type as tenant_id_type
+    `SELECT t.*, tn.name as tenant_name, tn.phone_number as tenant_phone, tn.government_id_url as tenant_id_url, tn.government_id_type as tenant_id_type, r.base_rent as base_rent
      FROM tenancies t
      JOIN tenants tn ON t.tenant_id = tn.id
+     JOIN rooms r ON t.room_id = r.id
      WHERE t.room_id = ? AND t.is_active = 1 LIMIT 1;`,
     [roomId]
   );
