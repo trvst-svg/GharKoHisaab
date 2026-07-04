@@ -13,14 +13,21 @@ import {
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 import { useInvoiceController } from './InvoiceController';
+import PaymentModal from '../payment/PaymentModal';
 
 interface InvoiceSectionProps {
   tenancyId: string;
   baseRent: number;
   startDate: string;
+  tenantPhone: string;
 }
 
-export default function InvoiceSection({ tenancyId, baseRent, startDate }: InvoiceSectionProps) {
+export default function InvoiceSection({
+  tenancyId,
+  baseRent,
+  startDate,
+  tenantPhone,
+}: InvoiceSectionProps) {
   const {
     dbReady,
     invoices,
@@ -40,9 +47,11 @@ export default function InvoiceSection({ tenancyId, baseRent, startDate }: Invoi
     calculateLiveTotal,
     getElectricityUnits,
     handleGenerateInvoice,
+    refreshRecords,
   } = useInvoiceController(tenancyId, baseRent, startDate);
 
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedInvoiceForPayment, setSelectedInvoiceForPayment] = useState<any | null>(null);
 
   if (!dbReady) {
     return (
@@ -85,7 +94,7 @@ export default function InvoiceSection({ tenancyId, baseRent, startDate }: Invoi
         <FlatList
           data={invoices}
           keyExtractor={(item) => item.id}
-          scrollEnabled={false} // Since this will render inside a parent scrollview
+          scrollEnabled={false} // Rendered inside parent scrollview
           renderItem={({ item }) => (
             <View style={styles.invoiceCard}>
               <View style={styles.invoiceCardHeader}>
@@ -122,6 +131,15 @@ export default function InvoiceSection({ tenancyId, baseRent, startDate }: Invoi
                   Rent: Rs. {item.rent_due.toLocaleString()} | Elec: Rs. {item.electricity_due.toLocaleString()} | Water: Rs. {item.water_due.toLocaleString()} | Waste: Rs. {item.waste_due.toLocaleString()}
                   {item.arrears_carried_forward > 0 && ` | Arrears: Rs. ${item.arrears_carried_forward.toLocaleString()}`}
                 </Text>
+
+                {item.status !== 'paid' && (
+                  <TouchableOpacity
+                    style={styles.payBtn}
+                    onPress={() => setSelectedInvoiceForPayment(item)}
+                  >
+                    <Text style={styles.payBtnText}>Record Payment</Text>
+                  </TouchableOpacity>
+                )}
               </View>
             </View>
           )}
@@ -247,6 +265,22 @@ export default function InvoiceSection({ tenancyId, baseRent, startDate }: Invoi
           </KeyboardAvoidingView>
         </View>
       </Modal>
+
+      {/* Record Payment Modal */}
+      {selectedInvoiceForPayment && (
+        <PaymentModal
+          isVisible={!!selectedInvoiceForPayment}
+          onClose={async () => {
+            setSelectedInvoiceForPayment(null);
+            // Reload invoices and arrears status after payment confirmation
+            await refreshRecords();
+          }}
+          invoiceId={selectedInvoiceForPayment.id}
+          totalDue={selectedInvoiceForPayment.total_due}
+          billingPeriod={selectedInvoiceForPayment.billing_period}
+          tenantPhone={tenantPhone}
+        />
+      )}
     </View>
   );
 }
@@ -376,6 +410,20 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     marginTop: 6,
     lineHeight: 15,
+    marginBottom: 8,
+  },
+  payBtn: {
+    backgroundColor: COLORS.primary,
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 4,
+    alignSelf: 'flex-start',
+    marginTop: 6,
+  },
+  payBtnText: {
+    color: COLORS.white,
+    fontSize: 11,
+    fontWeight: 'bold',
   },
   modalOverlay: {
     flex: 1,

@@ -113,6 +113,7 @@ export default function TenantScreen({ roomId, roomNumber, onBack }: TenantScree
             tenancyId={activeTenancy.id}
             baseRent={activeTenancy.base_rent}
             startDate={activeTenancy.start_date}
+            tenantPhone={activeTenancy.tenant_phone}
           />
 
           <TouchableOpacity onPress={onBack} style={styles.backButton}>
