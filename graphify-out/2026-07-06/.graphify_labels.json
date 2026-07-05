@@ -1,11 +1,16 @@
 {
-  "0": "connection.ts",
-  "1": "getDB",
-  "2": "graphify.md",
-  "3": "graphify.md",
-  "4": ".runAsync",
-  "5": "WebSqliteStatement",
-  "6": "PropertyScreen.tsx",
-  "7": ".runSync",
-  "8": "WebSqliteDb"
+  "0": "Database Schema Definitions",
+  "1": "SQLite Database Connection",
+  "2": "Production Dependencies",
+  "3": "UI Components & Invoice View",
+  "4": "Expo Mobile Config",
+  "5": "Property Management & Dashboard",
+  "6": "Marketplace & Room Listings",
+  "7": "Tenant Onboarding Features",
+  "8": "Bikram Sambat Date Converters",
+  "9": "Web SQL Query Driver",
+  "10": "Developer Tooling & Testing",
+  "11": "TypeScript Configuration",
+  "12": "Jest Test Setup",
+  "13": "dependencies"
 }
