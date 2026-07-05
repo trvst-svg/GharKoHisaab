@@ -3,11 +3,8 @@ import * as SQLite from 'expo-sqlite';
 import { drizzle } from 'drizzle-orm/expo-sqlite';
 import * as schema from './schema';
 
-<<<<<<< Updated upstream
-let dbInstance: SQLite.SQLiteDatabase | null = null;
-let drizzleInstance: ReturnType<typeof drizzle<typeof schema>> | null = null;
-=======
 let dbInstance: any = null;
+let drizzleInstance: ReturnType<typeof drizzle<typeof schema>> | null = null;
 
 // Helper to load table from localStorage on Web
 const getTable = (name: string): any[] => {
@@ -22,6 +19,104 @@ const saveTable = (name: string, data: any[]) => {
   localStorage.setItem(`db_${name}`, JSON.stringify(data));
 };
 
+// Helper to parse INSERT queries dynamically
+function parseInsertParams(sql: string, params: any[]) {
+  const cleanSql = sql.replace(/["`]/g, '');
+  const match = cleanSql.match(/insert\s+into\s+(\w+)\s*\(([^)]+)\)/i);
+  if (!match) return null;
+  const table = match[1].toLowerCase();
+  const cols = match[2].split(',').map(s => s.trim());
+  
+  const data: any = {};
+  cols.forEach((col, idx) => {
+    // Drizzle maps camelCase in JS but database columns are snake_case.
+    // Drizzle sends the parameter values in the same order as columns in the SQL statement.
+    // Our Web Sqlite mock stores rows in snake_case to match SQL column queries.
+    data[col] = params[idx];
+  });
+  return { table, data };
+}
+
+// Helper to parse UPDATE queries dynamically
+function parseUpdateParams(sql: string, params: any[]) {
+  const cleanSql = sql.replace(/["`]/g, '');
+  const match = cleanSql.match(/update\s+(\w+)\s+set\s+([^]+?)\s+where\s+([^]+)/i);
+  if (!match) return null;
+  const table = match[1].toLowerCase();
+  const setPart = match[2];
+  const wherePart = match[3];
+  
+  const setCols: string[] = [];
+  const setMatches = setPart.matchAll(/(\w+)\s*=\s*\?/gi);
+  for (const m of setMatches) {
+    setCols.push(m[1]);
+  }
+  
+  const whereCols: string[] = [];
+  // Remove table prefixes in where e.g. "rooms.id = ?" -> "id = ?"
+  const wherePartClean = wherePart.replace(/\w+\./g, '');
+  const whereMatches = wherePartClean.matchAll(/(\w+)\s*=\s*\?/gi);
+  for (const m of whereMatches) {
+    whereCols.push(m[1]);
+  }
+  
+  const setData: any = {};
+  setCols.forEach((col, idx) => {
+    setData[col] = params[idx];
+  });
+  
+  const whereData: any = {};
+  whereCols.forEach((col, idx) => {
+    whereData[col] = params[setCols.length + idx];
+  });
+  
+  return { table, setData, whereData };
+}
+
+// Helper to parse DELETE queries dynamically
+function parseDeleteParams(sql: string, params: any[]) {
+  const cleanSql = sql.replace(/["`]/g, '');
+  const match = cleanSql.match(/delete\s+from\s+(\w+)\s+where\s+([^]+)/i);
+  if (!match) return null;
+  const table = match[1].toLowerCase();
+  const wherePart = match[2].replace(/\w+\./g, '');
+  
+  const whereCols: string[] = [];
+  const whereMatches = wherePart.matchAll(/(\w+)\s*=\s*\?/gi);
+  for (const m of whereMatches) {
+    whereCols.push(m[1]);
+  }
+  
+  const whereData: any = {};
+  whereCols.forEach((col, idx) => {
+    whereData[col] = params[idx];
+  });
+  
+  return { table, whereData };
+}
+
+// Helper to parse SELECT queries dynamically
+function parseSelectParams(sql: string, params: any[]) {
+  const cleanSql = sql.replace(/["`]/g, '');
+  const fromMatch = cleanSql.match(/from\s+(\w+)(?:\s+where\s+([^]+))?/i);
+  if (!fromMatch) return null;
+  const table = fromMatch[1].toLowerCase();
+  const wherePart = fromMatch[2] ? fromMatch[2].replace(/\w+\./g, '') : null;
+  
+  const whereData: any = {};
+  if (wherePart) {
+    const whereCols: string[] = [];
+    const whereMatches = wherePart.matchAll(/(\w+)\s*=\s*\?/gi);
+    for (const m of whereMatches) {
+      whereCols.push(m[1]);
+    }
+    whereCols.forEach((col, idx) => {
+      whereData[col] = params[idx];
+    });
+  }
+  return { table, whereData };
+}
+
 // Web Mock SQLite Database
 class WebSqliteDb {
   async execAsync(sql: string): Promise<void> {
@@ -31,216 +126,64 @@ class WebSqliteDb {
   async runAsync(sql: string, params: any[] = []): Promise<any> {
     console.log('[Web DB] runAsync SQL:', sql, 'params:', params);
     
-    if (sql.includes('INSERT INTO houses')) {
-      const houses = getTable('houses');
-      houses.push({
-        id: params[0],
-        housekeeper_name: params[1],
-        name: params[2],
-        address: params[3],
-        created_at: params[4] || new Date().toISOString(),
-      });
-      saveTable('houses', houses);
-      return { changes: 1, lastInsertRowId: 1 };
-    }
-    
-    if (sql.includes('INSERT INTO rooms')) {
-      const rooms = getTable('rooms');
-      rooms.push({
-        id: params[0],
-        house_id: params[1],
-        room_number: params[2],
-        base_rent: params[3],
-        status: params[4],
-        created_at: params[5] || new Date().toISOString(),
-      });
-      saveTable('rooms', rooms);
-      return { changes: 1, lastInsertRowId: 1 };
-    }
-    
-    if (sql.includes('UPDATE rooms SET status = ? WHERE id = ?')) {
-      const rooms = getTable('rooms');
-      const idx = rooms.findIndex(r => r.id === params[1]);
-      if (idx !== -1) {
-        rooms[idx].status = params[0];
-        saveTable('rooms', rooms);
-      }
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('DELETE FROM rooms WHERE id = ?')) {
-      let rooms = getTable('rooms');
-      rooms = rooms.filter(r => r.id !== params[0]);
-      saveTable('rooms', rooms);
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('INSERT INTO tenants')) {
-      const tenants = getTable('tenants');
-      tenants.push({
-        id: params[0],
-        name: params[1],
-        phone_number: params[2],
-        government_id_url: params[3],
-        government_id_type: params[4],
-        rating: params[5],
-        created_at: params[6] || new Date().toISOString(),
-      });
-      saveTable('tenants', tenants);
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('INSERT INTO tenancies')) {
-      const tenancies = getTable('tenancies');
-      tenancies.push({
-        id: params[0],
-        room_id: params[1],
-        tenant_id: params[2],
-        start_date: params[3],
-        end_date: params[4],
-        security_deposit_amount: params[5],
-        security_deposit_status: params[6],
-        is_active: params[7],
-        created_at: params[8] || new Date().toISOString(),
-      });
-      saveTable('tenancies', tenancies);
+    const parsedInsert = parseInsertParams(sql, params);
+    if (parsedInsert) {
+      const { table, data } = parsedInsert;
+      const list = getTable(table);
       
-      // Auto update room status to occupied on web
-      const rooms = getTable('rooms');
-      const rIdx = rooms.findIndex(r => r.id === params[1]);
-      if (rIdx !== -1) {
-        rooms[rIdx].status = 'occupied';
-        saveTable('rooms', rooms);
+      // Enforce UNIQUE constraint for room_postings on room_id
+      if (table === 'room_postings' || table === 'roomPostings') {
+        const filtered = list.filter(p => p.room_id !== data.room_id && p.roomId !== data.roomId);
+        filtered.push(data);
+        saveTable(table, filtered);
+      } else {
+        list.push(data);
+        saveTable(table, list);
       }
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('INSERT INTO meter_readings')) {
-      const readings = getTable('meter_readings');
-      readings.push({
-        id: params[0],
-        tenancy_id: params[1],
-        reading_date: params[2],
-        electricity_reading: params[3],
-        water_reading: params[4],
-        created_at: params[5] || new Date().toISOString(),
-      });
-      saveTable('meter_readings', readings);
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('INSERT INTO invoices')) {
-      const invoices = getTable('invoices');
-      invoices.push({
-        id: params[0],
-        tenancy_id: params[1],
-        billing_period: params[2],
-        rent_due: params[3],
-        electricity_due: params[4],
-        water_due: params[5],
-        waste_due: params[6],
-        arrears_carried_forward: params[7],
-        total_due: params[8],
-        status: params[9],
-        created_at: params[10] || new Date().toISOString(),
-      });
-      saveTable('invoices', invoices);
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('INSERT INTO payments')) {
-      const payments = getTable('payments');
-      payments.push({
-        id: params[0],
-        invoice_id: params[1],
-        amount_paid: params[2],
-        payment_method: params[3],
-        payment_date: params[4],
-        receipt_image_url: params[5],
-        is_confirmed: params[6],
-        otp_code: params[7],
-        signature_data: params[8],
-        created_at: params[9] || new Date().toISOString(),
-      });
-      saveTable('payments', payments);
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('UPDATE invoices SET status = ? WHERE id = ?')) {
-      const invoices = getTable('invoices');
-      const idx = invoices.findIndex(inv => inv.id === params[1]);
-      if (idx !== -1) {
-        invoices[idx].status = params[0];
-        saveTable('invoices', invoices);
+      
+      // Side effect: Auto update room status to occupied on web onboarding
+      if (table === 'tenancies') {
+        const rooms = getTable('rooms');
+        const rIdx = rooms.findIndex(r => r.id === (data.room_id || data.roomId));
+        if (rIdx !== -1) {
+          rooms[rIdx].status = 'occupied';
+          saveTable('rooms', rooms);
+        }
       }
-      return { changes: 1 };
+      return { changes: 1, lastInsertRowId: 1 };
     }
     
-    if (sql.includes('INSERT INTO checkout_settlements')) {
-      const settlements = getTable('checkout_settlements');
-      settlements.push({
-        id: params[0],
-        tenancy_id: params[1],
-        checkout_date: params[2],
-        final_rent_due: params[3],
-        final_utility_due: params[4],
-        damage_charges: params[5],
-        deducted_deposit: params[6],
-        refunded_deposit: params[7],
-        net_balance: params[8],
-        is_settled: params[9],
-        created_at: params[10] || new Date().toISOString(),
+    const parsedUpdate = parseUpdateParams(sql, params);
+    if (parsedUpdate) {
+      const { table, setData, whereData } = parsedUpdate;
+      const list = getTable(table);
+      let changes = 0;
+      list.forEach(item => {
+        const match = Object.keys(whereData).every(k => {
+          // Relax exact matching for cases where values might be converted to strings/numbers
+          return item[k] == whereData[k] || item[toCamelCase(k)] == whereData[k];
+        });
+        if (match) {
+          Object.assign(item, setData);
+          changes++;
+        }
       });
-      saveTable('checkout_settlements', settlements);
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('UPDATE tenancies SET is_active = 0')) {
-      const tenancies = getTable('tenancies');
-      const idx = tenancies.findIndex(t => t.id === params[2]);
-      if (idx !== -1) {
-        tenancies[idx].is_active = 0;
-        tenancies[idx].end_date = params[0];
-        tenancies[idx].security_deposit_status = params[1];
-        saveTable('tenancies', tenancies);
+      if (changes > 0) {
+        saveTable(table, list);
       }
-      return { changes: 1 };
+      return { changes };
     }
     
-    if (sql.includes('INSERT INTO room_postings')) {
-      const postings = getTable('room_postings');
-      const filtered = postings.filter(p => p.room_id !== params[1]);
-      filtered.push({
-        id: params[0],
-        room_id: params[1],
-        house_id: params[2],
-        title: params[3],
-        description: params[4],
-        contact_phone: params[5],
-        is_active: params[6],
-        created_at: params[7] || new Date().toISOString(),
+    const parsedDelete = parseDeleteParams(sql, params);
+    if (parsedDelete) {
+      const { table, whereData } = parsedDelete;
+      const list = getTable(table);
+      const filtered = list.filter(item => {
+        return !Object.keys(whereData).every(k => item[k] == whereData[k] || item[toCamelCase(k)] == whereData[k]);
       });
-      saveTable('room_postings', filtered);
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('UPDATE room_postings SET title = ?')) {
-      const postings = getTable('room_postings');
-      const idx = postings.findIndex(p => p.id === params[3]);
-      if (idx !== -1) {
-        postings[idx].title = params[0];
-        postings[idx].description = params[1];
-        postings[idx].contact_phone = params[2];
-        saveTable('room_postings', postings);
-      }
-      return { changes: 1 };
-    }
-    
-    if (sql.includes('DELETE FROM room_postings WHERE id = ?')) {
-      let postings = getTable('room_postings');
-      postings = postings.filter(p => p.id !== params[0]);
-      saveTable('room_postings', postings);
-      return { changes: 1 };
+      const changes = list.length - filtered.length;
+      saveTable(table, filtered);
+      return { changes };
     }
     
     return { changes: 0 };
@@ -248,141 +191,133 @@ class WebSqliteDb {
 
   async getAllAsync<T>(sql: string, params: any[] = []): Promise<T[]> {
     console.log('[Web DB] getAllAsync SQL:', sql, 'params:', params);
+    const parsed = parseSelectParams(sql, params);
+    if (!parsed) return [];
     
-    if (sql.includes('SELECT * FROM houses')) {
-      return getTable('houses') as T[];
+    const { table, whereData } = parsed;
+    const list = getTable(table);
+    
+    let result = list.filter(item => {
+      return Object.keys(whereData).every(k => item[k] == whereData[k] || item[toCamelCase(k)] == whereData[k]);
+    });
+    
+    // Sort overrides for consistency
+    if (table === 'rooms') {
+      result.sort((a, b) => (a.room_number || a.roomNumber || '').localeCompare(b.room_number || b.roomNumber || '', undefined, { numeric: true }));
+    } else if (table === 'invoices') {
+      result.sort((a, b) => (b.created_at || b.createdAt || '').localeCompare(a.created_at || a.createdAt || ''));
+    } else if (table === 'payments') {
+      result.sort((a, b) => (b.payment_date || b.paymentDate || '').localeCompare(a.payment_date || a.paymentDate || ''));
+    } else if (table === 'houses') {
+      result.sort((a, b) => (a.created_at || a.createdAt || '').localeCompare(b.created_at || b.createdAt || ''));
     }
     
-    if (sql.includes('SELECT * FROM rooms WHERE house_id = ?')) {
-      const rooms = getTable('rooms');
-      const filtered = rooms.filter(r => r.house_id === params[0]);
-      filtered.sort((a, b) => a.room_number.localeCompare(b.room_number, undefined, { numeric: true }));
-      return filtered as T[];
-    }
-    
-    if (sql.includes('SELECT * FROM invoices WHERE tenancy_id = ?')) {
-      const invoices = getTable('invoices');
-      const filtered = invoices.filter(inv => inv.tenancy_id === params[0]);
-      filtered.sort((a, b) => b.created_at.localeCompare(a.created_at));
-      return filtered as T[];
-    }
-    
-    if (sql.includes('SELECT * FROM payments WHERE invoice_id = ?')) {
-      const payments = getTable('payments');
-      const filtered = payments.filter(p => p.invoice_id === params[0]);
-      filtered.sort((a, b) => b.payment_date.localeCompare(a.payment_date));
-      return filtered as T[];
-    }
-    
-    if (sql.includes('SELECT rp.*, r.room_number, r.base_rent, h.name as house_name')) {
-      const postings = getTable('room_postings');
+    // Handle complex JOINs inside public postings feed
+    const cleanSql = sql.replace(/["`]/g, '').toLowerCase();
+    if (cleanSql.includes('join rooms') && cleanSql.includes('join houses')) {
+      const postings = getTable('room_postings').length > 0 ? getTable('room_postings') : getTable('roomPostings');
       const rooms = getTable('rooms');
       const houses = getTable('houses');
       
-      const result = postings
-        .filter(rp => rp.is_active === 1)
+      const joined = postings
+        .filter(rp => rp.is_active == 1 || rp.isActive == 1)
         .map(rp => {
-          const room = rooms.find(r => r.id === rp.room_id);
-          const house = houses.find(h => h.id === rp.house_id);
+          const room = rooms.find(r => r.id === (rp.room_id || rp.roomId));
+          const house = houses.find(h => h.id === (rp.house_id || rp.houseId));
           if (room && house && room.status === 'vacant') {
             return {
               ...rp,
-              room_number: room.room_number,
-              base_rent: room.base_rent,
+              room_number: room.roomNumber || room.room_number,
+              base_rent: room.baseRent || room.base_rent,
               house_name: house.name,
               house_address: house.address,
-              housekeeper_name: house.housekeeper_name,
+              housekeeper_name: house.housekeeperName || house.housekeeper_name,
             };
           }
           return null;
         })
         .filter(item => item !== null);
       
-      result.sort((a, b) => b.created_at.localeCompare(a.created_at));
-      return result as T[];
+      joined.sort((a, b) => (b.created_at || b.createdAt || '').localeCompare(a.created_at || a.createdAt || ''));
+      return joined as T[];
     }
     
-    return [];
+    return result.map(mapToDrizzleFormat) as T[];
   }
 
   async getFirstAsync<T>(sql: string, params: any[] = []): Promise<T | null> {
     console.log('[Web DB] getFirstAsync SQL:', sql, 'params:', params);
+    const parsed = parseSelectParams(sql, params);
+    if (!parsed) return null;
     
-    if (sql.includes('SELECT t.*, tn.name as tenant_name')) {
+    const { table, whereData } = parsed;
+    const cleanSql = sql.replace(/["`]/g, '').toLowerCase();
+    
+    // Handle complex JOINs inside active tenancy details
+    if (table === 'tenancies' && cleanSql.includes('join tenants') && cleanSql.includes('join rooms')) {
       const tenancies = getTable('tenancies');
       const tenants = getTable('tenants');
       const rooms = getTable('rooms');
       
-      const tenancy = tenancies.find(t => t.room_id === params[0] && t.is_active === 1);
+      const roomId = whereData.room_id || whereData.roomId;
+      const tenancy = tenancies.find(t => (t.room_id == roomId || t.roomId == roomId) && (t.is_active == 1 || t.isActive == 1));
       if (!tenancy) return null;
       
-      const tenant = tenants.find(tn => tn.id === tenancy.tenant_id);
-      const room = rooms.find(r => r.id === tenancy.room_id);
+      const tenant = tenants.find(tn => tn.id === (tenancy.tenant_id || tenancy.tenantId));
+      const room = rooms.find(r => r.id === (tenancy.room_id || tenancy.roomId));
       
-      return {
+      return mapToDrizzleFormat({
         ...tenancy,
         tenant_name: tenant ? tenant.name : 'Unknown',
-        tenant_phone: tenant ? tenant.phone_number : '',
-        tenant_id_url: tenant ? tenant.government_id_url : null,
-        tenant_id_type: tenant ? tenant.government_id_type : 'citizenship',
-        base_rent: room ? room.base_rent : 0,
-      } as any as T;
+        tenant_phone: tenant ? tenant.phoneNumber || tenant.phone_number : '',
+        tenant_id_url: tenant ? tenant.governmentIdUrl || tenant.government_id_url : null,
+        tenant_id_type: tenant ? tenant.governmentIdType || tenant.government_id_type : 'citizenship',
+        base_rent: room ? room.baseRent || room.base_rent : 0,
+      }) as any as T;
     }
     
-    if (sql.includes('SELECT * FROM meter_readings WHERE tenancy_id = ?')) {
-      const readings = getTable('meter_readings');
-      const filtered = readings.filter(r => r.tenancy_id === params[0]);
-      if (filtered.length === 0) return null;
-      filtered.sort((a, b) => b.created_at.localeCompare(a.created_at));
-      return filtered[0] as T;
+    const list = getTable(table);
+    const result = list.filter(item => {
+      return Object.keys(whereData).every(k => item[k] == whereData[k] || item[toCamelCase(k)] == whereData[k]);
+    });
+    
+    if (result.length === 0) return null;
+    
+    if (table === 'meter_readings') {
+      result.sort((a, b) => (b.created_at || b.createdAt || '').localeCompare(a.created_at || a.createdAt || ''));
     }
     
-    if (sql.includes('SELECT SUM(total_due) as total FROM invoices WHERE tenancy_id = ?')) {
-      const invoices = getTable('invoices');
-      const filtered = invoices.filter(inv => inv.tenancy_id === params[0]);
-      const total = filtered.reduce((sum, inv) => sum + inv.total_due, 0);
+    // Custom SUM aggregates
+    if (cleanSql.includes('sum(total_due)') || cleanSql.includes('sum(totaldue)')) {
+      const total = result.reduce((sum, inv) => sum + (inv.total_due || inv.totalDue || 0), 0);
+      return { total } as any as T;
+    }
+    if (cleanSql.includes('sum(amount_paid)') || cleanSql.includes('sum(amountpaid)')) {
+      const total = result.reduce((sum, p) => sum + (p.amount_paid || p.amountPaid || 0), 0);
       return { total } as any as T;
     }
     
-    if (sql.includes('SELECT SUM(amount_paid) as total FROM payments WHERE invoice_id IN')) {
-      const invoices = getTable('invoices');
-      const payments = getTable('payments');
-      
-      const invoiceIds = invoices.filter(inv => inv.tenancy_id === params[0]).map(inv => inv.id);
-      const matchedPayments = payments.filter(p => invoiceIds.includes(p.invoice_id));
-      const total = matchedPayments.reduce((sum, p) => sum + p.amount_paid, 0);
-      return { total } as any as T;
-    }
-    
-    if (sql.includes('SELECT SUM(amount_paid) as total FROM payments WHERE invoice_id = ? AND is_confirmed = 1')) {
-      const payments = getTable('payments');
-      const filtered = payments.filter(p => p.invoice_id === params[0] && p.is_confirmed === 1);
-      const total = filtered.reduce((sum, p) => sum + p.amount_paid, 0);
-      return { total } as any as T;
-    }
-    
-    if (sql.includes('SELECT total_due FROM invoices WHERE id = ?')) {
-      const invoices = getTable('invoices');
-      const invoice = invoices.find(inv => inv.id === params[0]);
-      return invoice ? { total_due: invoice.total_due } as any as T : null;
-    }
-    
-    if (sql.includes('SELECT * FROM room_postings WHERE room_id = ?')) {
-      const postings = getTable('room_postings');
-      const posting = postings.find(p => p.room_id === params[0]);
-      return posting ? posting as any as T : null;
-    }
-    
-    if (sql.includes('SELECT * FROM checkout_settlements WHERE tenancy_id = ?')) {
-      const settlements = getTable('checkout_settlements');
-      const settlement = settlements.find(s => s.tenancy_id === params[0]);
-      return settlement ? settlement as any as T : null;
-    }
-    
-    return null;
+    return mapToDrizzleFormat(result[0]) as T;
   }
 }
->>>>>>> Stashed changes
+
+// Convert camelCase columns to snake_case equivalent or vice versa to ensure Drizzle mapper reads correctly
+function toCamelCase(str: string): string {
+  return str.replace(/_([a-z])/g, (g) => g[1].toUpperCase());
+}
+
+function mapToDrizzleFormat(obj: any): any {
+  if (!obj) return obj;
+  const mapped: any = {};
+  Object.keys(obj).forEach(key => {
+    mapped[key] = obj[key];
+    const camel = toCamelCase(key);
+    if (camel !== key) {
+      mapped[camel] = obj[key];
+    }
+  });
+  return mapped;
+}
 
 export async function getDB(): Promise<SQLite.SQLiteDatabase> {
   if (Platform.OS === 'web') {
