@@ -45,9 +45,9 @@
     "semantic_hash": "5bb3ac38e70fb4a23883511bf263a7ad"
   },
   "src/database/connection.ts": {
-    "mtime": 1783281879.451379,
-    "ast_hash": "c0f349f82d96ee98221e7aabc642ac84",
-    "semantic_hash": "c0f349f82d96ee98221e7aabc642ac84"
+    "mtime": 1783289921.1643703,
+    "ast_hash": "c344f65045bd1098fda31e68b0d6bed1",
+    "semantic_hash": ""
   },
   "src/database/schema.ts": {
     "mtime": 1783282851.836423,
@@ -227,6 +227,16 @@
   "src/features/checkout/CheckoutController.test.ts": {
     "mtime": 1783289651.8639665,
     "ast_hash": "57dd4ad1f8b069c73745e80c68bb1967",
+    "semantic_hash": ""
+  },
+  "src/database/dbIntegration.test.ts": {
+    "mtime": 1783289883.0501218,
+    "ast_hash": "e6d9f2c5ca7977a693369301a6bd2334",
+    "semantic_hash": ""
+  },
+  "src/features/tenant/TenantScreen.test.tsx": {
+    "mtime": 1783290003.6757548,
+    "ast_hash": "7945343bc70293efcb63757c24cc2e21",
     "semantic_hash": ""
   }
 }
