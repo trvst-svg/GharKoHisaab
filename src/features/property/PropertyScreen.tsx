@@ -200,7 +200,7 @@ export default function PropertyScreen() {
                       >
                         <View style={{ flex: 1 }}>
                           <Text style={styles.roomNumber}>Room / Flat {item.room_number}</Text>
-                          <Text style={styles.roomRent}>Rent: Rs. {item.base_rent.toLocaleString()}</Text>
+                          <Text style={styles.roomRent}>Rent: Rs. {(item.base_rent ?? 0).toLocaleString()}</Text>
                         </View>
                         <View
                           style={[

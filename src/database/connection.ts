@@ -29,9 +29,6 @@ function parseInsertParams(sql: string, params: any[]) {
   
   const data: any = {};
   cols.forEach((col, idx) => {
-    // Drizzle maps camelCase in JS but database columns are snake_case.
-    // Drizzle sends the parameter values in the same order as columns in the SQL statement.
-    // Our Web Sqlite mock stores rows in snake_case to match SQL column queries.
     data[col] = params[idx];
   });
   return { table, data };
@@ -53,7 +50,6 @@ function parseUpdateParams(sql: string, params: any[]) {
   }
   
   const whereCols: string[] = [];
-  // Remove table prefixes in where e.g. "rooms.id = ?" -> "id = ?"
   const wherePartClean = wherePart.replace(/\w+\./g, '');
   const whereMatches = wherePartClean.matchAll(/(\w+)\s*=\s*\?/gi);
   for (const m of whereMatches) {
@@ -117,6 +113,111 @@ function parseSelectParams(sql: string, params: any[]) {
   return { table, whereData };
 }
 
+// Web Mock SQLite Statement Result wrapper
+class WebSqliteExecuteResult<T> {
+  lastInsertRowId: number;
+  changes: number;
+  rows: T[];
+
+  constructor(rows: T[], changes = 0, lastInsertRowId = 0) {
+    this.rows = rows;
+    this.changes = changes;
+    this.lastInsertRowId = lastInsertRowId;
+  }
+
+  async getFirstAsync(): Promise<T | null> {
+    return this.rows[0] || null;
+  }
+
+  async getAllAsync(): Promise<T[]> {
+    return this.rows;
+  }
+
+  async resetAsync(): Promise<void> {}
+
+  getFirstSync(): T | null {
+    return this.rows[0] || null;
+  }
+
+  getAllSync(): T[] {
+    return this.rows;
+  }
+
+  resetSync(): void {}
+
+  // IterableIterator
+  next(): IteratorResult<T> {
+    const iterator = this.rows[Symbol.iterator]();
+    return iterator.next();
+  }
+
+  [Symbol.iterator](): IterableIterator<T> {
+    return this.rows[Symbol.iterator]();
+  }
+
+  [Symbol.asyncIterator](): AsyncIterableIterator<T> {
+    const iterator = this.rows[Symbol.iterator]();
+    return {
+      async next(): Promise<IteratorResult<T>> {
+        return iterator.next();
+      },
+      [Symbol.asyncIterator]() {
+        return this;
+      }
+    };
+  }
+}
+
+// Web Mock SQLite Statement
+class WebSqliteStatement {
+  db: WebSqliteDb;
+  sql: string;
+
+  constructor(db: WebSqliteDb, sql: string) {
+    this.db = db;
+    this.sql = sql;
+  }
+
+  executeSync<T>(params: any[] = []): any {
+    const isQuery = this.sql.trim().toLowerCase().startsWith('select');
+    if (isQuery) {
+      const rows = this.db.getAllSync<T>(this.sql, params);
+      return new WebSqliteExecuteResult<T>(rows, 0, 0);
+    } else {
+      const result = this.db.runSync(this.sql, params);
+      return new WebSqliteExecuteResult<T>([], result.changes, result.lastInsertRowId || 0);
+    }
+  }
+
+  async executeAsync<T>(params: any[] = []): Promise<any> {
+    return this.executeSync<T>(params);
+  }
+
+  executeForRawResultSync<T>(params: any[] = []): any {
+    return this.executeSync<T>(params);
+  }
+
+  async executeForRawResultAsync<T>(params: any[] = []): Promise<any> {
+    return this.executeSync<T>(params);
+  }
+
+  getColumnNamesSync(): string[] {
+    return [];
+  }
+
+  async getColumnNamesAsync(): Promise<string[]> {
+    return [];
+  }
+
+  finalizeSync(): void {
+    console.log('[Web DB] finalizeSync');
+  }
+
+  async finalizeAsync(): Promise<void> {
+    this.finalizeSync();
+  }
+}
+
 // Web Mock SQLite Database
 class WebSqliteDb {
   async execAsync(sql: string): Promise<void> {
@@ -124,7 +225,11 @@ class WebSqliteDb {
   }
 
   async runAsync(sql: string, params: any[] = []): Promise<any> {
-    console.log('[Web DB] runAsync SQL:', sql, 'params:', params);
+    return this.runSync(sql, params);
+  }
+
+  runSync(sql: string, params: any[] = []): any {
+    console.log('[Web DB] runSync SQL:', sql, 'params:', params);
     
     const parsedInsert = parseInsertParams(sql, params);
     if (parsedInsert) {
@@ -150,7 +255,7 @@ class WebSqliteDb {
           saveTable('rooms', rooms);
         }
       }
-      return { changes: 1, lastInsertRowId: 1 };
+      return { changes: 1, lastInsertRowId: Math.floor(Math.random() * 1000000) };
     }
     
     const parsedUpdate = parseUpdateParams(sql, params);
@@ -160,7 +265,6 @@ class WebSqliteDb {
       let changes = 0;
       list.forEach(item => {
         const match = Object.keys(whereData).every(k => {
-          // Relax exact matching for cases where values might be converted to strings/numbers
           return item[k] == whereData[k] || item[toCamelCase(k)] == whereData[k];
         });
         if (match) {
@@ -190,7 +294,11 @@ class WebSqliteDb {
   }
 
   async getAllAsync<T>(sql: string, params: any[] = []): Promise<T[]> {
-    console.log('[Web DB] getAllAsync SQL:', sql, 'params:', params);
+    return this.getAllSync(sql, params);
+  }
+
+  getAllSync<T>(sql: string, params: any[] = []): T[] {
+    console.log('[Web DB] getAllSync SQL:', sql, 'params:', params);
     const parsed = parseSelectParams(sql, params);
     if (!parsed) return [];
     
@@ -246,7 +354,11 @@ class WebSqliteDb {
   }
 
   async getFirstAsync<T>(sql: string, params: any[] = []): Promise<T | null> {
-    console.log('[Web DB] getFirstAsync SQL:', sql, 'params:', params);
+    return this.getFirstSync(sql, params);
+  }
+
+  getFirstSync<T>(sql: string, params: any[] = []): T | null {
+    console.log('[Web DB] getFirstSync SQL:', sql, 'params:', params);
     const parsed = parseSelectParams(sql, params);
     if (!parsed) return null;
     
@@ -299,6 +411,16 @@ class WebSqliteDb {
     
     return mapToDrizzleFormat(result[0]) as T;
   }
+
+  prepareSync(sql: string) {
+    console.log('[Web DB] prepareSync SQL:', sql);
+    return new WebSqliteStatement(this, sql);
+  }
+
+  async prepareAsync(sql: string) {
+    console.log('[Web DB] prepareAsync SQL:', sql);
+    return new WebSqliteStatement(this, sql);
+  }
 }
 
 // Convert camelCase columns to snake_case equivalent or vice versa to ensure Drizzle mapper reads correctly
@@ -310,9 +432,10 @@ function mapToDrizzleFormat(obj: any): any {
   if (!obj) return obj;
   const mapped: any = {};
   Object.keys(obj).forEach(key => {
-    mapped[key] = obj[key];
-    const camel = toCamelCase(key);
-    if (camel !== key) {
+    const cleanKey = key.trim();
+    mapped[cleanKey] = obj[key];
+    const camel = toCamelCase(cleanKey);
+    if (camel !== cleanKey) {
       mapped[camel] = obj[key];
     }
   });
@@ -343,7 +466,31 @@ export async function getDrizzleDB() {
 
 export async function initConnection(): Promise<void> {
   const db = await getDB();
-  if (Platform.OS !== 'web') {
+  if (Platform.OS === 'web') {
+    // Repair and trim any keys in localStorage from previous test runs
+    const tables = ['houses', 'rooms', 'tenants', 'tenancies', 'meter_readings', 'invoices', 'payments', 'checkout_settlements', 'room_postings', 'roomPostings'];
+    tables.forEach(table => {
+      const raw = localStorage.getItem(`db_${table}`);
+      if (raw) {
+        try {
+          const list = JSON.parse(raw);
+          if (Array.isArray(list)) {
+            const cleaned = list.map(item => {
+              if (!item || typeof item !== 'object') return item;
+              const cleanItem: any = {};
+              Object.keys(item).forEach(k => {
+                cleanItem[k.trim()] = item[k];
+              });
+              return cleanItem;
+            });
+            localStorage.setItem(`db_${table}`, JSON.stringify(cleaned));
+          }
+        } catch (e) {
+          console.error('Failed to clean table:', table, e);
+        }
+      }
+    });
+  } else {
     // Enable foreign key support on native SQLite only
     await db.execAsync('PRAGMA foreign_keys = ON;');
   }
