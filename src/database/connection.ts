@@ -113,6 +113,15 @@ function parseSelectParams(sql: string, params: any[]) {
   return { table, whereData };
 }
 
+// Helper to extract SELECT columns in order
+function parseSelectColumns(sql: string): string[] {
+  const cleanSql = sql.replace(/["`]/g, '');
+  const match = cleanSql.match(/select\s+([^]+?)\s+from/i);
+  if (!match) return [];
+  // Split columns and map to clean lowercase names
+  return match[1].split(',').map(s => s.trim().toLowerCase());
+}
+
 // Web Mock SQLite Statement Result wrapper
 class WebSqliteExecuteResult<T> {
   lastInsertRowId: number;
@@ -194,19 +203,37 @@ class WebSqliteStatement {
   }
 
   executeForRawResultSync<T>(params: any[] = []): any {
-    return this.executeSync<T>(params);
+    const isQuery = this.sql.trim().toLowerCase().startsWith('select');
+    if (isQuery) {
+      const rows = this.db.getAllSync<any>(this.sql, params);
+      const cols = parseSelectColumns(this.sql);
+      
+      // Map row objects to value arrays in the exact order expected by the SELECT statement
+      const rawRows = rows.map(item => {
+        return cols.map(col => {
+          const cleanCol = col.replace(/^\w+\./, '').trim();
+          const val = item[cleanCol] !== undefined ? item[cleanCol] : item[toCamelCase(cleanCol)];
+          return val === undefined ? null : val;
+        });
+      });
+      
+      return new WebSqliteExecuteResult<any>(rawRows, 0, 0);
+    } else {
+      const result = this.db.runSync(this.sql, params);
+      return new WebSqliteExecuteResult<any>([], result.changes, result.lastInsertRowId || 0);
+    }
   }
 
   async executeForRawResultAsync<T>(params: any[] = []): Promise<any> {
-    return this.executeSync<T>(params);
+    return this.executeForRawResultSync<T>(params);
   }
 
   getColumnNamesSync(): string[] {
-    return [];
+    return parseSelectColumns(this.sql);
   }
 
   async getColumnNamesAsync(): Promise<string[]> {
-    return [];
+    return this.getColumnNamesSync();
   }
 
   finalizeSync(): void {
