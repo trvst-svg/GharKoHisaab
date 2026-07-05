@@ -4,293 +4,123 @@
   "graph": {},
   "nodes": [
     {
-      "label": "schema.ts",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_database_schema",
-      "community": 7,
-      "norm_label": "schema.ts"
-    },
-    {
-      "label": "houses",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_database_schema_houses",
-      "community": 7,
-      "norm_label": "houses"
-    },
-    {
-      "label": "rooms",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "src_database_schema_rooms",
-      "community": 7,
-      "norm_label": "rooms"
-    },
-    {
-      "label": "roomPostings",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "src_database_schema_roompostings",
-      "community": 7,
-      "norm_label": "roompostings"
-    },
-    {
-      "label": "tenants",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "src_database_schema_tenants",
-      "community": 7,
-      "norm_label": "tenants"
-    },
-    {
-      "label": "tenancies",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "src_database_schema_tenancies",
-      "community": 7,
-      "norm_label": "tenancies"
-    },
-    {
-      "label": "checkoutSettlements",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "src_database_schema_checkoutsettlements",
-      "community": 7,
-      "norm_label": "checkoutsettlements"
-    },
-    {
-      "label": "tenancyAgreements",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L67",
-      "_origin": "ast",
-      "id": "src_database_schema_tenancyagreements",
-      "community": 7,
-      "norm_label": "tenancyagreements"
-    },
-    {
-      "label": "invoices",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L84",
-      "_origin": "ast",
-      "id": "src_database_schema_invoices",
-      "community": 7,
-      "norm_label": "invoices"
-    },
-    {
-      "label": "meterReadings",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L98",
-      "_origin": "ast",
-      "id": "src_database_schema_meterreadings",
-      "community": 7,
-      "norm_label": "meterreadings"
-    },
-    {
-      "label": "payments",
-      "file_type": "code",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L107",
-      "_origin": "ast",
-      "id": "src_database_schema_payments",
-      "community": 7,
-      "norm_label": "payments"
-    },
-    {
-      "label": "AgreementController.ts",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementcontroller",
-      "community": 8,
-      "norm_label": "agreementcontroller.ts"
-    },
-    {
-      "label": "AgreementControllerArgs",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementcontroller_agreementcontrollerargs",
-      "community": 8,
-      "norm_label": "agreementcontrollerargs"
-    },
-    {
-      "label": "useAgreementController()",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementcontroller_useagreementcontroller",
-      "community": 8,
-      "norm_label": "useagreementcontroller()"
-    },
-    {
       "label": "AgreementModal.tsx",
       "file_type": "code",
       "source_file": "src/features/agreement/AgreementModal.tsx",
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_features_agreement_agreementmodal",
-      "community": 8,
+      "community": 0,
       "norm_label": "agreementmodal.tsx"
     },
     {
       "label": "AgreementModalProps",
       "file_type": "code",
       "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "src_features_agreement_agreementmodal_agreementmodalprops",
-      "community": 8,
+      "community": 0,
       "norm_label": "agreementmodalprops"
     },
     {
       "label": "AgreementModal()",
       "file_type": "code",
       "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "src_features_agreement_agreementmodal_agreementmodal",
-      "community": 8,
+      "community": 0,
       "norm_label": "agreementmodal()"
     },
     {
       "label": "styles",
       "file_type": "code",
       "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L399",
+      "source_location": "L436",
       "_origin": "ast",
       "id": "src_features_agreement_agreementmodal_styles",
-      "community": 8,
+      "community": 0,
       "norm_label": "styles"
     },
     {
-      "label": "AgreementModel.ts",
+      "label": "InvoiceSection.tsx",
       "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_features_agreement_agreementmodel",
-      "community": 8,
-      "norm_label": "agreementmodel.ts"
+      "id": "src_features_invoice_invoicesection",
+      "community": 9,
+      "norm_label": "invoicesection.tsx"
     },
     {
-      "label": "Agreement",
+      "label": "InvoiceSectionProps",
       "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L5",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L19",
       "_origin": "ast",
-      "id": "src_features_agreement_agreementmodel_agreement",
-      "community": 8,
-      "norm_label": "agreement"
+      "id": "src_features_invoice_invoicesection_invoicesectionprops",
+      "community": 9,
+      "norm_label": "invoicesectionprops"
     },
     {
-      "label": "initAgreementSchema()",
+      "label": "InvoiceSection()",
       "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L25",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "src_features_agreement_agreementmodel_initagreementschema",
-      "community": 8,
-      "norm_label": "initagreementschema()"
-    },
-    {
-      "label": "saveAgreement()",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L50",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementmodel_saveagreement",
-      "community": 8,
-      "norm_label": "saveagreement()"
-    },
-    {
-      "label": "getAgreementForTenancy()",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L73",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementmodel_getagreementfortenancy",
-      "community": 8,
-      "norm_label": "getagreementfortenancy()"
-    },
-    {
-      "label": "TenantController.ts",
-      "file_type": "code",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_features_tenant_tenantcontroller",
-      "community": 8,
-      "norm_label": "tenantcontroller.ts"
-    },
-    {
-      "label": "useTenantController()",
-      "file_type": "code",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "src_features_tenant_tenantcontroller_usetenantcontroller",
-      "community": 8,
-      "norm_label": "usetenantcontroller()"
-    },
-    {
-      "label": "TenantScreen.tsx",
-      "file_type": "code",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_features_tenant_tenantscreen",
-      "community": 8,
-      "norm_label": "tenantscreen.tsx"
-    },
-    {
-      "label": "TenantScreenProps",
-      "file_type": "code",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "src_features_tenant_tenantscreen_tenantscreenprops",
-      "community": 8,
-      "norm_label": "tenantscreenprops"
-    },
-    {
-      "label": "TenantScreen()",
-      "file_type": "code",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "src_features_tenant_tenantscreen_tenantscreen",
-      "community": 8,
-      "norm_label": "tenantscreen()"
+      "id": "src_features_invoice_invoicesection_invoicesection",
+      "community": 9,
+      "norm_label": "invoicesection()"
     },
     {
       "label": "styles",
       "file_type": "code",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L466",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L330",
       "_origin": "ast",
-      "id": "src_features_tenant_tenantscreen_styles",
-      "community": 8,
+      "id": "src_features_invoice_invoicesection_styles",
+      "community": 9,
+      "norm_label": "styles"
+    },
+    {
+      "label": "PaymentModal.tsx",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_features_payment_paymentmodal",
+      "community": 9,
+      "norm_label": "paymentmodal.tsx"
+    },
+    {
+      "label": "PaymentModalProps",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "src_features_payment_paymentmodal_paymentmodalprops",
+      "community": 9,
+      "norm_label": "paymentmodalprops"
+    },
+    {
+      "label": "PaymentModal()",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "src_features_payment_paymentmodal_paymentmodal",
+      "community": 9,
+      "norm_label": "paymentmodal()"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L302",
+      "_origin": "ast",
+      "id": "src_features_payment_paymentmodal_styles",
+      "community": 9,
       "norm_label": "styles"
     },
     {
@@ -299,7 +129,7 @@
       "source_file": "App.test.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "app.test.tsx",
       "id": "app_test"
     },
@@ -309,7 +139,7 @@
       "source_file": "App.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "app.tsx",
       "id": "app_tsx_app"
     },
@@ -319,7 +149,7 @@
       "source_file": "App.tsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "app()",
       "id": "app_app"
     },
@@ -329,7 +159,7 @@
       "source_file": "app.json",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "app.json",
       "id": "app_json_app"
     },
@@ -339,7 +169,7 @@
       "source_file": "app.json",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "expo",
       "id": "app_expo"
     },
@@ -349,7 +179,7 @@
       "source_file": "app.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "name",
       "id": "app_expo_name"
     },
@@ -359,7 +189,7 @@
       "source_file": "app.json",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "slug",
       "id": "app_expo_slug"
     },
@@ -369,7 +199,7 @@
       "source_file": "app.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "version",
       "id": "app_expo_version"
     },
@@ -379,7 +209,7 @@
       "source_file": "app.json",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "orientation",
       "id": "app_expo_orientation"
     },
@@ -389,7 +219,7 @@
       "source_file": "app.json",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "icon",
       "id": "app_expo_icon"
     },
@@ -399,7 +229,7 @@
       "source_file": "app.json",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "userinterfacestyle",
       "id": "app_expo_userinterfacestyle"
     },
@@ -409,7 +239,7 @@
       "source_file": "app.json",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "ios",
       "id": "app_expo_ios"
     },
@@ -419,7 +249,7 @@
       "source_file": "app.json",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "supportstablet",
       "id": "app_ios_supportstablet"
     },
@@ -429,7 +259,7 @@
       "source_file": "app.json",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "android",
       "id": "app_expo_android"
     },
@@ -439,7 +269,7 @@
       "source_file": "app.json",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "adaptiveicon",
       "id": "app_android_adaptiveicon"
     },
@@ -449,7 +279,7 @@
       "source_file": "app.json",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "backgroundcolor",
       "id": "app_adaptiveicon_backgroundcolor"
     },
@@ -459,7 +289,7 @@
       "source_file": "app.json",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "foregroundimage",
       "id": "app_adaptiveicon_foregroundimage"
     },
@@ -469,7 +299,7 @@
       "source_file": "app.json",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "backgroundimage",
       "id": "app_adaptiveicon_backgroundimage"
     },
@@ -479,7 +309,7 @@
       "source_file": "app.json",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "monochromeimage",
       "id": "app_adaptiveicon_monochromeimage"
     },
@@ -489,7 +319,7 @@
       "source_file": "app.json",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "predictivebackgestureenabled",
       "id": "app_android_predictivebackgestureenabled"
     },
@@ -499,7 +329,7 @@
       "source_file": "app.json",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "web",
       "id": "app_expo_web"
     },
@@ -509,7 +339,7 @@
       "source_file": "app.json",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "favicon",
       "id": "app_web_favicon"
     },
@@ -519,7 +349,7 @@
       "source_file": "app.json",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 4,
+      "community": 5,
       "norm_label": "plugins",
       "id": "app_expo_plugins"
     },
@@ -529,7 +359,7 @@
       "source_file": "index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "index.ts",
       "id": "index"
     },
@@ -539,7 +369,7 @@
       "source_file": "jest.setup.js",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 12,
+      "community": 13,
       "norm_label": "jest.setup.js",
       "id": "jest_setup"
     },
@@ -549,7 +379,7 @@
       "source_file": "package.json",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "package.json",
       "id": "package"
     },
@@ -559,7 +389,7 @@
       "source_file": "package.json",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "name",
       "id": "package_name"
     },
@@ -569,7 +399,7 @@
       "source_file": "package.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "version",
       "id": "package_version"
     },
@@ -579,7 +409,7 @@
       "source_file": "package.json",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "main",
       "id": "package_main"
     },
@@ -589,7 +419,7 @@
       "source_file": "package.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "dependencies",
       "id": "package_dependencies"
     },
@@ -599,7 +429,7 @@
       "source_file": "package.json",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "drizzle-orm",
       "id": "package_dependencies_drizzle_orm"
     },
@@ -609,7 +439,7 @@
       "source_file": "package.json",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "expo",
       "id": "package_dependencies_expo"
     },
@@ -619,7 +449,7 @@
       "source_file": "package.json",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "expo-asset",
       "id": "package_dependencies_expo_asset"
     },
@@ -629,7 +459,7 @@
       "source_file": "package.json",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "expo-crypto",
       "id": "package_dependencies_expo_crypto"
     },
@@ -639,7 +469,7 @@
       "source_file": "package.json",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "expo-image-picker",
       "id": "package_dependencies_expo_image_picker"
     },
@@ -649,7 +479,7 @@
       "source_file": "package.json",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "expo-sqlite",
       "id": "package_dependencies_expo_sqlite"
     },
@@ -659,7 +489,7 @@
       "source_file": "package.json",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "expo-status-bar",
       "id": "package_dependencies_expo_status_bar"
     },
@@ -669,7 +499,7 @@
       "source_file": "package.json",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "nepali-date-converter",
       "id": "package_dependencies_nepali_date_converter"
     },
@@ -679,7 +509,7 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "react",
       "id": "package_dependencies_react"
     },
@@ -689,7 +519,7 @@
       "source_file": "package.json",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "react-dom",
       "id": "package_dependencies_react_dom"
     },
@@ -699,7 +529,7 @@
       "source_file": "package.json",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "react-native",
       "id": "package_dependencies_react_native"
     },
@@ -709,7 +539,7 @@
       "source_file": "package.json",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "react-native-svg",
       "id": "package_dependencies_react_native_svg"
     },
@@ -719,7 +549,7 @@
       "source_file": "package.json",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "react-native-web",
       "id": "package_dependencies_react_native_web"
     },
@@ -729,7 +559,7 @@
       "source_file": "package.json",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 13,
+      "community": 6,
       "norm_label": "zod",
       "id": "package_dependencies_zod"
     },
@@ -739,7 +569,7 @@
       "source_file": "package.json",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "devdependencies",
       "id": "package_devdependencies"
     },
@@ -749,7 +579,7 @@
       "source_file": "package.json",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "@testing-library/react-native",
       "id": "package_devdependencies_testing_library_react_native"
     },
@@ -759,7 +589,7 @@
       "source_file": "package.json",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "@types/jest",
       "id": "package_devdependencies_types_jest"
     },
@@ -769,7 +599,7 @@
       "source_file": "package.json",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "@types/react",
       "id": "package_devdependencies_types_react"
     },
@@ -779,7 +609,7 @@
       "source_file": "package.json",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "@types/sqlstring",
       "id": "package_devdependencies_types_sqlstring"
     },
@@ -789,7 +619,7 @@
       "source_file": "package.json",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "drizzle-kit",
       "id": "package_devdependencies_drizzle_kit"
     },
@@ -799,7 +629,7 @@
       "source_file": "package.json",
       "source_location": "L27",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "jest",
       "id": "package_devdependencies_jest"
     },
@@ -809,7 +639,7 @@
       "source_file": "package.json",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "jest-expo",
       "id": "package_devdependencies_jest_expo"
     },
@@ -819,7 +649,7 @@
       "source_file": "package.json",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "react-test-renderer",
       "id": "package_devdependencies_react_test_renderer"
     },
@@ -829,7 +659,7 @@
       "source_file": "package.json",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "typescript",
       "id": "package_devdependencies_typescript"
     },
@@ -839,7 +669,7 @@
       "source_file": "package.json",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "scripts",
       "id": "package_scripts"
     },
@@ -849,7 +679,7 @@
       "source_file": "package.json",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "start",
       "id": "package_scripts_start"
     },
@@ -859,7 +689,7 @@
       "source_file": "package.json",
       "source_location": "L34",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "android",
       "id": "package_scripts_android"
     },
@@ -869,7 +699,7 @@
       "source_file": "package.json",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "ios",
       "id": "package_scripts_ios"
     },
@@ -879,7 +709,7 @@
       "source_file": "package.json",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "web",
       "id": "package_scripts_web"
     },
@@ -889,7 +719,7 @@
       "source_file": "package.json",
       "source_location": "L37",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "test",
       "id": "package_scripts_test"
     },
@@ -899,7 +729,7 @@
       "source_file": "package.json",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "jest",
       "id": "package_jest"
     },
@@ -909,7 +739,7 @@
       "source_file": "package.json",
       "source_location": "L40",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "preset",
       "id": "package_jest_preset"
     },
@@ -919,7 +749,7 @@
       "source_file": "package.json",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "setupfilesafterenv",
       "id": "package_jest_setupfilesafterenv"
     },
@@ -929,7 +759,7 @@
       "source_file": "package.json",
       "source_location": "L45",
       "_origin": "ast",
-      "community": 2,
+      "community": 3,
       "norm_label": "private",
       "id": "package_private"
     },
@@ -939,7 +769,7 @@
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "signaturepad.tsx",
       "id": "src_components_signaturepad"
     },
@@ -949,7 +779,7 @@
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "signaturepadprops",
       "id": "src_components_signaturepad_signaturepadprops"
     },
@@ -959,7 +789,7 @@
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "signaturepad()",
       "id": "src_components_signaturepad_signaturepad"
     },
@@ -969,7 +799,7 @@
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L91",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "styles",
       "id": "src_components_signaturepad_styles"
     },
@@ -979,7 +809,7 @@
       "source_file": "src/constants/colors.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "colors.ts",
       "id": "src_constants_colors"
     },
@@ -989,7 +819,7 @@
       "source_file": "src/constants/colors.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "colors",
       "id": "src_constants_colors_colors"
     },
@@ -1079,7 +909,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L126",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": "websqliteexecuteresult",
       "id": "src_database_connection_websqliteexecuteresult"
     },
@@ -1089,7 +919,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L131",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".constructor()",
       "id": "src_database_connection_websqliteexecuteresult_constructor"
     },
@@ -1099,7 +929,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L137",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getfirstasync()",
       "id": "src_database_connection_websqliteexecuteresult_getfirstasync"
     },
@@ -1109,7 +939,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getallasync()",
       "id": "src_database_connection_websqliteexecuteresult_getallasync"
     },
@@ -1119,7 +949,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L145",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".resetasync()",
       "id": "src_database_connection_websqliteexecuteresult_resetasync"
     },
@@ -1129,7 +959,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getfirstsync()",
       "id": "src_database_connection_websqliteexecuteresult_getfirstsync"
     },
@@ -1139,7 +969,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L151",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".getallsync()",
       "id": "src_database_connection_websqliteexecuteresult_getallsync"
     },
@@ -1149,7 +979,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L155",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".resetsync()",
       "id": "src_database_connection_websqliteexecuteresult_resetsync"
     },
@@ -1159,7 +989,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L158",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".next()",
       "id": "src_database_connection_websqliteexecuteresult_next"
     },
@@ -1169,7 +999,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L163",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".[symbol.iterator]()",
       "id": "src_database_connection_websqliteexecuteresult_symbol_iterator"
     },
@@ -1179,7 +1009,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L167",
       "_origin": "ast",
-      "community": 9,
+      "community": 10,
       "norm_label": ".[symbol.asynciterator]()",
       "id": "src_database_connection_websqliteexecuteresult_symbol_asynciterator"
     },
@@ -1409,7 +1239,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L472",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "getdb()",
       "id": "src_database_connection_getdb"
     },
@@ -1419,7 +1249,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L486",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "getdrizzledb()",
       "id": "src_database_connection_getdrizzledb"
     },
@@ -1429,9 +1259,199 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L494",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "initconnection()",
       "id": "src_database_connection_initconnection"
+    },
+    {
+      "label": "schema.ts",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "schema.ts",
+      "id": "src_database_schema"
+    },
+    {
+      "label": "houses",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "houses",
+      "id": "src_database_schema_houses"
+    },
+    {
+      "label": "rooms",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "rooms",
+      "id": "src_database_schema_rooms"
+    },
+    {
+      "label": "roomPostings",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "roompostings",
+      "id": "src_database_schema_roompostings"
+    },
+    {
+      "label": "tenants",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "tenants",
+      "id": "src_database_schema_tenants"
+    },
+    {
+      "label": "tenancies",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L41",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "tenancies",
+      "id": "src_database_schema_tenancies"
+    },
+    {
+      "label": "checkoutSettlements",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L53",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "checkoutsettlements",
+      "id": "src_database_schema_checkoutsettlements"
+    },
+    {
+      "label": "tenancyAgreements",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L67",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "tenancyagreements",
+      "id": "src_database_schema_tenancyagreements"
+    },
+    {
+      "label": "invoices",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L84",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "invoices",
+      "id": "src_database_schema_invoices"
+    },
+    {
+      "label": "meterReadings",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L98",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "meterreadings",
+      "id": "src_database_schema_meterreadings"
+    },
+    {
+      "label": "payments",
+      "file_type": "code",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L107",
+      "_origin": "ast",
+      "community": 11,
+      "norm_label": "payments",
+      "id": "src_database_schema_payments"
+    },
+    {
+      "label": "AgreementController.ts",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "agreementcontroller.ts",
+      "id": "src_features_agreement_agreementcontroller"
+    },
+    {
+      "label": "AgreementControllerArgs",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "agreementcontrollerargs",
+      "id": "src_features_agreement_agreementcontroller_agreementcontrollerargs"
+    },
+    {
+      "label": "useAgreementController()",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "useagreementcontroller()",
+      "id": "src_features_agreement_agreementcontroller_useagreementcontroller"
+    },
+    {
+      "label": "AgreementModel.ts",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "agreementmodel.ts",
+      "id": "src_features_agreement_agreementmodel"
+    },
+    {
+      "label": "Agreement",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "agreement",
+      "id": "src_features_agreement_agreementmodel_agreement"
+    },
+    {
+      "label": "initAgreementSchema()",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "initagreementschema()",
+      "id": "src_features_agreement_agreementmodel_initagreementschema"
+    },
+    {
+      "label": "saveAgreement()",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L50",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "saveagreement()",
+      "id": "src_features_agreement_agreementmodel_saveagreement"
+    },
+    {
+      "label": "getAgreementForTenancy()",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L73",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "getagreementfortenancy()",
+      "id": "src_features_agreement_agreementmodel_getagreementfortenancy"
     },
     {
       "label": "CheckoutController.ts",
@@ -1439,7 +1459,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "checkoutcontroller.ts",
       "id": "src_features_checkout_checkoutcontroller"
     },
@@ -1449,7 +1469,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "getsafenepalidate()",
       "id": "src_features_checkout_checkoutcontroller_getsafenepalidate"
     },
@@ -1459,7 +1479,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "getcycledates()",
       "id": "src_features_checkout_checkoutcontroller_getcycledates"
     },
@@ -1469,7 +1489,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L73",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "usecheckoutcontroller()",
       "id": "src_features_checkout_checkoutcontroller_usecheckoutcontroller"
     },
@@ -1519,7 +1539,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "checkoutmodel.ts",
       "id": "src_features_checkout_checkoutmodel"
     },
@@ -1529,7 +1549,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "checkoutsettlement",
       "id": "src_features_checkout_checkoutmodel_checkoutsettlement"
     },
@@ -1539,7 +1559,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "initcheckoutschema()",
       "id": "src_features_checkout_checkoutmodel_initcheckoutschema"
     },
@@ -1549,7 +1569,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "addcheckoutsettlement()",
       "id": "src_features_checkout_checkoutmodel_addcheckoutsettlement"
     },
@@ -1559,7 +1579,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "getcheckoutsettlement()",
       "id": "src_features_checkout_checkoutmodel_getcheckoutsettlement"
     },
@@ -1569,7 +1589,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "terminatetenancy()",
       "id": "src_features_checkout_checkoutmodel_terminatetenancy"
     },
@@ -1579,7 +1599,7 @@
       "source_file": "src/features/invoice/InvoiceController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "invoicecontroller.ts",
       "id": "src_features_invoice_invoicecontroller"
     },
@@ -1589,7 +1609,7 @@
       "source_file": "src/features/invoice/InvoiceController.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "useinvoicecontroller()",
       "id": "src_features_invoice_invoicecontroller_useinvoicecontroller"
     },
@@ -1599,7 +1619,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "invoicemodel.ts",
       "id": "src_features_invoice_invoicemodel"
     },
@@ -1609,7 +1629,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "invoice",
       "id": "src_features_invoice_invoicemodel_invoice"
     },
@@ -1619,7 +1639,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "meterreading",
       "id": "src_features_invoice_invoicemodel_meterreading"
     },
@@ -1629,7 +1649,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "initinvoiceschema()",
       "id": "src_features_invoice_invoicemodel_initinvoiceschema"
     },
@@ -1639,7 +1659,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "getinvoicesfortenancy()",
       "id": "src_features_invoice_invoicemodel_getinvoicesfortenancy"
     },
@@ -1649,7 +1669,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L82",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "getlastmeterreading()",
       "id": "src_features_invoice_invoicemodel_getlastmeterreading"
     },
@@ -1659,7 +1679,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L104",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "addmeterreading()",
       "id": "src_features_invoice_invoicemodel_addmeterreading"
     },
@@ -1669,7 +1689,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L117",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "addinvoice()",
       "id": "src_features_invoice_invoicemodel_addinvoice"
     },
@@ -1679,49 +1699,9 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L135",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "calculatearrearsfortenancy()",
       "id": "src_features_invoice_invoicemodel_calculatearrearsfortenancy"
-    },
-    {
-      "label": "InvoiceSection.tsx",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "invoicesection.tsx",
-      "id": "src_features_invoice_invoicesection"
-    },
-    {
-      "label": "InvoiceSectionProps",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L18",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "invoicesectionprops",
-      "id": "src_features_invoice_invoicesection_invoicesectionprops"
-    },
-    {
-      "label": "InvoiceSection()",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "invoicesection()",
-      "id": "src_features_invoice_invoicesection_invoicesection"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L288",
-      "_origin": "ast",
-      "community": 0,
-      "norm_label": "styles",
-      "id": "src_features_invoice_invoicesection_styles"
     },
     {
       "label": "PaymentController.ts",
@@ -1729,7 +1709,7 @@
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "paymentcontroller.ts",
       "id": "src_features_payment_paymentcontroller"
     },
@@ -1739,49 +1719,9 @@
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "usepaymentcontroller()",
       "id": "src_features_payment_paymentcontroller_usepaymentcontroller"
-    },
-    {
-      "label": "PaymentModal.tsx",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "paymentmodal.tsx",
-      "id": "src_features_payment_paymentmodal"
-    },
-    {
-      "label": "PaymentModalProps",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L18",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "paymentmodalprops",
-      "id": "src_features_payment_paymentmodal_paymentmodalprops"
-    },
-    {
-      "label": "PaymentModal()",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L27",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "paymentmodal()",
-      "id": "src_features_payment_paymentmodal_paymentmodal"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L261",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "styles",
-      "id": "src_features_payment_paymentmodal_styles"
     },
     {
       "label": "PaymentModel.ts",
@@ -1789,7 +1729,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "paymentmodel.ts",
       "id": "src_features_payment_paymentmodel"
     },
@@ -1799,7 +1739,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "payment",
       "id": "src_features_payment_paymentmodel_payment"
     },
@@ -1809,7 +1749,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "initpaymentschema()",
       "id": "src_features_payment_paymentmodel_initpaymentschema"
     },
@@ -1819,7 +1759,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "addpayment()",
       "id": "src_features_payment_paymentmodel_addpayment"
     },
@@ -1829,7 +1769,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "getpaymentsforinvoice()",
       "id": "src_features_payment_paymentmodel_getpaymentsforinvoice"
     },
@@ -1839,7 +1779,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "gettotalpaidforinvoice()",
       "id": "src_features_payment_paymentmodel_gettotalpaidforinvoice"
     },
@@ -1849,7 +1789,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 3,
+      "community": 11,
       "norm_label": "syncinvoicestatus()",
       "id": "src_features_payment_paymentmodel_syncinvoicestatus"
     },
@@ -1859,7 +1799,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "marketplacefeed.tsx",
       "id": "src_features_postings_marketplacefeed"
     },
@@ -1869,7 +1809,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "marketplacefeed()",
       "id": "src_features_postings_marketplacefeed_marketplacefeed"
     },
@@ -1879,7 +1819,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L146",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "styles",
       "id": "src_features_postings_marketplacefeed_styles"
     },
@@ -1889,7 +1829,7 @@
       "source_file": "src/features/postings/PostingController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "postingcontroller.ts",
       "id": "src_features_postings_postingcontroller"
     },
@@ -1899,7 +1839,7 @@
       "source_file": "src/features/postings/PostingController.ts",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "uselistingcontroller()",
       "id": "src_features_postings_postingcontroller_uselistingcontroller"
     },
@@ -1909,7 +1849,7 @@
       "source_file": "src/features/postings/PostingController.ts",
       "source_location": "L164",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "usemarketplacecontroller()",
       "id": "src_features_postings_postingcontroller_usemarketplacecontroller"
     },
@@ -1919,7 +1859,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "postingmodel.ts",
       "id": "src_features_postings_postingmodel"
     },
@@ -1929,7 +1869,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "roomposting",
       "id": "src_features_postings_postingmodel_roomposting"
     },
@@ -1939,7 +1879,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "publicpostingitem",
       "id": "src_features_postings_postingmodel_publicpostingitem"
     },
@@ -1949,7 +1889,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "initpostingschema()",
       "id": "src_features_postings_postingmodel_initpostingschema"
     },
@@ -1959,7 +1899,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "addroomposting()",
       "id": "src_features_postings_postingmodel_addroomposting"
     },
@@ -1969,7 +1909,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L65",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "updateroomposting()",
       "id": "src_features_postings_postingmodel_updateroomposting"
     },
@@ -1979,7 +1919,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L79",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "deleteroomposting()",
       "id": "src_features_postings_postingmodel_deleteroomposting"
     },
@@ -1989,7 +1929,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L84",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "getpostingforroom()",
       "id": "src_features_postings_postingmodel_getpostingforroom"
     },
@@ -1999,7 +1939,7 @@
       "source_file": "src/features/postings/PostingModel.ts",
       "source_location": "L106",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "getallpublicpostings()",
       "id": "src_features_postings_postingmodel_getallpublicpostings"
     },
@@ -2009,7 +1949,7 @@
       "source_file": "src/features/property/PropertyController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "propertycontroller.ts",
       "id": "src_features_property_propertycontroller"
     },
@@ -2019,7 +1959,7 @@
       "source_file": "src/features/property/PropertyController.ts",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "usepropertycontroller()",
       "id": "src_features_property_propertycontroller_usepropertycontroller"
     },
@@ -2029,7 +1969,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "propertymodel.ts",
       "id": "src_features_property_propertymodel"
     },
@@ -2039,7 +1979,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "house",
       "id": "src_features_property_propertymodel_house"
     },
@@ -2049,7 +1989,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "room",
       "id": "src_features_property_propertymodel_room"
     },
@@ -2059,7 +1999,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "initpropertyschema()",
       "id": "src_features_property_propertymodel_initpropertyschema"
     },
@@ -2069,7 +2009,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "gethouses()",
       "id": "src_features_property_propertymodel_gethouses"
     },
@@ -2079,7 +2019,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "addhouse()",
       "id": "src_features_property_propertymodel_addhouse"
     },
@@ -2089,7 +2029,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L70",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "getroomsforhouse()",
       "id": "src_features_property_propertymodel_getroomsforhouse"
     },
@@ -2099,7 +2039,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L83",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "addroom()",
       "id": "src_features_property_propertymodel_addroom"
     },
@@ -2109,7 +2049,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L95",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "updateroomstatus()",
       "id": "src_features_property_propertymodel_updateroomstatus"
     },
@@ -2119,7 +2059,7 @@
       "source_file": "src/features/property/PropertyModel.ts",
       "source_location": "L100",
       "_origin": "ast",
-      "community": 5,
+      "community": 8,
       "norm_label": "deleteroom()",
       "id": "src_features_property_propertymodel_deleteroom"
     },
@@ -2129,7 +2069,7 @@
       "source_file": "src/features/property/PropertyScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "propertyscreen.tsx",
       "id": "src_features_property_propertyscreen"
     },
@@ -2139,7 +2079,7 @@
       "source_file": "src/features/property/PropertyScreen.tsx",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "propertyscreen()",
       "id": "src_features_property_propertyscreen_propertyscreen"
     },
@@ -2149,9 +2089,29 @@
       "source_file": "src/features/property/PropertyScreen.tsx",
       "source_location": "L345",
       "_origin": "ast",
-      "community": 10,
+      "community": 0,
       "norm_label": "styles",
       "id": "src_features_property_propertyscreen_styles"
+    },
+    {
+      "label": "TenantController.ts",
+      "file_type": "code",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "tenantcontroller.ts",
+      "id": "src_features_tenant_tenantcontroller"
+    },
+    {
+      "label": "useTenantController()",
+      "file_type": "code",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "usetenantcontroller()",
+      "id": "src_features_tenant_tenantcontroller_usetenantcontroller"
     },
     {
       "label": "TenantModel.ts",
@@ -2159,7 +2119,7 @@
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "tenantmodel.ts",
       "id": "src_features_tenant_tenantmodel"
     },
@@ -2169,7 +2129,7 @@
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "tenant",
       "id": "src_features_tenant_tenantmodel_tenant"
     },
@@ -2179,7 +2139,7 @@
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "tenancy",
       "id": "src_features_tenant_tenantmodel_tenancy"
     },
@@ -2189,7 +2149,7 @@
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "inittenantschema()",
       "id": "src_features_tenant_tenantmodel_inittenantschema"
     },
@@ -2199,7 +2159,7 @@
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "addtenant()",
       "id": "src_features_tenant_tenantmodel_addtenant"
     },
@@ -2209,7 +2169,7 @@
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L71",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "addtenancy()",
       "id": "src_features_tenant_tenantmodel_addtenancy"
     },
@@ -2219,9 +2179,49 @@
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L89",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "getactivetenancyforroom()",
       "id": "src_features_tenant_tenantmodel_getactivetenancyforroom"
+    },
+    {
+      "label": "TenantScreen.tsx",
+      "file_type": "code",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "tenantscreen.tsx",
+      "id": "src_features_tenant_tenantscreen"
+    },
+    {
+      "label": "TenantScreenProps",
+      "file_type": "code",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "tenantscreenprops",
+      "id": "src_features_tenant_tenantscreen_tenantscreenprops"
+    },
+    {
+      "label": "TenantScreen()",
+      "file_type": "code",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "tenantscreen()",
+      "id": "src_features_tenant_tenantscreen_tenantscreen"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L466",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "styles",
+      "id": "src_features_tenant_tenantscreen_styles"
     },
     {
       "label": "nepali-date-converter.d.ts",
@@ -2229,7 +2229,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "nepali-date-converter.d.ts",
       "id": "src_types_nepali_date_converter_d"
     },
@@ -2239,7 +2239,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "nepali-date-converter",
       "id": "src_types_nepali_date_converter_d_nepali_date_converter"
     },
@@ -2249,7 +2249,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": "nepalidate",
       "id": "src_types_nepali_date_converter_d_nepalidate"
     },
@@ -2259,7 +2259,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".constructor()",
       "id": "src_types_nepali_date_converter_d_nepalidate_constructor"
     },
@@ -2269,7 +2269,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".getyear()",
       "id": "src_types_nepali_date_converter_d_nepalidate_getyear"
     },
@@ -2279,7 +2279,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".getmonth()",
       "id": "src_types_nepali_date_converter_d_nepalidate_getmonth"
     },
@@ -2289,7 +2289,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".getdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_getdate"
     },
@@ -2299,7 +2299,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".getday()",
       "id": "src_types_nepali_date_converter_d_nepalidate_getday"
     },
@@ -2309,7 +2309,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".setyear()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setyear"
     },
@@ -2319,7 +2319,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".setmonth()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setmonth"
     },
@@ -2329,7 +2329,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".setdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setdate"
     },
@@ -2339,7 +2339,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "norm_label": ".format()",
       "id": "src_types_nepali_date_converter_d_nepalidate_format"
     },
@@ -2349,7 +2349,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".tojsdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_tojsdate"
     },
@@ -2359,7 +2359,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 0,
+      "community": 2,
       "norm_label": ".parse()",
       "id": "src_types_nepali_date_converter_d_nepalidate_parse"
     },
@@ -2369,7 +2369,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "norm_label": "tsconfig.json",
       "id": "tsconfig"
     },
@@ -2379,7 +2379,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "norm_label": "extends",
       "id": "tsconfig_extends"
     },
@@ -2389,7 +2389,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "norm_label": "compileroptions",
       "id": "tsconfig_compileroptions"
     },
@@ -2399,7 +2399,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "norm_label": "strict",
       "id": "tsconfig_compileroptions_strict"
     },
@@ -2409,7 +2409,7 @@
       "source_file": "tsconfig.json",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "norm_label": "types",
       "id": "tsconfig_compileroptions_types"
     },
@@ -2419,533 +2419,17 @@
       "source_file": "tsconfig.json",
       "source_location": "L7",
       "_origin": "ast",
-      "community": 11,
+      "community": 12,
       "norm_label": "include",
       "id": "tsconfig_include"
     }
   ],
   "links": [
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/connection.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_database_connection",
-      "target": "src_database_schema"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_checkoutsettlements",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_houses",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L84",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_invoices",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L98",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_meterreadings",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L107",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_payments",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_roompostings",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_rooms",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_tenancies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L67",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_tenancyagreements",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/database/schema.ts",
-      "source_location": "L31",
-      "weight": 1.0,
-      "source": "src_database_schema",
-      "target": "src_database_schema_tenants",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodel",
-      "target": "src_database_schema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/checkout/CheckoutModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_checkout_checkoutmodel",
-      "target": "src_database_schema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicemodel",
-      "target": "src_database_schema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodel",
-      "target": "src_database_schema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/postings/PostingModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_postings_postingmodel",
-      "target": "src_database_schema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/property/PropertyModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_property_propertymodel",
-      "target": "src_database_schema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantcontroller",
-      "target": "src_database_schema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantmodel",
-      "target": "src_database_schema"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/postings/PostingModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_postings_postingmodel",
-      "target": "src_database_schema_houses"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/property/PropertyModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_property_propertymodel",
-      "target": "src_database_schema_houses"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/checkout/CheckoutModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_checkout_checkoutmodel",
-      "target": "src_database_schema_rooms"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/postings/PostingModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_postings_postingmodel",
-      "target": "src_database_schema_rooms"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/property/PropertyModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_property_propertymodel",
-      "target": "src_database_schema_rooms"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantcontroller",
-      "target": "src_database_schema_rooms",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantmodel",
-      "target": "src_database_schema_rooms"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/postings/PostingModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_postings_postingmodel",
-      "target": "src_database_schema_roompostings"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantmodel",
-      "target": "src_database_schema_tenants"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/checkout/CheckoutModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_checkout_checkoutmodel",
-      "target": "src_database_schema_tenancies"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantmodel",
-      "target": "src_database_schema_tenancies"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/checkout/CheckoutModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_checkout_checkoutmodel",
-      "target": "src_database_schema_checkoutsettlements"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodel",
-      "target": "src_database_schema_tenancyagreements",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicemodel",
-      "target": "src_database_schema_invoices"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodel",
-      "target": "src_database_schema_invoices"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicemodel",
-      "target": "src_database_schema_meterreadings"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicemodel",
-      "target": "src_database_schema_payments"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModel.ts",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodel",
-      "target": "src_database_schema_payments"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller",
-      "target": "src_features_agreement_agreementcontroller_agreementcontrollerargs",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller",
-      "target": "src_features_agreement_agreementcontroller_useagreementcontroller",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller",
-      "target": "src_features_agreement_agreementmodel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller",
-      "target": "src_features_agreement_agreementmodel_agreement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller",
-      "target": "src_features_agreement_agreementmodel_getagreementfortenancy",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller",
-      "target": "src_features_agreement_agreementmodel_initagreementschema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller",
-      "target": "src_features_agreement_agreementmodel_saveagreement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodal",
-      "target": "src_features_agreement_agreementcontroller",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/agreement/AgreementController.ts",
-      "source_location": "L129",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementcontroller_useagreementcontroller",
-      "target": "src_features_agreement_agreementmodel_saveagreement"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodal",
-      "target": "src_features_agreement_agreementcontroller_useagreementcontroller",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L64",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodal_agreementmodal",
-      "target": "src_features_agreement_agreementcontroller_useagreementcontroller"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L31",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "src_features_agreement_agreementmodal",
       "target": "src_features_agreement_agreementmodal_agreementmodal",
@@ -2955,7 +2439,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "source": "src_features_agreement_agreementmodal",
       "target": "src_features_agreement_agreementmodal_agreementmodalprops",
@@ -2965,7 +2449,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L399",
+      "source_location": "L436",
       "weight": 1.0,
       "source": "src_features_agreement_agreementmodal",
       "target": "src_features_agreement_agreementmodal_styles",
@@ -2978,165 +2462,90 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L20",
       "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_agreement_agreementmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodel",
-      "target": "src_features_agreement_agreementmodel_agreement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L73",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodel",
-      "target": "src_features_agreement_agreementmodel_getagreementfortenancy",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodel",
-      "target": "src_features_agreement_agreementmodel_initagreementschema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModel.ts",
-      "source_location": "L50",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodel",
-      "target": "src_features_agreement_agreementmodel_saveagreement",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantcontroller",
-      "target": "src_features_agreement_agreementmodel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantcontroller",
-      "target": "src_features_agreement_agreementmodel_initagreementschema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantcontroller",
-      "target": "src_features_agreement_agreementmodel_getagreementfortenancy",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantController.ts",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantcontroller",
-      "target": "src_features_tenant_tenantcontroller_usetenantcontroller",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_tenant_tenantcontroller",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_tenant_tenantcontroller_usetenantcontroller",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L58",
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_agreement_agreementmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L26",
       "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen_tenantscreen",
-      "target": "src_features_tenant_tenantcontroller_usetenantcontroller"
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicesection_invoicesection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicesection_invoicesectionprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L330",
+      "weight": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicesection_styles",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_payment_paymentmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L17",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "src_features_property_propertyscreen",
-      "target": "src_features_tenant_tenantscreen"
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_invoice_invoicesection"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L466",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L28",
       "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_tenant_tenantscreen_styles",
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentmodal_paymentmodal",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L29",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L19",
       "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_tenant_tenantscreen_tenantscreen",
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentmodal_paymentmodalprops",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L22",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L302",
       "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_tenant_tenantscreen_tenantscreenprops",
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentmodal_styles",
       "confidence_score": 1.0
     },
     {
@@ -3593,6 +3002,17 @@
       "target": "package_dependencies_zod"
     },
     {
+      "relation": "references",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L60",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantscreen_tenantscreen",
+      "target": "package_dependencies_react"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
@@ -3805,17 +3225,6 @@
       "target": "src_constants_colors_colors"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_components_signaturepad"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/constants/colors.ts",
@@ -3840,28 +3249,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L15",
       "weight": 1.0,
@@ -3878,6 +3265,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_features_property_propertyscreen",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
       "target": "src_constants_colors"
     },
     {
@@ -3895,28 +3293,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L15",
       "weight": 1.0,
@@ -3933,6 +3309,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_features_property_propertyscreen",
+      "target": "src_constants_colors_colors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
       "target": "src_constants_colors_colors"
     },
     {
@@ -4089,6 +3476,39 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_database_connection"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_database_connection"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L6",
       "weight": 1.0,
@@ -4193,6 +3613,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_features_property_propertymodel",
+      "target": "src_database_connection"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
       "target": "src_database_connection"
     },
     {
@@ -4842,6 +4273,28 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_database_connection_getdb"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_features_agreement_agreementmodel_initagreementschema",
+      "target": "src_database_connection_getdb"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L1",
       "weight": 1.0,
@@ -4969,6 +4422,39 @@
       "weight": 1.0,
       "source": "src_features_tenant_tenantmodel_inittenantschema",
       "target": "src_database_connection_getdb"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_database_connection_getdrizzledb"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "src_features_agreement_agreementmodel_getagreementfortenancy",
+      "target": "src_database_connection_getdrizzledb"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "src_features_agreement_agreementmodel_saveagreement",
+      "target": "src_database_connection_getdrizzledb"
     },
     {
       "relation": "imports",
@@ -5282,6 +4768,17 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_database_connection_getdrizzledb"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/features/tenant/TenantModel.ts",
       "source_location": "L1",
       "weight": 1.0,
@@ -5321,6 +4818,17 @@
       "weight": 1.0,
       "source": "src_features_tenant_tenantmodel_getactivetenancyforroom",
       "target": "src_database_connection_getdrizzledb"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_database_connection_initconnection"
     },
     {
       "relation": "imports",
@@ -5387,6 +4895,562 @@
       "confidence_score": 1.0,
       "source": "src_features_property_propertycontroller",
       "target": "src_database_connection_initconnection"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_database_connection_initconnection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_checkoutsettlements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_houses"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L84",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_invoices"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L98",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_meterreadings"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L107",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_payments"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_roompostings"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_rooms"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_tenancies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_tenancyagreements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/schema.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_database_schema",
+      "target": "src_database_schema_tenants"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/checkout/CheckoutModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_checkout_checkoutmodel",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicemodel",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodel",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/postings/PostingModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_postings_postingmodel",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_property_propertymodel",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantmodel",
+      "target": "src_database_schema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/postings/PostingModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_postings_postingmodel",
+      "target": "src_database_schema_houses"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_property_propertymodel",
+      "target": "src_database_schema_houses"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/checkout/CheckoutModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_checkout_checkoutmodel",
+      "target": "src_database_schema_rooms"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/postings/PostingModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_postings_postingmodel",
+      "target": "src_database_schema_rooms"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_property_propertymodel",
+      "target": "src_database_schema_rooms"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_database_schema_rooms"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantmodel",
+      "target": "src_database_schema_rooms"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/postings/PostingModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_postings_postingmodel",
+      "target": "src_database_schema_roompostings"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantmodel",
+      "target": "src_database_schema_tenants"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/checkout/CheckoutModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_checkout_checkoutmodel",
+      "target": "src_database_schema_tenancies"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantmodel",
+      "target": "src_database_schema_tenancies"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/checkout/CheckoutModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_checkout_checkoutmodel",
+      "target": "src_database_schema_checkoutsettlements"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_database_schema_tenancyagreements"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicemodel",
+      "target": "src_database_schema_invoices"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodel",
+      "target": "src_database_schema_invoices"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicemodel",
+      "target": "src_database_schema_meterreadings"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicemodel",
+      "target": "src_database_schema_payments"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodel",
+      "target": "src_database_schema_payments"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_features_agreement_agreementcontroller_agreementcontrollerargs"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_features_agreement_agreementcontroller_useagreementcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_features_agreement_agreementmodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_features_agreement_agreementmodel_agreement"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_features_agreement_agreementmodel_getagreementfortenancy"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_features_agreement_agreementmodel_initagreementschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementcontroller",
+      "target": "src_features_agreement_agreementmodel_saveagreement"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/agreement/AgreementController.ts",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "src_features_agreement_agreementcontroller_useagreementcontroller",
+      "target": "src_features_agreement_agreementmodel_saveagreement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_features_agreement_agreementmodel_agreement"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_features_agreement_agreementmodel_getagreementfortenancy"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_features_agreement_agreementmodel_initagreementschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModel.ts",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodel",
+      "target": "src_features_agreement_agreementmodel_saveagreement"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_agreement_agreementmodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_agreement_agreementmodel_initagreementschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_agreement_agreementmodel_getagreementfortenancy"
     },
     {
       "relation": "contains",
@@ -5691,6 +5755,17 @@
       "target": "src_features_checkout_checkoutmodal_styles"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_checkout_checkoutmodal"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/checkout/CheckoutModel.ts",
@@ -5850,17 +5925,6 @@
       "target": "src_features_invoice_invoicemodel_meterreading"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicecontroller"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -5936,28 +6000,6 @@
       "weight": 1.0,
       "source": "src_features_invoice_invoicecontroller_useinvoicecontroller",
       "target": "src_types_nepali_date_converter_d_nepalidate_getyear"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicecontroller_useinvoicecontroller"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L51",
-      "weight": 1.0,
-      "source": "src_features_invoice_invoicesection_invoicesection",
-      "target": "src_features_invoice_invoicecontroller_useinvoicecontroller"
     },
     {
       "relation": "contains",
@@ -6042,47 +6084,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicesection_invoicesection"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicesection_invoicesectionprops"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L288",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicesection_styles"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_payment_paymentmodal"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L15",
       "weight": 1.0,
@@ -6157,17 +6158,6 @@
       "target": "src_features_payment_paymentmodel_payment"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentcontroller"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6199,58 +6189,6 @@
       "weight": 1.0,
       "source": "src_features_payment_paymentcontroller_usepaymentcontroller",
       "target": "src_features_payment_paymentmodel_gettotalpaidforinvoice"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentcontroller_usepaymentcontroller"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L54",
-      "weight": 1.0,
-      "source": "src_features_payment_paymentmodal_paymentmodal",
-      "target": "src_features_payment_paymentcontroller_usepaymentcontroller"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentmodal_paymentmodal"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentmodal_paymentmodalprops"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L261",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentmodal_styles"
     },
     {
       "relation": "contains",
@@ -6518,6 +6456,17 @@
       "target": "src_features_postings_postingmodel_updateroomposting"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_postings_postingcontroller"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6549,6 +6498,28 @@
       "weight": 1.0,
       "source": "src_features_postings_postingcontroller_uselistingcontroller",
       "target": "src_features_postings_postingmodel_updateroomposting"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_postings_postingcontroller_uselistingcontroller"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantscreen_tenantscreen",
+      "target": "src_features_postings_postingcontroller_uselistingcontroller"
     },
     {
       "relation": "calls",
@@ -6960,6 +6931,170 @@
       "target": "src_features_property_propertyscreen_styles"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_features_tenant_tenantscreen"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantcontroller_usetenantcontroller"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantmodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantmodel_addtenancy"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantmodel_addtenant"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantmodel_getactivetenancyforroom"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantmodel_inittenantschema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantmodel_tenancy"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantcontroller",
+      "target": "src_features_tenant_tenantmodel_tenant"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_tenant_tenantcontroller"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L199",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantcontroller_usetenantcontroller",
+      "target": "src_features_tenant_tenantmodel_addtenancy"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantcontroller_usetenantcontroller",
+      "target": "src_features_tenant_tenantmodel_addtenant"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantController.ts",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantcontroller_usetenantcontroller",
+      "target": "src_types_nepali_date_converter_d_nepalidate_tojsdate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_tenant_tenantcontroller_usetenantcontroller"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantscreen_tenantscreen",
+      "target": "src_features_tenant_tenantcontroller_usetenantcontroller"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/tenant/TenantModel.ts",
@@ -7018,6 +7153,47 @@
       "confidence_score": 1.0,
       "source": "src_features_tenant_tenantmodel",
       "target": "src_features_tenant_tenantmodel_tenant"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L466",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_tenant_tenantscreen_styles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_tenant_tenantscreen_tenantscreen"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_tenant_tenantscreen_tenantscreenprops"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L119",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantscreen_tenantscreen",
+      "target": "src_types_nepali_date_converter_d_nepalidate_format"
     },
     {
       "relation": "contains",
@@ -7201,5 +7377,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "17a589c5939af12a0a070cf1f7d1687f84cceb56"
+  "built_at_commit": "d6f9e5184a68de439d135608d46023c35489b0ed"
 }

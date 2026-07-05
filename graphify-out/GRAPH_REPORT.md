@@ -1,27 +1,36 @@
-# Graph Report - .  (2026-07-06)
+# Graph Report - GharKoHisaab  (2026-07-06)
 
 ## Corpus Check
-- Corpus is ~38,733 words - fits in a single context window. You may not need a graph.
+- 39 files · ~39,272 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 242 nodes · 486 edges · 14 communities (13 shown, 1 thin omitted)
+- 270 nodes · 509 edges · 18 communities (14 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
+## Graph Freshness
+- Built from commit: `d6f9e518`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
+
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Community 0|Community 0]]
-- [[_COMMUNITY_Community 1|Community 1]]
-- [[_COMMUNITY_Community 2|Community 2]]
-- [[_COMMUNITY_Community 3|Community 3]]
-- [[_COMMUNITY_Community 4|Community 4]]
-- [[_COMMUNITY_Community 5|Community 5]]
-- [[_COMMUNITY_Community 6|Community 6]]
-- [[_COMMUNITY_Community 7|Community 7]]
-- [[_COMMUNITY_Community 8|Community 8]]
-- [[_COMMUNITY_Community 9|Community 9]]
-- [[_COMMUNITY_Community 10|Community 10]]
-- [[_COMMUNITY_Community 11|Community 11]]
-- [[_COMMUNITY_Community 12|Community 12]]
+- [[_COMMUNITY_Database Schema Definitions|Database Schema Definitions]]
+- [[_COMMUNITY_SQLite Database Connection|SQLite Database Connection]]
+- [[_COMMUNITY_Production Dependencies|Production Dependencies]]
+- [[_COMMUNITY_UI Components & Invoice View|UI Components & Invoice View]]
+- [[_COMMUNITY_Expo Mobile Config|Expo Mobile Config]]
+- [[_COMMUNITY_Property Management & Dashboard|Property Management & Dashboard]]
+- [[_COMMUNITY_Marketplace & Room Listings|Marketplace & Room Listings]]
+- [[_COMMUNITY_Tenant Onboarding Features|Tenant Onboarding Features]]
+- [[_COMMUNITY_Bikram Sambat Date Converters|Bikram Sambat Date Converters]]
+- [[_COMMUNITY_Web SQL Query Driver|Web SQL Query Driver]]
+- [[_COMMUNITY_Developer Tooling & Testing|Developer Tooling & Testing]]
+- [[_COMMUNITY_TypeScript Configuration|TypeScript Configuration]]
+- [[_COMMUNITY_Jest Test Setup|Jest Test Setup]]
+- [[_COMMUNITY_AGENTS|AGENTS.md]]
+- [[_COMMUNITY_graphify|graphify.md]]
+- [[_COMMUNITY_graphify|graphify.md]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `getDrizzleDB()` - 38 edges
@@ -50,75 +59,75 @@
 ## Import Cycles
 - None detected.
 
-## Communities (14 total, 1 thin omitted)
+## Communities (18 total, 4 thin omitted)
 
-### Community 0 - "Community 0"
-Cohesion: 0.09
-Nodes (19): App(), SignaturePadProps, styles, COLORS, CheckoutModal(), CheckoutModalProps, styles, InvoiceSection() (+11 more)
+### Community 0 - "Database Schema Definitions"
+Cohesion: 0.13
+Nodes (16): SignaturePadProps, styles, COLORS, AgreementModalProps, styles, CheckoutModal(), CheckoutModalProps, styles (+8 more)
 
-### Community 1 - "Community 1"
+### Community 1 - "SQLite Database Connection"
 Cohesion: 0.13
 Nodes (11): getTable(), mapToDrizzleFormat(), parseDeleteParams(), parseInsertParams(), parseSelectColumns(), parseSelectParams(), parseUpdateParams(), saveTable() (+3 more)
 
-### Community 2 - "Community 2"
-Cohesion: 0.13
-Nodes (16): getCycleDates(), getSafeNepaliDate(), useCheckoutController(), addCheckoutSettlement(), terminateTenancy(), useInvoiceController(), addInvoice(), addMeterReading() (+8 more)
+### Community 2 - "Production Dependencies"
+Cohesion: 0.12
+Nodes (17): initConnection(), getCycleDates(), getSafeNepaliDate(), useCheckoutController(), addCheckoutSettlement(), terminateTenancy(), useInvoiceController(), addInvoice() (+9 more)
 
-### Community 3 - "Community 3"
+### Community 3 - "UI Components & Invoice View"
 Cohesion: 0.08
 Nodes (23): devDependencies, drizzle-kit, jest, jest-expo, react-test-renderer, @testing-library/react-native, @types/jest, @types/react (+15 more)
 
-### Community 4 - "Community 4"
-Cohesion: 0.17
-Nodes (17): checkoutSettlements, houses, meterReadings, roomPostings, rooms, tenancies, tenants, CheckoutSettlement (+9 more)
+### Community 4 - "Expo Mobile Config"
+Cohesion: 0.12
+Nodes (26): getDB(), checkoutSettlements, invoices, meterReadings, payments, rooms, tenancies, tenancyAgreements (+18 more)
 
-### Community 5 - "Community 5"
+### Community 5 - "Property Management & Dashboard"
 Cohesion: 0.10
 Nodes (19): backgroundColor, backgroundImage, foregroundImage, monochromeImage, adaptiveIcon, predictiveBackGestureEnabled, expo, android (+11 more)
 
-### Community 6 - "Community 6"
+### Community 6 - "Marketplace & Room Listings"
 Cohesion: 0.12
 Nodes (16): dependencies, drizzle-orm, expo, expo-asset, expo-crypto, expo-image-picker, expo-sqlite, expo-status-bar (+8 more)
 
-### Community 7 - "Community 7"
-Cohesion: 0.32
-Nodes (12): getDB(), initConnection(), useListingController(), useMarketplaceController(), addRoomPosting(), deleteRoomPosting(), getAllPublicPostings(), getPostingForRoom() (+4 more)
+### Community 7 - "Tenant Onboarding Features"
+Cohesion: 0.23
+Nodes (14): houses, roomPostings, MarketplaceFeed(), styles, useListingController(), useMarketplaceController(), addRoomPosting(), deleteRoomPosting() (+6 more)
 
-### Community 8 - "Community 8"
-Cohesion: 0.40
-Nodes (11): getDrizzleDB(), usePropertyController(), addHouse(), addRoom(), deleteRoom(), getHouses(), getRoomsForHouse(), House (+3 more)
+### Community 8 - "Bikram Sambat Date Converters"
+Cohesion: 0.21
+Nodes (14): App(), getDrizzleDB(), usePropertyController(), addHouse(), addRoom(), deleteRoom(), getHouses(), getRoomsForHouse() (+6 more)
 
-### Community 9 - "Community 9"
-Cohesion: 0.24
-Nodes (10): tenancyAgreements, AgreementControllerArgs, useAgreementController(), AgreementModal(), AgreementModalProps, styles, Agreement, getAgreementForTenancy() (+2 more)
+### Community 9 - "Web SQL Query Driver"
+Cohesion: 0.10
+Nodes (20): 💬 Community Verification & Profiles, For App Users, For Non-App Users, 🚀 Getting Started, GharKoHisaab (घरको हिसाब) 🏡📄, 📌 Highlights, Installation, 🎛️ Intelligent Billing & Meter Calculations (+12 more)
 
-### Community 11 - "Community 11"
-Cohesion: 0.36
-Nodes (9): invoices, payments, usePaymentController(), addPayment(), getPaymentsForInvoice(), getTotalPaidForInvoice(), initPaymentSchema(), Payment (+1 more)
+### Community 11 - "TypeScript Configuration"
+Cohesion: 0.50
+Nodes (7): usePaymentController(), addPayment(), getPaymentsForInvoice(), getTotalPaidForInvoice(), initPaymentSchema(), Payment, syncInvoiceStatus()
 
-### Community 12 - "Community 12"
+### Community 12 - "Jest Test Setup"
 Cohesion: 0.33
 Nodes (5): compilerOptions, strict, types, extends, include
 
 ## Knowledge Gaps
-- **68 isolated node(s):** `name`, `slug`, `version`, `orientation`, `icon` (+63 more)
+- **86 isolated node(s):** `name`, `slug`, `version`, `orientation`, `icon` (+81 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **1 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `TenantScreen()` connect `Community 6` to `Community 0`, `Community 4`, `Community 7`?**
-  _High betweenness centrality (0.243) - this node is a cross-community bridge._
-- **Why does `dependencies` connect `Community 6` to `Community 3`?**
-  _High betweenness centrality (0.240) - this node is a cross-community bridge._
+- **Why does `TenantScreen()` connect `Marketplace & Room Listings` to `Database Schema Definitions`, `Expo Mobile Config`, `Tenant Onboarding Features`?**
+  _High betweenness centrality (0.195) - this node is a cross-community bridge._
+- **Why does `dependencies` connect `Marketplace & Room Listings` to `UI Components & Invoice View`?**
+  _High betweenness centrality (0.193) - this node is a cross-community bridge._
 - **What connects `name`, `slug`, `version` to the rest of the system?**
-  _68 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.09247311827956989 - nodes in this community are weakly interconnected._
-- **Should `Community 1` be split into smaller, more focused modules?**
+  _86 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `Database Schema Definitions` be split into smaller, more focused modules?**
+  _Cohesion score 0.12681159420289856 - nodes in this community are weakly interconnected._
+- **Should `SQLite Database Connection` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
-- **Should `Community 2` be split into smaller, more focused modules?**
-  _Cohesion score 0.12873563218390804 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
+- **Should `Production Dependencies` be split into smaller, more focused modules?**
+  _Cohesion score 0.12473118279569892 - nodes in this community are weakly interconnected._
+- **Should `UI Components & Invoice View` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
