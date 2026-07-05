@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
+import * as Crypto from 'expo-crypto';
 import { initConnection } from '../../database/connection';
 import {
   initPaymentSchema,
@@ -92,7 +93,11 @@ export function usePaymentController(
       return;
     }
 
-    const otp = Math.floor(1000 + Math.random() * 9000).toString();
+    // Generate secure 4-digit OTP using expo-crypto
+    const randomBytes = Crypto.getRandomBytes(2);
+    const randomNum = (randomBytes[0] << 8) | randomBytes[1];
+    // Modulo 9000 ensures range 0-8999, +1000 ensures range 1000-9999
+    const otp = (1000 + (Math.abs(randomNum) % 9000)).toString();
     setGeneratedOtp(otp);
     setOtpRequested(true);
 
@@ -129,7 +134,7 @@ export function usePaymentController(
     setIsSubmitting(true);
 
     try {
-      const paymentId = Math.random().toString(36).substring(2, 15);
+      const paymentId = Crypto.randomUUID();
       const newPayment: Payment = {
         id: paymentId,
         invoice_id: invoiceId,

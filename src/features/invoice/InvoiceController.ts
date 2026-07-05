@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import NepaliDate from 'nepali-date-converter';
+import * as Crypto from 'expo-crypto';
 import { initConnection } from '../../database/connection';
 import {
   initInvoiceSchema,
@@ -107,7 +108,7 @@ export function useInvoiceController(tenancyId: string, baseRent: number, tenanc
 
     try {
       // 1. Save new meter reading
-      const readingId = Math.random().toString(36).substring(2, 15);
+      const readingId = Crypto.randomUUID();
       const newReading: MeterReading = {
         id: readingId,
         tenancy_id: tenancyId,
@@ -122,7 +123,7 @@ export function useInvoiceController(tenancyId: string, baseRent: number, tenanc
       const elecDue = (currRead - prevRead) * rate;
 
       // 3. Create invoice
-      const invoiceId = Math.random().toString(36).substring(2, 15);
+      const invoiceId = Crypto.randomUUID();
       const newInvoice: Invoice = {
         id: invoiceId,
         tenancy_id: tenancyId,
