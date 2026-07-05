@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import NepaliDate from 'nepali-date-converter';
 import * as Crypto from 'expo-crypto';
+import { z } from 'zod';
 import { initConnection } from '../../database/connection';
 import {
   initTenantSchema,
@@ -110,30 +111,28 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
     }
   };
 
+  const tenantSchema = z.object({
+    name: z.string().trim().min(1, 'Name is required.'),
+    phone: z.string().trim().min(1, 'Phone number is required.'),
+    deposit: z.string().trim().optional().transform(val => val ? parseFloat(val) : 0).refine(val => !isNaN(val) && val >= 0, 'Please enter a valid deposit amount.'),
+    bsYear: z.string().trim().min(1, 'Year is required.').transform(val => parseInt(val)).refine(val => !isNaN(val), 'Invalid year.'),
+    bsMonth: z.string().trim().min(1, 'Month is required.').transform(val => parseInt(val)).refine(val => !isNaN(val) && val >= 1 && val <= 12, 'Invalid month.'),
+    bsDay: z.string().trim().min(1, 'Day is required.').transform(val => parseInt(val)).refine(val => !isNaN(val) && val >= 1 && val <= 32, 'Invalid day.')
+  });
+
   // Onboarding action
   const handleOnboardTenant = async () => {
-    if (!name.trim() || !phone.trim() || !bsYear.trim() || !bsMonth.trim() || !bsDay.trim()) {
-      Alert.alert('Validation Error', 'Please fill in all mandatory fields.');
+    const result = tenantSchema.safeParse({ name, phone, deposit, bsYear, bsMonth, bsDay });
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
       return;
     }
 
-    const depositVal = deposit.trim() ? parseFloat(deposit.trim()) : 0;
-    if (isNaN(depositVal) || depositVal < 0) {
-      Alert.alert('Validation Error', 'Please enter a valid deposit amount.');
-      return;
-    }
+    const { deposit: depositVal, bsYear: year, bsMonth: month, bsDay: day } = result.data;
 
     // Parse Bikram Sambat date to Gregorian A.D. Date
     let parsedADDate: Date;
     try {
-      const year = parseInt(bsYear);
-      const month = parseInt(bsMonth);
-      const day = parseInt(bsDay);
-
-      if (isNaN(year) || isNaN(month) || isNaN(day) || month < 1 || month > 12 || day < 1 || day > 32) {
-        throw new Error('Invalid B.S. Date inputs');
-      }
-
       // nepali-date-converter month is 0-indexed internally
       const nepaliDate = new NepaliDate(year, month - 1, day);
       parsedADDate = nepaliDate.toJsDate();

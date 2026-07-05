@@ -1,4 +1,6 @@
-import { getDB } from '../../database/connection';
+import { getDB, getDrizzleDB } from '../../database/connection';
+import { payments, invoices } from '../../database/schema';
+import { eq, and, desc, sum } from 'drizzle-orm';
 
 export interface Payment {
   id: string;
@@ -34,23 +36,19 @@ export async function initPaymentSchema(): Promise<void> {
 
 // Add a payment transaction record
 export async function addPayment(payment: Payment): Promise<void> {
-  const db = await getDB();
-  await db.runAsync(
-    `INSERT INTO payments (id, invoice_id, amount_paid, payment_method, payment_date, receipt_image_url, is_confirmed, otp_code, signature_data, created_at) 
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
-    [
-      payment.id,
-      payment.invoice_id,
-      payment.amount_paid,
-      payment.payment_method,
-      payment.payment_date,
-      payment.receipt_image_url,
-      payment.is_confirmed,
-      payment.otp_code,
-      payment.signature_data,
-      payment.created_at,
-    ]
-  );
+  const db = await getDrizzleDB();
+  await db.insert(payments).values({
+    id: payment.id,
+    invoiceId: payment.invoice_id,
+    amountPaid: payment.amount_paid,
+    paymentMethod: payment.payment_method,
+    paymentDate: payment.payment_date,
+    receiptImageUrl: payment.receipt_image_url,
+    isConfirmed: payment.is_confirmed,
+    otpCode: payment.otp_code,
+    signatureData: payment.signature_data,
+    createdAt: payment.created_at,
+  });
   
   // Re-calculate the invoice status based on total paid amount
   await syncInvoiceStatus(payment.invoice_id);
@@ -58,42 +56,57 @@ export async function addPayment(payment: Payment): Promise<void> {
 
 // Get all payments recorded for a specific invoice
 export async function getPaymentsForInvoice(invoiceId: string): Promise<Payment[]> {
-  const db = await getDB();
-  return await db.getAllAsync<Payment>(
-    'SELECT * FROM payments WHERE invoice_id = ? ORDER BY payment_date DESC;',
-    [invoiceId]
-  );
+  const db = await getDrizzleDB();
+  const results = await db.select()
+    .from(payments)
+    .where(eq(payments.invoiceId, invoiceId))
+    .orderBy(desc(payments.paymentDate));
+
+  return results.map(p => ({
+    id: p.id,
+    invoice_id: p.invoiceId,
+    amount_paid: p.amountPaid,
+    payment_method: p.paymentMethod as any,
+    payment_date: p.paymentDate,
+    receipt_image_url: p.receiptImageUrl,
+    is_confirmed: p.isConfirmed || 0,
+    otp_code: p.otpCode,
+    signature_data: p.signatureData,
+    created_at: p.createdAt || '',
+  }));
 }
 
 // Calculate total paid amount for an invoice
 export async function getTotalPaidForInvoice(invoiceId: string): Promise<number> {
-  const db = await getDB();
-  const result = await db.getFirstAsync<{ total: number }>(
-    'SELECT SUM(amount_paid) as total FROM payments WHERE invoice_id = ? AND is_confirmed = 1;',
-    [invoiceId]
-  );
-  return result?.total || 0;
+  const db = await getDrizzleDB();
+  const results = await db.select({ total: sum(payments.amountPaid) })
+    .from(payments)
+    .where(and(eq(payments.invoiceId, invoiceId), eq(payments.isConfirmed, 1)));
+
+  return Number(results[0]?.total || 0);
 }
 
 // Automatically recalculate and set invoice status
 async function syncInvoiceStatus(invoiceId: string): Promise<void> {
-  const db = await getDB();
+  const db = await getDrizzleDB();
   
   // Fetch total due
-  const invoice = await db.getFirstAsync<{ total_due: number }>(
-    'SELECT total_due FROM invoices WHERE id = ?;',
-    [invoiceId]
-  );
-  if (!invoice) return;
+  const invoiceResults = await db.select({ totalDue: invoices.totalDue })
+    .from(invoices)
+    .where(eq(invoices.id, invoiceId))
+    .limit(1);
+
+  if (invoiceResults.length === 0) return;
+  const invoice = invoiceResults[0];
 
   const totalPaid = await getTotalPaidForInvoice(invoiceId);
   
   let newStatus: 'unpaid' | 'partially_paid' | 'paid' = 'unpaid';
-  if (totalPaid >= invoice.total_due) {
+  if (totalPaid >= invoice.totalDue) {
     newStatus = 'paid';
   } else if (totalPaid > 0) {
     newStatus = 'partially_paid';
   }
 
-  await db.runAsync('UPDATE invoices SET status = ? WHERE id = ?;', [newStatus, invoiceId]);
+  await db.update(invoices).set({ status: newStatus }).where(eq(invoices.id, invoiceId));
 }

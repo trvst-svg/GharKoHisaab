@@ -1,4 +1,6 @@
-import { getDB } from '../../database/connection';
+import { getDB, getDrizzleDB } from '../../database/connection';
+import { checkoutSettlements, tenancies, rooms } from '../../database/schema';
+import { eq } from 'drizzle-orm';
 
 export interface CheckoutSettlement {
   id: string;
@@ -35,35 +37,45 @@ export async function initCheckoutSchema(): Promise<void> {
 }
 
 export async function addCheckoutSettlement(settlement: CheckoutSettlement): Promise<void> {
-  const db = await getDB();
-  await db.runAsync(
-    `INSERT INTO checkout_settlements (
-      id, tenancy_id, checkout_date, final_rent_due, final_utility_due, 
-      damage_charges, deducted_deposit, refunded_deposit, net_balance, is_settled, created_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
-    [
-      settlement.id,
-      settlement.tenancy_id,
-      settlement.checkout_date,
-      settlement.final_rent_due,
-      settlement.final_utility_due,
-      settlement.damage_charges,
-      settlement.deducted_deposit,
-      settlement.refunded_deposit,
-      settlement.net_balance,
-      settlement.is_settled,
-      settlement.created_at,
-    ]
-  );
+  const db = await getDrizzleDB();
+  await db.insert(checkoutSettlements).values({
+    id: settlement.id,
+    tenancyId: settlement.tenancy_id,
+    checkoutDate: settlement.checkout_date,
+    finalRentDue: settlement.final_rent_due,
+    finalUtilityDue: settlement.final_utility_due,
+    damageCharges: settlement.damage_charges,
+    deductedDeposit: settlement.deducted_deposit,
+    refundedDeposit: settlement.refunded_deposit,
+    netBalance: settlement.net_balance,
+    isSettled: settlement.is_settled,
+    createdAt: settlement.created_at,
+  });
 }
 
 export async function getCheckoutSettlement(tenancyId: string): Promise<CheckoutSettlement | null> {
-  const db = await getDB();
-  const result = await db.getFirstAsync<CheckoutSettlement>(
-    'SELECT * FROM checkout_settlements WHERE tenancy_id = ? LIMIT 1;',
-    [tenancyId]
-  );
-  return result || null;
+  const db = await getDrizzleDB();
+  const results = await db.select()
+    .from(checkoutSettlements)
+    .where(eq(checkoutSettlements.tenancyId, tenancyId))
+    .limit(1);
+
+  if (results.length === 0) return null;
+  const result = results[0];
+
+  return {
+    id: result.id,
+    tenancy_id: result.tenancyId,
+    checkout_date: result.checkoutDate,
+    final_rent_due: result.finalRentDue || 0,
+    final_utility_due: result.finalUtilityDue || 0,
+    damage_charges: result.damageCharges || 0,
+    deducted_deposit: result.deductedDeposit || 0,
+    refunded_deposit: result.refundedDeposit || 0,
+    net_balance: result.netBalance,
+    is_settled: result.isSettled || 0,
+    created_at: result.createdAt || '',
+  };
 }
 
 export async function terminateTenancy(
@@ -72,17 +84,15 @@ export async function terminateTenancy(
   endDate: string,
   depositStatus: 'refunded' | 'applied_to_dues' | 'held'
 ): Promise<void> {
-  const db = await getDB();
+  const db = await getDrizzleDB();
   
   // 1. Update the tenancy record
-  await db.runAsync(
-    'UPDATE tenancies SET is_active = 0, end_date = ?, security_deposit_status = ? WHERE id = ?;',
-    [endDate, depositStatus, tenancyId]
-  );
+  await db.update(tenancies).set({
+    isActive: 0,
+    endDate: endDate,
+    securityDepositStatus: depositStatus,
+  }).where(eq(tenancies.id, tenancyId));
   
   // 2. Set the room status back to vacant
-  await db.runAsync(
-    'UPDATE rooms SET status = ? WHERE id = ?;',
-    ['vacant', roomId]
-  );
+  await db.update(rooms).set({ status: 'vacant' }).where(eq(rooms.id, roomId));
 }

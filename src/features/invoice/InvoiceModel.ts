@@ -1,4 +1,6 @@
-import { getDB } from '../../database/connection';
+import { getDB, getDrizzleDB } from '../../database/connection';
+import { invoices, meterReadings, payments } from '../../database/schema';
+import { eq, desc, sum, inArray } from 'drizzle-orm';
 
 export interface Invoice {
   id: string;
@@ -55,87 +57,108 @@ export async function initInvoiceSchema(): Promise<void> {
 
 // Get invoices for a tenancy
 export async function getInvoicesForTenancy(tenancyId: string): Promise<Invoice[]> {
-  const db = await getDB();
-  return await db.getAllAsync<Invoice>(
-    'SELECT * FROM invoices WHERE tenancy_id = ? ORDER BY created_at DESC;',
-    [tenancyId]
-  );
+  const db = await getDrizzleDB();
+  const allInvoices = await db.select()
+    .from(invoices)
+    .where(eq(invoices.tenancyId, tenancyId))
+    .orderBy(desc(invoices.createdAt));
+
+  return allInvoices.map(inv => ({
+    id: inv.id,
+    tenancy_id: inv.tenancyId,
+    billing_period: inv.billingPeriod,
+    rent_due: inv.rentDue,
+    electricity_due: inv.electricityDue || 0,
+    water_due: inv.waterDue || 0,
+    waste_due: inv.wasteDue || 0,
+    arrears_carried_forward: inv.arrearsCarriedForward || 0,
+    total_due: inv.totalDue,
+    status: inv.status as 'unpaid' | 'partially_paid' | 'paid',
+    created_at: inv.createdAt || '',
+  }));
 }
 
 // Get the last meter reading recorded for a tenancy to use as previous reading
 export async function getLastMeterReading(tenancyId: string): Promise<MeterReading | null> {
-  const db = await getDB();
-  const result = await db.getFirstAsync<MeterReading>(
-    'SELECT * FROM meter_readings WHERE tenancy_id = ? ORDER BY created_at DESC LIMIT 1;',
-    [tenancyId]
-  );
-  return result || null;
+  const db = await getDrizzleDB();
+  const results = await db.select()
+    .from(meterReadings)
+    .where(eq(meterReadings.tenancyId, tenancyId))
+    .orderBy(desc(meterReadings.createdAt))
+    .limit(1);
+
+  if (results.length === 0) return null;
+  const result = results[0];
+
+  return {
+    id: result.id,
+    tenancy_id: result.tenancyId,
+    reading_date: result.readingDate,
+    electricity_reading: result.electricityReading,
+    water_reading: result.waterReading,
+    created_at: result.createdAt || '',
+  };
 }
 
 // Add a new meter reading
 export async function addMeterReading(reading: MeterReading): Promise<void> {
-  const db = await getDB();
-  await db.runAsync(
-    'INSERT INTO meter_readings (id, tenancy_id, reading_date, electricity_reading, water_reading, created_at) VALUES (?, ?, ?, ?, ?, ?);',
-    [
-      reading.id,
-      reading.tenancy_id,
-      reading.reading_date,
-      reading.electricity_reading,
-      reading.water_reading,
-      reading.created_at,
-    ]
-  );
+  const db = await getDrizzleDB();
+  await db.insert(meterReadings).values({
+    id: reading.id,
+    tenancyId: reading.tenancy_id,
+    readingDate: reading.reading_date,
+    electricityReading: reading.electricity_reading,
+    waterReading: reading.water_reading,
+    createdAt: reading.created_at,
+  });
 }
 
 // Add a new invoice
 export async function addInvoice(invoice: Invoice): Promise<void> {
-  const db = await getDB();
-  await db.runAsync(
-    `INSERT INTO invoices (id, tenancy_id, billing_period, rent_due, electricity_due, water_due, waste_due, arrears_carried_forward, total_due, status, created_at) 
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`,
-    [
-      invoice.id,
-      invoice.tenancy_id,
-      invoice.billing_period,
-      invoice.rent_due,
-      invoice.electricity_due,
-      invoice.water_due,
-      invoice.waste_due,
-      invoice.arrears_carried_forward,
-      invoice.total_due,
-      invoice.status,
-      invoice.created_at,
-    ]
-  );
+  const db = await getDrizzleDB();
+  await db.insert(invoices).values({
+    id: invoice.id,
+    tenancyId: invoice.tenancy_id,
+    billingPeriod: invoice.billing_period,
+    rentDue: invoice.rent_due,
+    electricityDue: invoice.electricity_due,
+    waterDue: invoice.water_due,
+    wasteDue: invoice.waste_due,
+    arrearsCarriedForward: invoice.arrears_carried_forward,
+    totalDue: invoice.total_due,
+    status: invoice.status,
+    createdAt: invoice.created_at,
+  });
 }
 
 // Calculate outstanding arrears (unpaid / partially paid invoice balances) for a tenancy
 export async function calculateArrearsForTenancy(tenancyId: string): Promise<number> {
-  const db = await getDB();
+  const db = await getDrizzleDB();
   
   // Total due from all invoices
-  const totalDueResult = await db.getFirstAsync<{ total: number }>(
-    'SELECT SUM(total_due) as total FROM invoices WHERE tenancy_id = ?;',
-    [tenancyId]
-  );
+  const totalDueResult = await db.select({ total: sum(invoices.totalDue) })
+    .from(invoices)
+    .where(eq(invoices.tenancyId, tenancyId));
   
-  // Total paid from all payments
-  // Note: Payments table might not exist yet, we'll gracefully handle it.
-  // If the payments table doesn't exist, paid is 0.
   let totalPaid = 0;
   try {
-    const totalPaidResult = await db.getFirstAsync<{ total: number }>(
-      'SELECT SUM(amount_paid) as total FROM payments WHERE invoice_id IN (SELECT id FROM invoices WHERE tenancy_id = ?);',
-      [tenancyId]
-    );
-    totalPaid = totalPaidResult?.total || 0;
+    const invoiceIds = await db.select({ id: invoices.id })
+      .from(invoices)
+      .where(eq(invoices.tenancyId, tenancyId));
+
+    if (invoiceIds.length > 0) {
+      const ids = invoiceIds.map(inv => inv.id);
+      const totalPaidResult = await db.select({ total: sum(payments.amountPaid) })
+        .from(payments)
+        .where(inArray(payments.invoiceId, ids));
+      totalPaid = Number(totalPaidResult[0]?.total || 0);
+    }
   } catch (e) {
-    // Payments table not initialized yet, treat as 0
+    // Payments table might not exist or empty
     totalPaid = 0;
   }
 
-  const totalDue = totalDueResult?.total || 0;
+  const totalDue = Number(totalDueResult[0]?.total || 0);
   const arrears = totalDue - totalPaid;
   return arrears > 0 ? arrears : 0;
 }
