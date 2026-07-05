@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import NepaliDate from 'nepali-date-converter';
 import * as Crypto from 'expo-crypto';
+import { z } from 'zod';
 import { initConnection } from '../../database/connection';
 import {
   initCheckoutSchema,
@@ -125,15 +126,20 @@ export function useCheckoutController(
     setup();
   }, [tenancyId]);
 
+  const dateSchema = z.object({
+    year: z.string().trim().min(1, 'Year is required.').transform(val => parseInt(val)).refine(val => !isNaN(val), 'Invalid year.'),
+    month: z.string().trim().min(1, 'Month is required.').transform(val => parseInt(val)).refine(val => !isNaN(val) && val >= 1 && val <= 12, 'Invalid month.'),
+    day: z.string().trim().min(1, 'Day is required.').transform(val => parseInt(val)).refine(val => !isNaN(val) && val >= 1 && val <= 32, 'Invalid day.')
+  });
+
   // Derive pro-rated dates, days stayed, and rent calculation
   const getProRatedDetails = () => {
-    const year = parseInt(checkoutYear);
-    const month = parseInt(checkoutMonth);
-    const day = parseInt(checkoutDay);
-
-    if (isNaN(year) || isNaN(month) || isNaN(day) || month < 1 || month > 12 || day < 1 || day > 32) {
+    const dateResult = dateSchema.safeParse({ year: checkoutYear, month: checkoutMonth, day: checkoutDay });
+    if (!dateResult.success) {
       return { error: 'Please enter a valid B.S. date' };
     }
+
+    const { year, month, day } = dateResult.data;
 
     try {
       const checkoutBS = new NepaliDate(year, month - 1, day);

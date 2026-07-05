@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import * as Crypto from 'expo-crypto';
+import { z } from 'zod';
 import { initConnection } from '../../database/connection';
 import {
   initPropertySchema,
@@ -87,9 +88,24 @@ export function usePropertyController() {
     }
   };
 
+  const houseSchema = z.object({
+    housekeeperName: z.string().trim().min(1, 'Housekeeper name is required.'),
+    customHouseName: z.string().trim().min(1, 'House name is required.'),
+    address: z.string().trim().min(1, 'Address is required.'),
+  });
+
+  const roomSchema = z.object({
+    roomNumber: z.string().trim().min(1, 'Room number is required.'),
+    baseRent: z.string().trim().refine((val) => {
+      const parsed = parseFloat(val);
+      return !isNaN(parsed) && parsed > 0;
+    }, 'Please enter a valid rent amount.'),
+  });
+
   const handleCreateProperty = async () => {
-    if (!housekeeperName.trim() || !address.trim() || !customHouseName.trim()) {
-      Alert.alert('Validation Error', 'Please fill in all details.');
+    const result = houseSchema.safeParse({ housekeeperName, customHouseName, address });
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
       return;
     }
 
@@ -116,16 +132,14 @@ export function usePropertyController() {
 
   const handleCreateRoom = async () => {
     if (!selectedHouse) return;
-    if (!roomNumber.trim() || !baseRent.trim()) {
-      Alert.alert('Validation Error', 'Please enter room number and rent.');
+
+    const result = roomSchema.safeParse({ roomNumber, baseRent });
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
       return;
     }
 
     const rentNumber = parseFloat(baseRent);
-    if (isNaN(rentNumber) || rentNumber <= 0) {
-      Alert.alert('Validation Error', 'Please enter a valid rent amount.');
-      return;
-    }
 
     const newRoomId = Crypto.randomUUID();
     const newRoomPayload: Room = {

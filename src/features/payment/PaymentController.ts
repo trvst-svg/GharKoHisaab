@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as Crypto from 'expo-crypto';
+import { z } from 'zod';
 import { initConnection } from '../../database/connection';
 import {
   initPaymentSchema,
@@ -86,10 +87,15 @@ export function usePaymentController(
     }
   };
 
+  const paymentSchema = z.object({
+    amountPaid: z.string().trim().min(1, 'Amount is required.').transform(val => parseFloat(val)).refine(val => !isNaN(val) && val > 0, 'Please enter a valid payment amount.'),
+  });
+
   // Request SMS OTP code simulation
   const handleRequestOtp = () => {
-    if (!amountPaid.trim() || parseFloat(amountPaid) <= 0) {
-      Alert.alert('Validation Error', 'Please enter a valid payment amount.');
+    const result = paymentSchema.safeParse({ amountPaid });
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
       return;
     }
 
@@ -111,11 +117,13 @@ export function usePaymentController(
 
   // Record payment
   const handleRecordPayment = async () => {
-    const payVal = parseFloat(amountPaid);
-    if (isNaN(payVal) || payVal <= 0) {
-      Alert.alert('Validation Error', 'Please enter a valid amount.');
+    const result = paymentSchema.safeParse({ amountPaid });
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
       return;
     }
+
+    const payVal = result.data.amountPaid;
 
     if (paymentMethod === 'cash') {
       // 1. Verify signature drawn

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import NepaliDate from 'nepali-date-converter';
 import * as Crypto from 'expo-crypto';
+import { z } from 'zod';
 import { initConnection } from '../../database/connection';
 import {
   initInvoiceSchema,
@@ -82,25 +83,35 @@ export function useInvoiceController(tenancyId: string, baseRent: number, tenanc
     return curr > prev ? curr - prev : 0;
   };
 
+  const invoiceSchema = z.object({
+    currRead: z.string().trim().min(1, 'Current meter reading is required.').transform(val => parseFloat(val)).refine(val => !isNaN(val), 'Invalid meter reading.'),
+    rate: z.string().trim().min(1, 'Electricity rate is required.').transform(val => parseFloat(val)).refine(val => !isNaN(val) && val >= 0, 'Invalid electricity rate.'),
+    water: z.string().trim().min(1, 'Water fee is required.').transform(val => parseFloat(val)).refine(val => !isNaN(val) && val >= 0, 'Invalid water fee.'),
+    waste: z.string().trim().min(1, 'Waste fee is required.').transform(val => parseFloat(val)).refine(val => !isNaN(val) && val >= 0, 'Invalid waste fee.'),
+  });
+
   // Generate the monthly invoice
   const handleGenerateInvoice = async (onSuccess: () => void) => {
-    const currRead = parseFloat(currElectricity);
+    const result = invoiceSchema.safeParse({
+      currRead: currElectricity,
+      rate: electricityRate,
+      water: waterFee,
+      waste: wasteFee
+    });
+
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
+      return;
+    }
+
+    const { currRead, rate, water, waste } = result.data;
     const prevRead = lastReading ? lastReading.electricity_reading : 0;
 
-    if (isNaN(currRead) || currRead < prevRead) {
+    if (currRead < prevRead) {
       Alert.alert(
         'Validation Error',
         `Current meter reading must be greater than or equal to the previous reading (${prevRead} units).`
       );
-      return;
-    }
-
-    const rate = parseFloat(electricityRate);
-    const water = parseFloat(waterFee);
-    const waste = parseFloat(wasteFee);
-
-    if (isNaN(rate) || rate < 0 || isNaN(water) || water < 0 || isNaN(waste) || waste < 0) {
-      Alert.alert('Validation Error', 'Please enter valid numbers for utility fees.');
       return;
     }
 

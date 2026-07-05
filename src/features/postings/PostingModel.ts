@@ -1,4 +1,6 @@
-import { getDB } from '../../database/connection';
+import { getDB, getDrizzleDB } from '../../database/connection';
+import { roomPostings, rooms, houses } from '../../database/schema';
+import { eq, and, desc } from 'drizzle-orm';
 
 export interface RoomPosting {
   id: string;
@@ -47,21 +49,17 @@ export async function initPostingSchema(): Promise<void> {
 }
 
 export async function addRoomPosting(posting: RoomPosting): Promise<void> {
-  const db = await getDB();
-  await db.runAsync(
-    `INSERT INTO room_postings (id, room_id, house_id, title, description, contact_phone, is_active, created_at)
-     VALUES (?, ?, ?, ?, ?, ?, ?, ?);`,
-    [
-      posting.id,
-      posting.room_id,
-      posting.house_id,
-      posting.title,
-      posting.description,
-      posting.contact_phone,
-      posting.is_active,
-      posting.created_at,
-    ]
-  );
+  const db = await getDrizzleDB();
+  await db.insert(roomPostings).values({
+    id: posting.id,
+    roomId: posting.room_id,
+    houseId: posting.house_id,
+    title: posting.title,
+    description: posting.description,
+    contactPhone: posting.contact_phone,
+    isActive: posting.is_active,
+    createdAt: posting.created_at,
+  });
 }
 
 export async function updateRoomPosting(
@@ -70,41 +68,67 @@ export async function updateRoomPosting(
   description: string,
   contactPhone: string
 ): Promise<void> {
-  const db = await getDB();
-  await db.runAsync(
-    'UPDATE room_postings SET title = ?, description = ?, contact_phone = ? WHERE id = ?;',
-    [title, description, contactPhone, postingId]
-  );
+  const db = await getDrizzleDB();
+  await db.update(roomPostings).set({
+    title,
+    description,
+    contactPhone,
+  }).where(eq(roomPostings.id, postingId));
 }
 
 export async function deleteRoomPosting(postingId: string): Promise<void> {
-  const db = await getDB();
-  await db.runAsync('DELETE FROM room_postings WHERE id = ?;', [postingId]);
+  const db = await getDrizzleDB();
+  await db.delete(roomPostings).where(eq(roomPostings.id, postingId));
 }
 
 export async function getPostingForRoom(roomId: string): Promise<RoomPosting | null> {
-  const db = await getDB();
-  const result = await db.getFirstAsync<RoomPosting>(
-    'SELECT * FROM room_postings WHERE room_id = ? LIMIT 1;',
-    [roomId]
-  );
-  return result || null;
+  const db = await getDrizzleDB();
+  const results = await db.select()
+    .from(roomPostings)
+    .where(eq(roomPostings.roomId, roomId))
+    .limit(1);
+
+  if (results.length === 0) return null;
+  const result = results[0];
+
+  return {
+    id: result.id,
+    room_id: result.roomId,
+    house_id: result.houseId,
+    title: result.title,
+    description: result.description || '',
+    contact_phone: result.contactPhone,
+    is_active: result.isActive || 0,
+    created_at: result.createdAt || '',
+  };
 }
 
 export async function getAllPublicPostings(): Promise<PublicPostingItem[]> {
-  const db = await getDB();
-  return await db.getAllAsync<PublicPostingItem>(`
-    SELECT 
-      rp.*, 
-      r.room_number, 
-      r.base_rent, 
-      h.name as house_name, 
-      h.address as house_address,
-      h.housekeeper_name
-    FROM room_postings rp
-    JOIN rooms r ON rp.room_id = r.id
-    JOIN houses h ON rp.house_id = h.id
-    WHERE rp.is_active = 1 AND r.status = 'vacant'
-    ORDER BY rp.created_at DESC;
-  `);
+  const db = await getDrizzleDB();
+  const results = await db.select({
+    rp: roomPostings,
+    r: rooms,
+    h: houses,
+  })
+  .from(roomPostings)
+  .innerJoin(rooms, eq(roomPostings.roomId, rooms.id))
+  .innerJoin(houses, eq(roomPostings.houseId, houses.id))
+  .where(and(eq(roomPostings.isActive, 1), eq(rooms.status, 'vacant')))
+  .orderBy(desc(roomPostings.createdAt));
+
+  return results.map(row => ({
+    id: row.rp.id,
+    room_id: row.rp.roomId,
+    house_id: row.rp.houseId,
+    title: row.rp.title,
+    description: row.rp.description || '',
+    contact_phone: row.rp.contactPhone,
+    is_active: row.rp.isActive || 0,
+    created_at: row.rp.createdAt || '',
+    room_number: row.r.roomNumber,
+    base_rent: row.r.baseRent,
+    house_name: row.h.name,
+    house_address: row.h.address,
+    housekeeper_name: row.h.housekeeperName,
+  }));
 }

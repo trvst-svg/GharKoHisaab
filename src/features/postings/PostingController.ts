@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import * as Crypto from 'expo-crypto';
+import { z } from 'zod';
 import { initConnection } from '../../database/connection';
 import {
   initPostingSchema,
@@ -45,9 +46,16 @@ export function useListingController(roomId: string, houseId: string, onSuccess?
     setup();
   }, [roomId]);
 
+  const postingSchema = z.object({
+    title: z.string().trim().min(1, 'Title is required.'),
+    description: z.string().trim(),
+    contactPhone: z.string().trim().min(1, 'Contact Phone is required.'),
+  });
+
   const handlePublish = async () => {
-    if (!title.trim() || !contactPhone.trim()) {
-      Alert.alert('Validation Error', 'Title and Contact Phone are required fields.');
+    const result = postingSchema.safeParse({ title, description, contactPhone });
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
       return;
     }
 
@@ -79,8 +87,9 @@ export function useListingController(roomId: string, houseId: string, onSuccess?
 
   const handleUpdate = async () => {
     if (!existingPosting) return;
-    if (!title.trim() || !contactPhone.trim()) {
-      Alert.alert('Validation Error', 'Title and Contact Phone are required.');
+    const result = postingSchema.safeParse({ title, description, contactPhone });
+    if (!result.success) {
+      Alert.alert('Validation Error', result.error.issues[0].message);
       return;
     }
 
