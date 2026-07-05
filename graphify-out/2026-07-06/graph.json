@@ -1,0 +1,1343 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "connection.ts",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_database_connection",
+      "community": 1,
+      "norm_label": "connection.ts"
+    },
+    {
+      "label": "getTable()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "src_database_connection_gettable",
+      "community": 7,
+      "norm_label": "gettable()"
+    },
+    {
+      "label": "saveTable()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "src_database_connection_savetable",
+      "community": 1,
+      "norm_label": "savetable()"
+    },
+    {
+      "label": "parseInsertParams()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "src_database_connection_parseinsertparams",
+      "community": 1,
+      "norm_label": "parseinsertparams()"
+    },
+    {
+      "label": "parseUpdateParams()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "src_database_connection_parseupdateparams",
+      "community": 7,
+      "norm_label": "parseupdateparams()"
+    },
+    {
+      "label": "parseDeleteParams()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "src_database_connection_parsedeleteparams",
+      "community": 1,
+      "norm_label": "parsedeleteparams()"
+    },
+    {
+      "label": "parseSelectParams()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "src_database_connection_parseselectparams",
+      "community": 0,
+      "norm_label": "parseselectparams()"
+    },
+    {
+      "label": "parseSelectColumns()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "src_database_connection_parseselectcolumns",
+      "community": 5,
+      "norm_label": "parseselectcolumns()"
+    },
+    {
+      "label": "WebSqliteExecuteResult",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult",
+      "community": 4,
+      "norm_label": "websqliteexecuteresult"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_constructor",
+      "community": 4,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".getFirstAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L137",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_getfirstasync",
+      "community": 4,
+      "norm_label": ".getfirstasync()"
+    },
+    {
+      "label": ".getAllAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_getallasync",
+      "community": 4,
+      "norm_label": ".getallasync()"
+    },
+    {
+      "label": ".resetAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L145",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_resetasync",
+      "community": 4,
+      "norm_label": ".resetasync()"
+    },
+    {
+      "label": ".getFirstSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L147",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_getfirstsync",
+      "community": 4,
+      "norm_label": ".getfirstsync()"
+    },
+    {
+      "label": ".getAllSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L151",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_getallsync",
+      "community": 4,
+      "norm_label": ".getallsync()"
+    },
+    {
+      "label": ".resetSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L155",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_resetsync",
+      "community": 4,
+      "norm_label": ".resetsync()"
+    },
+    {
+      "label": ".next()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L158",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_next",
+      "community": 4,
+      "norm_label": ".next()"
+    },
+    {
+      "label": ".[Symbol.iterator]()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L163",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_symbol_iterator",
+      "community": 4,
+      "norm_label": ".[symbol.iterator]()"
+    },
+    {
+      "label": ".[Symbol.asyncIterator]()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L167",
+      "_origin": "ast",
+      "id": "src_database_connection_websqliteexecuteresult_symbol_asynciterator",
+      "community": 4,
+      "norm_label": ".[symbol.asynciterator]()"
+    },
+    {
+      "label": "WebSqliteStatement",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L181",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement",
+      "community": 5,
+      "norm_label": "websqlitestatement"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L185",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_constructor",
+      "community": 5,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": ".executeSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_executesync",
+      "community": 5,
+      "norm_label": ".executesync()"
+    },
+    {
+      "label": ".executeAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L201",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_executeasync",
+      "community": 5,
+      "norm_label": ".executeasync()"
+    },
+    {
+      "label": ".executeForRawResultSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L205",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_executeforrawresultsync",
+      "community": 5,
+      "norm_label": ".executeforrawresultsync()"
+    },
+    {
+      "label": ".executeForRawResultAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_executeforrawresultasync",
+      "community": 5,
+      "norm_label": ".executeforrawresultasync()"
+    },
+    {
+      "label": ".getColumnNamesSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L231",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_getcolumnnamessync",
+      "community": 5,
+      "norm_label": ".getcolumnnamessync()"
+    },
+    {
+      "label": ".getColumnNamesAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L235",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_getcolumnnamesasync",
+      "community": 5,
+      "norm_label": ".getcolumnnamesasync()"
+    },
+    {
+      "label": ".finalizeSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L239",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_finalizesync",
+      "community": 5,
+      "norm_label": ".finalizesync()"
+    },
+    {
+      "label": ".finalizeAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L243",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitestatement_finalizeasync",
+      "community": 5,
+      "norm_label": ".finalizeasync()"
+    },
+    {
+      "label": "WebSqliteDb",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L249",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb",
+      "community": 8,
+      "norm_label": "websqlitedb"
+    },
+    {
+      "label": ".execAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L250",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_execasync",
+      "community": 1,
+      "norm_label": ".execasync()"
+    },
+    {
+      "label": ".runAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L254",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_runasync",
+      "community": 7,
+      "norm_label": ".runasync()"
+    },
+    {
+      "label": ".runSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L258",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_runsync",
+      "community": 7,
+      "norm_label": ".runsync()"
+    },
+    {
+      "label": ".getAllAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L323",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_getallasync",
+      "community": 8,
+      "norm_label": ".getallasync()"
+    },
+    {
+      "label": ".getAllSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L327",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_getallsync",
+      "community": 0,
+      "norm_label": ".getallsync()"
+    },
+    {
+      "label": ".getFirstAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L383",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_getfirstasync",
+      "community": 0,
+      "norm_label": ".getfirstasync()"
+    },
+    {
+      "label": ".getFirstSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L387",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_getfirstsync",
+      "community": 0,
+      "norm_label": ".getfirstsync()"
+    },
+    {
+      "label": ".prepareSync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L442",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_preparesync",
+      "community": 8,
+      "norm_label": ".preparesync()"
+    },
+    {
+      "label": ".prepareAsync()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L447",
+      "_origin": "ast",
+      "id": "src_database_connection_websqlitedb_prepareasync",
+      "community": 8,
+      "norm_label": ".prepareasync()"
+    },
+    {
+      "label": "toCamelCase()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L454",
+      "_origin": "ast",
+      "id": "src_database_connection_tocamelcase",
+      "community": 0,
+      "norm_label": "tocamelcase()"
+    },
+    {
+      "label": "mapToDrizzleFormat()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L458",
+      "_origin": "ast",
+      "id": "src_database_connection_maptodrizzleformat",
+      "community": 0,
+      "norm_label": "maptodrizzleformat()"
+    },
+    {
+      "label": "getDB()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L472",
+      "_origin": "ast",
+      "id": "src_database_connection_getdb",
+      "community": 1,
+      "norm_label": "getdb()"
+    },
+    {
+      "label": "getDrizzleDB()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L486",
+      "_origin": "ast",
+      "id": "src_database_connection_getdrizzledb",
+      "community": 1,
+      "norm_label": "getdrizzledb()"
+    },
+    {
+      "label": "initConnection()",
+      "file_type": "code",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L494",
+      "_origin": "ast",
+      "id": "src_database_connection_initconnection",
+      "community": 1,
+      "norm_label": "initconnection()"
+    },
+    {
+      "label": "PropertyScreen.tsx",
+      "file_type": "code",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "propertyscreen.tsx",
+      "id": "src_features_property_propertyscreen"
+    },
+    {
+      "label": "PropertyScreen()",
+      "file_type": "code",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "propertyscreen()",
+      "id": "src_features_property_propertyscreen_propertyscreen"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L345",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "styles",
+      "id": "src_features_property_propertyscreen_styles"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "graphify.md",
+      "id": "agents_rules_graphify"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 2,
+      "norm_label": "graphify",
+      "id": "agents_rules_graphify_graphify"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "graphify.md",
+      "id": "agents_workflows_graphify"
+    },
+    {
+      "label": "Workflow: graphify",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "workflow: graphify",
+      "id": "agents_workflows_graphify_workflow_graphify"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L472",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_getdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L486",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_getdrizzledb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_gettable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L494",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_initconnection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L458",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_maptodrizzleformat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_parsedeleteparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_parseinsertparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_parseselectcolumns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L95",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_parseselectparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_parseupdateparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_savetable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L454",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_tocamelcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L249",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_websqlitedb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_websqliteexecuteresult",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "src_database_connection",
+      "target": "src_database_connection_websqlitestatement",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L333",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getallsync",
+      "target": "src_database_connection_gettable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L397",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getfirstsync",
+      "target": "src_database_connection_gettable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L264",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_runsync",
+      "target": "src_database_connection_gettable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L270",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_runsync",
+      "target": "src_database_connection_savetable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L261",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_runsync",
+      "target": "src_database_connection_parseinsertparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_runsync",
+      "target": "src_database_connection_parseupdateparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_runsync",
+      "target": "src_database_connection_parsedeleteparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L329",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getallsync",
+      "target": "src_database_connection_parseselectparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L389",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getfirstsync",
+      "target": "src_database_connection_parseselectparams",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executeforrawresultsync",
+      "target": "src_database_connection_parseselectcolumns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L232",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_getcolumnnamessync",
+      "target": "src_database_connection_parseselectcolumns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_getallasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_getallsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_getfirstasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_getfirstsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_next",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L145",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_resetasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_resetsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_symbol_asynciterator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L163",
+      "weight": 1.0,
+      "source": "src_database_connection_websqliteexecuteresult",
+      "target": "src_database_connection_websqliteexecuteresult_symbol_iterator",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_executeasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_executeforrawresultasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_executeforrawresultsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_executesync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L243",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_finalizeasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L239",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_finalizesync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_getcolumnnamesasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L231",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement",
+      "target": "src_database_connection_websqlitestatement_getcolumnnamessync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L202",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executeasync",
+      "target": "src_database_connection_websqlitestatement_executesync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/database/connection.ts",
+      "source_location": "L193",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executesync",
+      "target": "src_database_connection_websqlitedb_getallsync"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/database/connection.ts",
+      "source_location": "L196",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executesync",
+      "target": "src_database_connection_websqlitedb_runsync"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L228",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executeforrawresultasync",
+      "target": "src_database_connection_websqlitestatement_executeforrawresultsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executeforrawresultsync",
+      "target": "src_database_connection_tocamelcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/database/connection.ts",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executeforrawresultsync",
+      "target": "src_database_connection_websqlitedb_getallsync"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/database/connection.ts",
+      "source_location": "L222",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_executeforrawresultsync",
+      "target": "src_database_connection_websqlitedb_runsync"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L236",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_getcolumnnamesasync",
+      "target": "src_database_connection_websqlitestatement_getcolumnnamessync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L244",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitestatement_finalizeasync",
+      "target": "src_database_connection_websqlitestatement_finalizesync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L250",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_execasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L323",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_getallasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L327",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_getallsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L383",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_getfirstasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L387",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_getfirstsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L447",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_prepareasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L442",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_preparesync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_runasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L258",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb",
+      "target": "src_database_connection_websqlitedb_runsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L522",
+      "weight": 1.0,
+      "source": "src_database_connection_initconnection",
+      "target": "src_database_connection_websqlitedb_execasync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L255",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_runasync",
+      "target": "src_database_connection_websqlitedb_runsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L295",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_runsync",
+      "target": "src_database_connection_tocamelcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L324",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getallasync",
+      "target": "src_database_connection_websqlitedb_getallsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "indirect_call",
+      "context": "argument",
+      "confidence": "INFERRED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L380",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getallsync",
+      "target": "src_database_connection_maptodrizzleformat",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L336",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getallsync",
+      "target": "src_database_connection_tocamelcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L384",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getfirstasync",
+      "target": "src_database_connection_websqlitedb_getfirstsync",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L408",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getfirstsync",
+      "target": "src_database_connection_maptodrizzleformat",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L420",
+      "weight": 1.0,
+      "source": "src_database_connection_websqlitedb_getfirstsync",
+      "target": "src_database_connection_tocamelcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L464",
+      "weight": 1.0,
+      "source": "src_database_connection_maptodrizzleformat",
+      "target": "src_database_connection_tocamelcase",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L488",
+      "weight": 1.0,
+      "source": "src_database_connection_getdrizzledb",
+      "target": "src_database_connection_getdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/database/connection.ts",
+      "source_location": "L495",
+      "weight": 1.0,
+      "source": "src_database_connection_initconnection",
+      "target": "src_database_connection_getdb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_features_property_propertyscreen_propertyscreen"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L345",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_features_property_propertyscreen_styles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_rules_graphify",
+      "target": "agents_rules_graphify_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_workflows_graphify",
+      "target": "agents_workflows_graphify_workflow_graphify"
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "51a9a06f02a9279b32d738a54a8dbc36f2ccf9a8"
+}
