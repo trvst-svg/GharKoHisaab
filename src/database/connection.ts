@@ -94,10 +94,15 @@ function parseDeleteParams(sql: string, params: any[]) {
 // Helper to parse SELECT queries dynamically
 function parseSelectParams(sql: string, params: any[]) {
   const cleanSql = sql.replace(/["`]/g, '');
-  const fromMatch = cleanSql.match(/from\s+(\w+)(?:\s+where\s+([^]+))?/i);
+  
+  // Extract table name right after FROM
+  const fromMatch = cleanSql.match(/from\s+(\w+)/i);
   if (!fromMatch) return null;
   const table = fromMatch[1].toLowerCase();
-  const wherePart = fromMatch[2] ? fromMatch[2].replace(/\w+\./g, '') : null;
+  
+  // Extract where clause anywhere in the SQL statement
+  const whereMatch = cleanSql.match(/where\s+([^]+)/i);
+  const wherePart = whereMatch ? whereMatch[1].replace(/\w+\./g, '') : null;
   
   const whereData: any = {};
   if (wherePart) {
@@ -347,8 +352,37 @@ class WebSqliteDb {
       result.sort((a, b) => (a.created_at || a.createdAt || '').localeCompare(b.created_at || b.createdAt || ''));
     }
     
-    // Handle complex JOINs inside public postings feed
+    // Handle complex JOINs inside active tenancy details
     const cleanSql = sql.replace(/["`]/g, '').toLowerCase();
+    if (table === 'tenancies' && cleanSql.includes('join tenants') && cleanSql.includes('join rooms')) {
+      const tenanciesList = getTable('tenancies');
+      const tenants = getTable('tenants');
+      const rooms = getTable('rooms');
+      
+      const roomId = whereData.room_id || whereData.roomId;
+      const isActiveFilter = whereData.is_active !== undefined ? whereData.is_active : whereData.isActive;
+      
+      const filteredTenancies = tenanciesList.filter(t => 
+        (roomId === undefined || t.room_id == roomId || t.roomId == roomId) && 
+        (isActiveFilter === undefined || t.is_active == isActiveFilter || t.isActive == isActiveFilter)
+      );
+      
+      const joined = filteredTenancies.map(tenancy => {
+        const tenant = tenants.find(tn => tn.id === (tenancy.tenant_id || tenancy.tenantId));
+        const room = rooms.find(r => r.id === (tenancy.room_id || tenancy.roomId));
+        return mapToDrizzleFormat({
+          ...tenancy,
+          tenant_name: tenant ? tenant.name : 'Unknown',
+          tenant_phone: tenant ? tenant.phoneNumber || tenant.phone_number : '',
+          tenant_id_url: tenant ? tenant.governmentIdUrl || tenant.government_id_url : null,
+          tenant_id_type: tenant ? tenant.governmentIdType || tenant.government_id_type : 'citizenship',
+          base_rent: room ? room.baseRent || room.base_rent : 0,
+        });
+      });
+      return joined as T[];
+    }
+
+    // Handle complex JOINs inside public postings feed
     if (cleanSql.includes('join rooms') && cleanSql.includes('join houses')) {
       const postings = getTable('room_postings').length > 0 ? getTable('room_postings') : getTable('roomPostings');
       const rooms = getTable('rooms');

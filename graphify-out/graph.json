@@ -1140,7 +1140,7 @@
       "source_location": "L494",
       "_origin": "ast",
       "id": "src_database_connection_initconnection",
-      "community": 2,
+      "community": 4,
       "norm_label": "initconnection()"
     },
     {
@@ -1280,7 +1280,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "src_features_agreement_agreementcontroller_useagreementcontroller",
-      "community": 4,
+      "community": 0,
       "norm_label": "useagreementcontroller()"
     },
     {
@@ -1310,7 +1310,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "src_features_agreement_agreementmodal_agreementmodal",
-      "community": 4,
+      "community": 0,
       "norm_label": "agreementmodal()"
     },
     {
@@ -1372,6 +1372,16 @@
       "id": "src_features_agreement_agreementmodel_getagreementfortenancy",
       "community": 4,
       "norm_label": "getagreementfortenancy()"
+    },
+    {
+      "label": "CheckoutController.test.ts",
+      "file_type": "code",
+      "source_file": "src/features/checkout/CheckoutController.test.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_features_checkout_checkoutcontroller_test",
+      "community": 2,
+      "norm_label": "checkoutcontroller.test.ts"
     },
     {
       "label": "CheckoutController.ts",
@@ -5772,6 +5782,28 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/checkout/CheckoutController.test.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_features_checkout_checkoutcontroller_test",
+      "target": "src_features_checkout_checkoutcontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/checkout/CheckoutController.test.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_features_checkout_checkoutcontroller_test",
+      "target": "src_features_checkout_checkoutcontroller_getcycledates",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/checkout/CheckoutController.ts",
@@ -8074,5 +8106,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d6f9e5184a68de439d135608d46023c35489b0ed"
+  "built_at_commit": "c10b2748fb0f540e0aa561428ee740069fe9b3e9"
 }

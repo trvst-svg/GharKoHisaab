@@ -1,16 +1,16 @@
 # Graph Report - GharKoHisaab  (2026-07-06)
 
 ## Corpus Check
-- 39 files · ~39,272 words
+- 40 files · ~39,559 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 270 nodes · 509 edges · 18 communities (14 shown, 4 thin omitted)
+- 271 nodes · 511 edges · 18 communities (14 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.5)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d6f9e518`
+- Built from commit: `c10b2748`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -62,8 +62,8 @@
 ## Communities (18 total, 4 thin omitted)
 
 ### Community 0 - "Database Schema Definitions"
-Cohesion: 0.13
-Nodes (16): SignaturePadProps, styles, COLORS, AgreementModalProps, styles, CheckoutModal(), CheckoutModalProps, styles (+8 more)
+Cohesion: 0.12
+Nodes (18): SignaturePadProps, styles, COLORS, useAgreementController(), AgreementModal(), AgreementModalProps, styles, CheckoutModal() (+10 more)
 
 ### Community 1 - "SQLite Database Connection"
 Cohesion: 0.13
@@ -71,15 +71,15 @@ Nodes (11): getTable(), mapToDrizzleFormat(), parseDeleteParams(), parseInsertPa
 
 ### Community 2 - "Production Dependencies"
 Cohesion: 0.12
-Nodes (17): initConnection(), getCycleDates(), getSafeNepaliDate(), useCheckoutController(), addCheckoutSettlement(), terminateTenancy(), useInvoiceController(), addInvoice() (+9 more)
+Nodes (16): getCycleDates(), getSafeNepaliDate(), useCheckoutController(), addCheckoutSettlement(), terminateTenancy(), useInvoiceController(), addInvoice(), addMeterReading() (+8 more)
 
 ### Community 3 - "UI Components & Invoice View"
 Cohesion: 0.08
 Nodes (23): devDependencies, drizzle-kit, jest, jest-expo, react-test-renderer, @testing-library/react-native, @types/jest, @types/react (+15 more)
 
 ### Community 4 - "Expo Mobile Config"
-Cohesion: 0.12
-Nodes (26): getDB(), checkoutSettlements, invoices, meterReadings, payments, rooms, tenancies, tenancyAgreements (+18 more)
+Cohesion: 0.13
+Nodes (25): getDB(), initConnection(), checkoutSettlements, invoices, meterReadings, payments, rooms, tenancies (+17 more)
 
 ### Community 5 - "Property Management & Dashboard"
 Cohesion: 0.10
@@ -120,11 +120,11 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `TenantScreen()` connect `Marketplace & Room Listings` to `Database Schema Definitions`, `Expo Mobile Config`, `Tenant Onboarding Features`?**
   _High betweenness centrality (0.195) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `Marketplace & Room Listings` to `UI Components & Invoice View`?**
-  _High betweenness centrality (0.193) - this node is a cross-community bridge._
+  _High betweenness centrality (0.192) - this node is a cross-community bridge._
 - **What connects `name`, `slug`, `version` to the rest of the system?**
   _86 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Database Schema Definitions` be split into smaller, more focused modules?**
-  _Cohesion score 0.12681159420289856 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.11692307692307692 - nodes in this community are weakly interconnected._
 - **Should `SQLite Database Connection` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
 - **Should `Production Dependencies` be split into smaller, more focused modules?**

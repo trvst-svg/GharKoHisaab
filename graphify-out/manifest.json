@@ -223,5 +223,10 @@
     "mtime": 1783283167.6939778,
     "ast_hash": "51fabcb846a9d45bc60e446234819b56",
     "semantic_hash": ""
+  },
+  "src/features/checkout/CheckoutController.test.ts": {
+    "mtime": 1783289651.8639665,
+    "ast_hash": "57dd4ad1f8b069c73745e80c68bb1967",
+    "semantic_hash": ""
   }
 }

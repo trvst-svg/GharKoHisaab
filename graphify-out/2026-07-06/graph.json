@@ -4,124 +4,14 @@
   "graph": {},
   "nodes": [
     {
-      "label": "AgreementModal.tsx",
+      "label": "CheckoutController.test.ts",
       "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_file": "src/features/checkout/CheckoutController.test.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_features_agreement_agreementmodal",
-      "community": 0,
-      "norm_label": "agreementmodal.tsx"
-    },
-    {
-      "label": "AgreementModalProps",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementmodal_agreementmodalprops",
-      "community": 0,
-      "norm_label": "agreementmodalprops"
-    },
-    {
-      "label": "AgreementModal()",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementmodal_agreementmodal",
-      "community": 0,
-      "norm_label": "agreementmodal()"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L436",
-      "_origin": "ast",
-      "id": "src_features_agreement_agreementmodal_styles",
-      "community": 0,
-      "norm_label": "styles"
-    },
-    {
-      "label": "InvoiceSection.tsx",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_features_invoice_invoicesection",
-      "community": 9,
-      "norm_label": "invoicesection.tsx"
-    },
-    {
-      "label": "InvoiceSectionProps",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "src_features_invoice_invoicesection_invoicesectionprops",
-      "community": 9,
-      "norm_label": "invoicesectionprops"
-    },
-    {
-      "label": "InvoiceSection()",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "src_features_invoice_invoicesection_invoicesection",
-      "community": 9,
-      "norm_label": "invoicesection()"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L330",
-      "_origin": "ast",
-      "id": "src_features_invoice_invoicesection_styles",
-      "community": 9,
-      "norm_label": "styles"
-    },
-    {
-      "label": "PaymentModal.tsx",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_features_payment_paymentmodal",
-      "community": 9,
-      "norm_label": "paymentmodal.tsx"
-    },
-    {
-      "label": "PaymentModalProps",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "src_features_payment_paymentmodal_paymentmodalprops",
-      "community": 9,
-      "norm_label": "paymentmodalprops"
-    },
-    {
-      "label": "PaymentModal()",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "src_features_payment_paymentmodal_paymentmodal",
-      "community": 9,
-      "norm_label": "paymentmodal()"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L302",
-      "_origin": "ast",
-      "id": "src_features_payment_paymentmodal_styles",
-      "community": 9,
-      "norm_label": "styles"
+      "id": "src_features_checkout_checkoutcontroller_test",
+      "community": 18,
+      "norm_label": "checkoutcontroller.test.ts"
     },
     {
       "label": "App.test.tsx",
@@ -129,7 +19,7 @@
       "source_file": "App.test.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "norm_label": "app.test.tsx",
       "id": "app_test"
     },
@@ -139,7 +29,7 @@
       "source_file": "App.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "norm_label": "app.tsx",
       "id": "app_tsx_app"
     },
@@ -149,7 +39,7 @@
       "source_file": "App.tsx",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "norm_label": "app()",
       "id": "app_app"
     },
@@ -359,7 +249,7 @@
       "source_file": "index.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "norm_label": "index.ts",
       "id": "index"
     },
@@ -1239,7 +1129,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L472",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "getdb()",
       "id": "src_database_connection_getdb"
     },
@@ -1259,7 +1149,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L494",
       "_origin": "ast",
-      "community": 7,
+      "community": 2,
       "norm_label": "initconnection()",
       "id": "src_database_connection_initconnection"
     },
@@ -1279,7 +1169,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "houses",
       "id": "src_database_schema_houses"
     },
@@ -1299,7 +1189,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "roompostings",
       "id": "src_database_schema_roompostings"
     },
@@ -1349,7 +1239,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L84",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "invoices",
       "id": "src_database_schema_invoices"
     },
@@ -1369,7 +1259,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L107",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "payments",
       "id": "src_database_schema_payments"
     },
@@ -1402,6 +1292,46 @@
       "community": 4,
       "norm_label": "useagreementcontroller()",
       "id": "src_features_agreement_agreementcontroller_useagreementcontroller"
+    },
+    {
+      "label": "AgreementModal.tsx",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "agreementmodal.tsx",
+      "id": "src_features_agreement_agreementmodal"
+    },
+    {
+      "label": "AgreementModalProps",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "agreementmodalprops",
+      "id": "src_features_agreement_agreementmodal_agreementmodalprops"
+    },
+    {
+      "label": "AgreementModal()",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 4,
+      "norm_label": "agreementmodal()",
+      "id": "src_features_agreement_agreementmodal_agreementmodal"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L436",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "styles",
+      "id": "src_features_agreement_agreementmodal_styles"
     },
     {
       "label": "AgreementModel.ts",
@@ -1704,6 +1634,46 @@
       "id": "src_features_invoice_invoicemodel_calculatearrearsfortenancy"
     },
     {
+      "label": "InvoiceSection.tsx",
+      "file_type": "code",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "invoicesection.tsx",
+      "id": "src_features_invoice_invoicesection"
+    },
+    {
+      "label": "InvoiceSectionProps",
+      "file_type": "code",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "invoicesectionprops",
+      "id": "src_features_invoice_invoicesection_invoicesectionprops"
+    },
+    {
+      "label": "InvoiceSection()",
+      "file_type": "code",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "invoicesection()",
+      "id": "src_features_invoice_invoicesection_invoicesection"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L330",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "styles",
+      "id": "src_features_invoice_invoicesection_styles"
+    },
+    {
       "label": "PaymentController.ts",
       "file_type": "code",
       "source_file": "src/features/payment/PaymentController.ts",
@@ -1722,6 +1692,46 @@
       "community": 11,
       "norm_label": "usepaymentcontroller()",
       "id": "src_features_payment_paymentcontroller_usepaymentcontroller"
+    },
+    {
+      "label": "PaymentModal.tsx",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "paymentmodal.tsx",
+      "id": "src_features_payment_paymentmodal"
+    },
+    {
+      "label": "PaymentModalProps",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "paymentmodalprops",
+      "id": "src_features_payment_paymentmodal_paymentmodalprops"
+    },
+    {
+      "label": "PaymentModal()",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "paymentmodal()",
+      "id": "src_features_payment_paymentmodal_paymentmodal"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L302",
+      "_origin": "ast",
+      "community": 0,
+      "norm_label": "styles",
+      "id": "src_features_payment_paymentmodal_styles"
     },
     {
       "label": "PaymentModel.ts",
@@ -1799,7 +1809,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 7,
       "norm_label": "marketplacefeed.tsx",
       "id": "src_features_postings_marketplacefeed"
     },
@@ -1809,7 +1819,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 0,
+      "community": 7,
       "norm_label": "marketplacefeed()",
       "id": "src_features_postings_marketplacefeed_marketplacefeed"
     },
@@ -1819,7 +1829,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L146",
       "_origin": "ast",
-      "community": 0,
+      "community": 7,
       "norm_label": "styles",
       "id": "src_features_postings_marketplacefeed_styles"
     },
@@ -2069,7 +2079,7 @@
       "source_file": "src/features/property/PropertyScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "norm_label": "propertyscreen.tsx",
       "id": "src_features_property_propertyscreen"
     },
@@ -2079,7 +2089,7 @@
       "source_file": "src/features/property/PropertyScreen.tsx",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "norm_label": "propertyscreen()",
       "id": "src_features_property_propertyscreen_propertyscreen"
     },
@@ -2089,7 +2099,7 @@
       "source_file": "src/features/property/PropertyScreen.tsx",
       "source_location": "L345",
       "_origin": "ast",
-      "community": 0,
+      "community": 8,
       "norm_label": "styles",
       "id": "src_features_property_propertyscreen_styles"
     },
@@ -2422,132 +2432,289 @@
       "community": 12,
       "norm_label": "include",
       "id": "tsconfig_include"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 15,
+      "norm_label": "graphify.md",
+      "id": "agents_rules_graphify"
+    },
+    {
+      "label": "graphify",
+      "file_type": "document",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 15,
+      "norm_label": "graphify",
+      "id": "agents_rules_graphify_graphify"
+    },
+    {
+      "label": "graphify.md",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 16,
+      "norm_label": "graphify.md",
+      "id": "agents_workflows_graphify"
+    },
+    {
+      "label": "Workflow: graphify",
+      "file_type": "document",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 16,
+      "norm_label": "workflow: graphify",
+      "id": "agents_workflows_graphify_workflow_graphify"
+    },
+    {
+      "label": "AGENTS.md",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "agents.md",
+      "id": "agents"
+    },
+    {
+      "label": "Expo HAS CHANGED",
+      "file_type": "document",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 14,
+      "norm_label": "expo has changed",
+      "id": "agents_expo_has_changed"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 17,
+      "norm_label": "claude.md",
+      "id": "claude"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "readme.md",
+      "id": "readme"
+    },
+    {
+      "label": "GharKoHisaab (\u0918\u0930\u0915\u094b \u0939\u093f\u0938\u093e\u092c) \ud83c\udfe1\ud83d\udcc4",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "gharkohisaab (\u0918\u0930\u0915\u094b \u0939\u093f\u0938\u093e\u092c) \ud83c\udfe1\ud83d\udcc4",
+      "id": "readme_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c"
+    },
+    {
+      "label": "\u2728 Key Features",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\u2728 key features",
+      "id": "readme_key_features"
+    },
+    {
+      "label": "\ud83c\udf9b\ufe0f Intelligent Billing & Meter Calculations",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83c\udf9b\ufe0f intelligent billing & meter calculations",
+      "id": "readme_intelligent_billing_meter_calculations"
+    },
+    {
+      "label": "\ud83d\udd12 Secure Cash Receipts (Double Confirmation Flow)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\udd12 secure cash receipts (double confirmation flow)",
+      "id": "readme_secure_cash_receipts_double_confirmation_flow"
+    },
+    {
+      "label": "For App Users",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "for app users",
+      "id": "readme_for_app_users"
+    },
+    {
+      "label": "For Non-App Users",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "for non-app users",
+      "id": "readme_for_non_app_users"
+    },
+    {
+      "label": "\ud83d\udcf7 Secure Document Capture",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\udcf7 secure document capture",
+      "id": "readme_secure_document_capture"
+    },
+    {
+      "label": "\ud83d\udcac Community Verification & Profiles",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\udcac community verification & profiles",
+      "id": "readme_community_verification_profiles"
+    },
+    {
+      "label": "Tenant Reviews",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "tenant reviews",
+      "id": "readme_tenant_reviews"
+    },
+    {
+      "label": "Property Reviews",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "property reviews",
+      "id": "readme_property_reviews"
+    },
+    {
+      "label": "\ud83d\udce3 Public Room Listings",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\udce3 public room listings",
+      "id": "readme_public_room_listings"
+    },
+    {
+      "label": "Post Vacant Rooms",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "post vacant rooms",
+      "id": "readme_post_vacant_rooms"
+    },
+    {
+      "label": "Search Available Rooms",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "search available rooms",
+      "id": "readme_search_available_rooms"
+    },
+    {
+      "label": "\ud83d\udee0\ufe0f Tech Stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\udee0\ufe0f tech stack",
+      "id": "readme_tech_stack"
+    },
+    {
+      "label": "\ud83d\udcc2 Project Structure",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\udcc2 project structure",
+      "id": "readme_project_structure"
+    },
+    {
+      "label": "\ud83d\ude80 Getting Started",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L160",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\ude80 getting started",
+      "id": "readme_getting_started"
+    },
+    {
+      "label": "Prerequisites",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L162",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "prerequisites",
+      "id": "readme_prerequisites"
+    },
+    {
+      "label": "Installation",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L172",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "installation",
+      "id": "readme_installation"
+    },
+    {
+      "label": "Running the App",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L194",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "running the app",
+      "id": "readme_running_the_app"
+    },
+    {
+      "label": "\ud83d\udccc Highlights",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L212",
+      "_origin": "ast",
+      "community": 9,
+      "norm_label": "\ud83d\udccc highlights",
+      "id": "readme_highlights"
     }
   ],
   "links": [
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodal",
-      "target": "src_features_agreement_agreementmodal_agreementmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodal",
-      "target": "src_features_agreement_agreementmodal_agreementmodalprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L436",
-      "weight": 1.0,
-      "source": "src_features_agreement_agreementmodal",
-      "target": "src_features_agreement_agreementmodal_styles",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_agreement_agreementmodal"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L26",
-      "weight": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicesection_invoicesection",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicesection_invoicesectionprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L330",
-      "weight": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_invoice_invoicesection_styles",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_features_payment_paymentmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_features_invoice_invoicesection"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentmodal_paymentmodal",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentmodal_paymentmodalprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L302",
-      "weight": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_features_payment_paymentmodal_styles",
-      "confidence_score": 1.0
-    },
     {
       "relation": "imports",
       "context": "import",
@@ -3225,6 +3392,28 @@
       "target": "src_constants_colors_colors"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_components_signaturepad"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_components_signaturepad"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/constants/colors.ts",
@@ -3238,11 +3427,44 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_features_checkout_checkoutmodal",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
       "target": "src_constants_colors"
     },
     {
@@ -3282,11 +3504,44 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_constants_colors_colors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L14",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_features_checkout_checkoutmodal",
+      "target": "src_constants_colors_colors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_constants_colors_colors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
       "target": "src_constants_colors_colors"
     },
     {
@@ -5369,6 +5624,17 @@
       "target": "src_features_agreement_agreementmodel_saveagreement"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_features_agreement_agreementcontroller"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -5378,6 +5644,69 @@
       "weight": 1.0,
       "source": "src_features_agreement_agreementcontroller_useagreementcontroller",
       "target": "src_features_agreement_agreementmodel_saveagreement"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_features_agreement_agreementcontroller_useagreementcontroller"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "src_features_agreement_agreementmodal_agreementmodal",
+      "target": "src_features_agreement_agreementcontroller_useagreementcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_features_agreement_agreementmodal_agreementmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_features_agreement_agreementmodal_agreementmodalprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L436",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_features_agreement_agreementmodal_styles"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_agreement_agreementmodal"
     },
     {
       "relation": "contains",
@@ -5925,6 +6254,17 @@
       "target": "src_features_invoice_invoicemodel_meterreading"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicecontroller"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6000,6 +6340,28 @@
       "weight": 1.0,
       "source": "src_features_invoice_invoicecontroller_useinvoicecontroller",
       "target": "src_types_nepali_date_converter_d_nepalidate_getyear"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicecontroller_useinvoicecontroller"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "src_features_invoice_invoicesection_invoicesection",
+      "target": "src_features_invoice_invoicecontroller_useinvoicecontroller"
     },
     {
       "relation": "contains",
@@ -6084,6 +6446,58 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicesection_invoicesection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicesection_invoicesectionprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L330",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_invoice_invoicesection_styles"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_features_payment_paymentmodal"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_features_invoice_invoicesection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L15",
       "weight": 1.0,
@@ -6158,6 +6572,17 @@
       "target": "src_features_payment_paymentmodel_payment"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentcontroller"
+    },
+    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6189,6 +6614,58 @@
       "weight": 1.0,
       "source": "src_features_payment_paymentcontroller_usepaymentcontroller",
       "target": "src_features_payment_paymentmodel_gettotalpaidforinvoice"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentcontroller_usepaymentcontroller"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "src_features_payment_paymentmodal_paymentmodal",
+      "target": "src_features_payment_paymentcontroller_usepaymentcontroller"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentmodal_paymentmodal"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentmodal_paymentmodalprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L302",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_features_payment_paymentmodal_styles"
     },
     {
       "relation": "contains",
@@ -7374,8 +7851,238 @@
       "confidence_score": 1.0,
       "source": "tsconfig_compileroptions",
       "target": "tsconfig_compileroptions_types"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/rules/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_rules_graphify",
+      "target": "agents_rules_graphify_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".agents/workflows/graphify.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents_workflows_graphify",
+      "target": "agents_workflows_graphify_workflow_graphify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "AGENTS.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "agents",
+      "target": "agents_expo_has_changed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L160",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_getting_started"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_key_features"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_project_structure"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L106",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme",
+      "target": "readme_tech_stack"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_key_features",
+      "target": "readme_community_verification_profiles"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_key_features",
+      "target": "readme_intelligent_billing_meter_calculations"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_key_features",
+      "target": "readme_public_room_listings"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_key_features",
+      "target": "readme_secure_cash_receipts_double_confirmation_flow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_key_features",
+      "target": "readme_secure_document_capture"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_secure_cash_receipts_double_confirmation_flow",
+      "target": "readme_for_app_users"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_secure_cash_receipts_double_confirmation_flow",
+      "target": "readme_for_non_app_users"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_community_verification_profiles",
+      "target": "readme_property_reviews"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_community_verification_profiles",
+      "target": "readme_tenant_reviews"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_public_room_listings",
+      "target": "readme_post_vacant_rooms"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L95",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_public_room_listings",
+      "target": "readme_search_available_rooms"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_getting_started",
+      "target": "readme_highlights"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L172",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_getting_started",
+      "target": "readme_installation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_getting_started",
+      "target": "readme_prerequisites"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L194",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "readme_getting_started",
+      "target": "readme_running_the_app"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d6f9e5184a68de439d135608d46023c35489b0ed"
+  "built_at_commit": "c10b2748fb0f540e0aa561428ee740069fe9b3e9"
 }
