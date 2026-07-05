@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
+import * as Crypto from 'expo-crypto';
 import { initConnection } from '../../database/connection';
 import {
   initPostingSchema,
@@ -52,7 +53,7 @@ export function useListingController(roomId: string, houseId: string, onSuccess?
 
     setIsSaving(true);
     try {
-      const postingId = Math.random().toString(36).substring(2, 15);
+      const postingId = Crypto.randomUUID();
       const newPosting: RoomPosting = {
         id: postingId,
         room_id: roomId,

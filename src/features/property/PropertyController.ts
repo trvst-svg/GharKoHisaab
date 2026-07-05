@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
+import * as Crypto from 'expo-crypto';
 import { initConnection } from '../../database/connection';
 import {
   initPropertySchema,
@@ -92,7 +93,7 @@ export function usePropertyController() {
       return;
     }
 
-    const newHouseId = Math.random().toString(36).substring(2, 15);
+    const newHouseId = Crypto.randomUUID();
     const newHousePayload: House = {
       id: newHouseId,
       housekeeper_name: housekeeperName.trim(),
@@ -126,7 +127,7 @@ export function usePropertyController() {
       return;
     }
 
-    const newRoomId = Math.random().toString(36).substring(2, 15);
+    const newRoomId = Crypto.randomUUID();
     const newRoomPayload: Room = {
       id: newRoomId,
       house_id: selectedHouse.id,

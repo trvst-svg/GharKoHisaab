@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import NepaliDate from 'nepali-date-converter';
+import * as Crypto from 'expo-crypto';
 import { initConnection } from '../../database/connection';
 import {
   initTenantSchema,
@@ -141,7 +142,7 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
       return;
     }
 
-    const tenantId = Math.random().toString(36).substring(2, 15);
+    const tenantId = Crypto.randomUUID();
     const newTenant: Tenant = {
       id: tenantId,
       name: name.trim(),
@@ -152,7 +153,7 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
       created_at: new Date().toISOString(),
     };
 
-    const tenancyId = Math.random().toString(36).substring(2, 15);
+    const tenancyId = Crypto.randomUUID();
     const newTenancy: Tenancy = {
       id: tenancyId,
       room_id: roomId,

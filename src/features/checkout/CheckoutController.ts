@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Alert } from 'react-native';
 import NepaliDate from 'nepali-date-converter';
+import * as Crypto from 'expo-crypto';
 import { initConnection } from '../../database/connection';
 import {
   initCheckoutSchema,
@@ -239,7 +240,7 @@ export function useCheckoutController(
 
     setIsSaving(true);
     try {
-      const settlementId = Math.random().toString(36).substring(2, 15);
+      const settlementId = Crypto.randomUUID();
 
       // Save Checkout Settlement record
       await addCheckoutSettlement({
@@ -271,7 +272,7 @@ export function useCheckoutController(
 
       // Save final reading if updated
       if (!isNaN(finalRead) && lastReading && finalRead > lastReading.electricity_reading) {
-        const readingId = Math.random().toString(36).substring(2, 15);
+        const readingId = Crypto.randomUUID();
         await addMeterReading({
           id: readingId,
           tenancy_id: tenancyId,
