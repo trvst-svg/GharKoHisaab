@@ -10,6 +10,7 @@ import {
   Image,
   KeyboardAvoidingView,
   Platform,
+  Share,
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 import { usePaymentController } from './PaymentController';
@@ -54,6 +55,28 @@ export default function PaymentModal({
   } = usePaymentController(invoiceId, totalDue, tenantPhone, onClose);
 
   const remainingBalance = totalDue - alreadyPaid;
+
+  const handleSharePaymentRequest = async () => {
+    try {
+      const amt = parseFloat(amountPaid) || remainingBalance;
+      const message = `GharKoHisaab Payment Request
+----------------------------------------
+Billing Period: ${billingPeriod}
+Outstanding Amount: Rs. ${amt.toLocaleString()}
+Method: ${paymentMethod.toUpperCase()}
+----------------------------------------
+Please transfer Rs. ${amt.toLocaleString()} for your room rent of period ${billingPeriod}.
+After transferring, please send the screenshot to confirm.
+
+Thank you!`;
+      await Share.share({
+        message,
+        title: 'GharKoHisaab Payment Request',
+      });
+    } catch (error) {
+      console.error('Error sharing payment request:', error);
+    }
+  };
 
   if (!dbReady || !isVisible) return null;
 
@@ -199,6 +222,24 @@ export default function PaymentModal({
             {/* Digital Upload Flow */}
             {paymentMethod !== 'cash' && (
               <View style={styles.digitalSection}>
+                <View style={styles.qrContainer}>
+                  <Text style={styles.qrTitle}>Scan to Pay via {paymentMethod.toUpperCase()}</Text>
+                  <Image
+                    source={{
+                      uri: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(
+                        `GharKoHisaab Payment:\nInvoice ID: ${invoiceId}\nBilling Period: ${billingPeriod}\nAmount: Rs. ${parseFloat(amountPaid) || remainingBalance}\nPhone: ${tenantPhone}`
+                      )}`
+                    }}
+                    style={styles.qrImage}
+                  />
+                  <Text style={styles.qrHelpText}>
+                    Show this QR code to the tenant to scan and pay Rs. ${(parseFloat(amountPaid) || remainingBalance).toLocaleString()} directly.
+                  </Text>
+                  <TouchableOpacity style={styles.shareRequestBtn} onPress={handleSharePaymentRequest}>
+                    <Text style={styles.shareRequestBtnText}>📤 Share Payment Details</Text>
+                  </TouchableOpacity>
+                </View>
+
                 {receiptImage ? (
                   <View style={styles.previewContainer}>
                     <Image source={{ uri: receiptImage }} style={styles.receiptPreview} />
@@ -406,6 +447,50 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderStyle: 'dashed',
+    marginBottom: 16,
+  },
+  qrContainer: {
+    alignItems: 'center',
+    backgroundColor: COLORS.cardBackground,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    borderRadius: 10,
+    padding: 16,
+    marginBottom: 16,
+  },
+  qrTitle: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: COLORS.primary,
+    marginBottom: 12,
+  },
+  qrImage: {
+    width: 160,
+    height: 160,
+    backgroundColor: COLORS.white,
+    marginBottom: 12,
+  },
+  qrHelpText: {
+    fontSize: 11,
+    color: COLORS.textSecondary,
+    textAlign: 'center',
+    lineHeight: 15,
+    marginBottom: 12,
+  },
+  shareRequestBtn: {
+    backgroundColor: COLORS.white,
+    borderWidth: 1.5,
+    borderColor: COLORS.primary,
+    borderRadius: 6,
+    height: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 16,
+  },
+  shareRequestBtnText: {
+    color: COLORS.primary,
+    fontSize: 12,
+    fontWeight: 'bold',
   },
   uploadBtnText: {
     fontSize: 13,

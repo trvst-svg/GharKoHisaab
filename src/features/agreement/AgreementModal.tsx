@@ -9,6 +9,7 @@ import {
   Modal,
   KeyboardAvoidingView,
   Platform,
+  Share,
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 import { useAgreementController } from './AgreementController';
@@ -72,6 +73,38 @@ export default function AgreementModal({
 
   // If read-only mode and agreement exists, show summary
   const isViewMode = readOnly && existingAgreement;
+
+  const handleShareAgreement = async () => {
+    try {
+      const message = `GharKoHisaab Tenancy Agreement
+----------------------------------------
+Housekeeper (Landlord): ${housekeeperName}
+Tenant: ${tenantName}
+Room: Room ${roomNumber}
+----------------------------------------
+Monthly Rent: Rs. ${baseRent.toLocaleString()}
+Security Deposit (Dharauti): Rs. ${securityDeposit.toLocaleString()}
+Start Date: ${existingAgreement?.start_date_bs || startDateBs}
+----------------------------------------
+Electricity Rate: Rs. ${existingAgreement?.electricity_rate || electricityRate}/unit
+Water Rate: Rs. ${existingAgreement?.water_rate || waterRate}/mo
+Waste Management: Rs. ${existingAgreement?.waste_rate || wasteRate}/mo
+Special Terms: ${existingAgreement?.special_terms || specialTerms || 'None'}
+----------------------------------------
+Status: DIGITALLY SIGNED & VERIFIED
+Signed At: ${existingAgreement?.signed_at ? new Date(existingAgreement.signed_at).toLocaleString() : new Date().toLocaleString()}
+Device ID: ${existingAgreement?.device_id || 'N/A'}
+----------------------------------------
+Generated via GharKoHisaab App.`;
+
+      await Share.share({
+        message,
+        title: 'GharKoHisaab Tenancy Agreement',
+      });
+    } catch (error) {
+      console.error('Error sharing agreement:', error);
+    }
+  };
 
   const renderStepIndicator = () => (
     <View style={styles.stepIndicator}>
@@ -351,6 +384,10 @@ export default function AgreementModal({
           </Text>
         )}
       </View>
+
+      <TouchableOpacity style={styles.shareAgreementBtn} onPress={handleShareAgreement}>
+        <Text style={styles.shareAgreementBtnText}>📤 Share Signed Contract</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 
@@ -400,6 +437,20 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     backgroundColor: COLORS.background,
+  },
+  shareAgreementBtn: {
+    height: 48,
+    borderRadius: 8,
+    backgroundColor: COLORS.accentGreen,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
+    marginBottom: 30,
+  },
+  shareAgreementBtnText: {
+    color: COLORS.white,
+    fontSize: 15,
+    fontWeight: 'bold',
   },
   modalHeader: {
     flexDirection: 'row',

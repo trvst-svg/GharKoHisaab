@@ -10,6 +10,7 @@ import {
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  Share,
 } from 'react-native';
 import { COLORS } from '../../constants/colors';
 import { useInvoiceController } from './InvoiceController';
@@ -52,6 +53,36 @@ export default function InvoiceSection({
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [selectedInvoiceForPayment, setSelectedInvoiceForPayment] = useState<any | null>(null);
+
+  const handleShareInvoice = async (invoice: any) => {
+    try {
+      const isPaid = invoice.status === 'paid';
+      const title = isPaid ? 'GharKoHisaab Payment Receipt' : 'GharKoHisaab Rental Invoice';
+      
+      const message = `${title}
+----------------------------------------
+Period: ${invoice.billing_period}
+Status: ${invoice.status.toUpperCase()}
+----------------------------------------
+Monthly Base Rent: Rs. ${invoice.rent_due.toLocaleString()}
+Electricity: Rs. ${invoice.electricity_due.toLocaleString()}
+Water Flat Fee: Rs. ${invoice.water_due.toLocaleString()}
+Waste Management: Rs. ${invoice.waste_due.toLocaleString()}
+${invoice.arrears_carried_forward > 0 ? `Previous Arrears: Rs. ${invoice.arrears_carried_forward.toLocaleString()}\n` : ''}----------------------------------------
+Total: Rs. ${invoice.total_due.toLocaleString()}
+----------------------------------------
+${isPaid ? 'Thank you! The payment has been verified and recorded.' : 'Please pay the outstanding dues via cash or digital transfer.'}
+
+Generated via GharKoHisaab App.`;
+
+      await Share.share({
+        message,
+        title,
+      });
+    } catch (error) {
+      console.error('Error sharing invoice:', error);
+    }
+  };
 
   if (!dbReady) {
     return (
@@ -132,14 +163,25 @@ export default function InvoiceSection({
                   {item.arrears_carried_forward > 0 && ` | Arrears: Rs. ${item.arrears_carried_forward.toLocaleString()}`}
                 </Text>
 
-                {item.status !== 'paid' && (
+                <View style={styles.actionRow}>
+                  {item.status !== 'paid' && (
+                    <TouchableOpacity
+                      style={styles.payBtn}
+                      onPress={() => setSelectedInvoiceForPayment(item)}
+                    >
+                      <Text style={styles.payBtnText}>Record Payment</Text>
+                    </TouchableOpacity>
+                  )}
+                  
                   <TouchableOpacity
-                    style={styles.payBtn}
-                    onPress={() => setSelectedInvoiceForPayment(item)}
+                    style={[styles.shareBtn, item.status === 'paid' && styles.shareBtnPaidOnly]}
+                    onPress={() => handleShareInvoice(item)}
                   >
-                    <Text style={styles.payBtnText}>Record Payment</Text>
+                    <Text style={[styles.shareBtnText, item.status === 'paid' && styles.shareBtnTextPaidOnly]}>
+                      {item.status === 'paid' ? '📤 Share Receipt' : '📤 Share Bill'}
+                    </Text>
                   </TouchableOpacity>
-                )}
+                </View>
               </View>
             </View>
           )}
@@ -417,13 +459,35 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 12,
     borderRadius: 4,
-    alignSelf: 'flex-start',
-    marginTop: 6,
+    marginRight: 8,
   },
   payBtnText: {
     color: COLORS.white,
     fontSize: 11,
     fontWeight: 'bold',
+  },
+  actionRow: {
+    flexDirection: 'row',
+    marginTop: 6,
+  },
+  shareBtn: {
+    backgroundColor: COLORS.white,
+    borderWidth: 1,
+    borderColor: COLORS.primary,
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 4,
+  },
+  shareBtnPaidOnly: {
+    borderColor: COLORS.accentGreen,
+  },
+  shareBtnText: {
+    color: COLORS.primary,
+    fontSize: 11,
+    fontWeight: 'bold',
+  },
+  shareBtnTextPaidOnly: {
+    color: COLORS.accentGreen,
   },
   modalOverlay: {
     flex: 1,
