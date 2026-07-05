@@ -1,12 +1,13 @@
 export const COLORS = {
-  primary: '#2C3E50',       // Slate Blue: headers and structure
-  accentGreen: '#27AE60',   // Forest Green: active, vacant, paid
-  accentOrange: '#D35400',  // Terracotta Clay: actions, unpaid
-  background: '#FDFEFE',    // Soft Off-White: primary backgrounds
-  cardBackground: '#F2F4F4',// Warm Sand/Grey: cards and secondary boxes
-  border: '#BDC3C7',        // Slate Gray: borders
-  textPrimary: '#1C2833',   // Charcoal Dark: main text
-  textSecondary: '#7F8C8D', // Medium Gray: subtitles
+  primary: '#4F46E5',         // Indigo: main accents & active CTAs
+  primaryDark: '#3730A3',     // Dark Indigo
+  accentGreen: '#10B981',     // Emerald: vacant, paid, positive actions
+  accentOrange: '#F59E0B',    // Amber: unpaid, actions
+  background: '#FAFBFD',      // Soft light gray background
+  cardBackground: '#FFFFFF',  // Pure white for high contrast cards
+  border: '#E2E8F0',          // Slate border
+  textPrimary: '#0F172A',     // Slate-900: high readability headers
+  textSecondary: '#64748B',   // Slate-500: body copy and labels
   white: '#FFFFFF',
-  red: '#C0392B',           // High contrast red: delete
+  red: '#EF4444',             // Rose-500: high contrast alerts and deletion
 };

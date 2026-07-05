@@ -2,7 +2,7 @@ import { Platform } from 'react-native';
 
 // Set up localStorage Mock BEFORE importing database connection
 const store: Record<string, string> = {};
-global.localStorage = {
+(globalThis as any).localStorage = {
   getItem: (key: string) => store[key] || null,
   setItem: (key: string, value: string) => { store[key] = value; },
   removeItem: (key: string) => { delete store[key]; },
@@ -136,7 +136,7 @@ describe('Database & Model Integration Tests', () => {
       created_at: new Date().toISOString(),
     });
 
-    await terminateTenancy(tenancyId, roomId);
+    await terminateTenancy(tenancyId, roomId, '2083 Shrawan 15', 'refunded');
 
     // Verify tenancy is deactivated
     const activeTenancy = await getActiveTenancyForRoom(roomId);

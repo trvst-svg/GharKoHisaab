@@ -472,25 +472,35 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: COLORS.background,
   },
   loadingText: {
-    fontSize: 16,
+    fontSize: 15,
     color: COLORS.textSecondary,
+    fontWeight: '500',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 16,
-    paddingTop: 16,
+    paddingTop: 20,
     paddingBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border,
+    backgroundColor: COLORS.white,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+      }
+    })
   },
   headerTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
   },
   backBtn: {
     paddingVertical: 8,
@@ -499,41 +509,58 @@ const styles = StyleSheet.create({
   backBtnText: {
     color: COLORS.primary,
     fontSize: 14,
-    fontWeight: '600',
+    fontWeight: 'bold',
   },
   contentScroll: {
     padding: 16,
+    paddingBottom: 40,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+      }
+    })
   },
   card: {
     backgroundColor: COLORS.cardBackground,
-    borderRadius: 12,
-    padding: 16,
+    borderRadius: 16,
+    padding: 20,
     borderWidth: 1,
     borderColor: COLORS.border,
     marginBottom: 16,
+    shadowColor: '#64748B',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    elevation: 2,
   },
   sectionHeader: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: 'bold',
     color: COLORS.primary,
-    marginBottom: 12,
-    borderBottomWidth: 1,
+    marginBottom: 14,
+    borderBottomWidth: 1.5,
     borderBottomColor: COLORS.border,
     paddingBottom: 6,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   label: {
-    fontSize: 13,
-    fontWeight: '600',
-    color: COLORS.primary,
+    fontSize: 12,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
     marginBottom: 6,
-    marginTop: 10,
+    marginTop: 12,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   input: {
     height: 44,
     borderWidth: 1,
     borderColor: COLORS.border,
-    borderRadius: 6,
-    paddingHorizontal: 10,
+    borderRadius: 10,
+    paddingHorizontal: 12,
     backgroundColor: COLORS.white,
     color: COLORS.textPrimary,
     fontSize: 14,
@@ -542,41 +569,43 @@ const styles = StyleSheet.create({
   detailRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingVertical: 8,
+    paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: 'rgba(0,0,0,0.05)',
+    borderBottomColor: 'rgba(0,0,0,0.03)',
   },
   detailLabel: {
-    fontSize: 14,
+    fontSize: 13,
     color: COLORS.textSecondary,
+    fontWeight: '500',
   },
   detailValue: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '600',
     color: COLORS.textPrimary,
   },
   depositText: {
     color: COLORS.accentGreen,
+    fontWeight: 'bold',
   },
   idImagePreview: {
     width: '100%',
     height: 200,
-    borderRadius: 8,
+    borderRadius: 12,
     resizeMode: 'cover',
     marginTop: 8,
   },
   backButton: {
-    height: 48,
-    borderRadius: 8,
+    height: 46,
+    borderRadius: 10,
     backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10,
-    marginBottom: 30,
+    marginTop: 14,
+    marginBottom: 20,
   },
   backButtonText: {
     color: COLORS.white,
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: 'bold',
   },
   dateInputsContainer: {
@@ -589,9 +618,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
   },
   dateLabel: {
-    fontSize: 11,
+    fontSize: 10,
+    fontWeight: 'bold',
     color: COLORS.textSecondary,
     marginBottom: 4,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   dateInput: {
     textAlign: 'center',
@@ -600,14 +632,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: COLORS.border,
-    borderRadius: 6,
+    borderRadius: 10,
     overflow: 'hidden',
     marginTop: 6,
     marginBottom: 16,
   },
   toggleBtn: {
     flex: 1,
-    height: 36,
+    height: 38,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: COLORS.white,
@@ -616,8 +648,9 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
   },
   toggleText: {
-    fontSize: 12,
+    fontSize: 13,
     color: COLORS.textPrimary,
+    fontWeight: '600',
   },
   toggleTextActive: {
     color: COLORS.white,
@@ -633,7 +666,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     borderWidth: 1,
     borderColor: COLORS.border,
-    borderRadius: 6,
+    borderRadius: 10,
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
@@ -641,7 +674,7 @@ const styles = StyleSheet.create({
   },
   photoBtnText: {
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: 'bold',
     color: COLORS.primary,
   },
   photoPreviewContainer: {
@@ -651,7 +684,7 @@ const styles = StyleSheet.create({
   imagePreview: {
     width: '100%',
     height: 180,
-    borderRadius: 8,
+    borderRadius: 12,
     resizeMode: 'cover',
   },
   removePhotoBtn: {
@@ -661,20 +694,20 @@ const styles = StyleSheet.create({
   removePhotoText: {
     color: COLORS.red,
     fontSize: 13,
-    fontWeight: '600',
+    fontWeight: 'bold',
   },
   saveBtn: {
-    height: 48,
-    borderRadius: 8,
-    backgroundColor: COLORS.accentOrange,
+    height: 46,
+    borderRadius: 10,
+    backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 10,
-    marginBottom: 40,
+    marginTop: 14,
+    marginBottom: 30,
   },
   saveBtnText: {
     color: COLORS.white,
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   checkoutBtn: {
@@ -711,11 +744,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border,
-    backgroundColor: COLORS.cardBackground,
+    backgroundColor: COLORS.white,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+        borderWidth: 1,
+        borderColor: COLORS.border,
+        borderRadius: 12,
+        marginBottom: 16,
+      }
+    })
   },
   tabBtn: {
     flex: 1,
-    paddingVertical: 12,
+    paddingVertical: 14,
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 3,
@@ -744,3 +788,4 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
 });
+

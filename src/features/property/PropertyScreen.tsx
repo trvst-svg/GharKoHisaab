@@ -188,6 +188,8 @@ export default function PropertyScreen() {
                 </View>
               ) : (
                 <FlatList
+                  key={Platform.OS === 'web' ? 'web-grid' : 'mobile-list'}
+                  numColumns={Platform.OS === 'web' ? 2 : 1}
                   data={rooms}
                   keyExtractor={(item) => item.id}
                   contentContainerStyle={styles.listContainer}
@@ -354,12 +356,15 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
   loadingText: {
-    fontSize: 16,
+    fontSize: 15,
     color: COLORS.textSecondary,
+    fontWeight: '500',
   },
   wizardScroll: {
     padding: 24,
     justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
   },
   wizardHeader: {
     alignItems: 'center',
@@ -367,9 +372,9 @@ const styles = StyleSheet.create({
     marginTop: 40,
   },
   title: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
     marginBottom: 8,
   },
   subtitle: {
@@ -378,46 +383,57 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: COLORS.cardBackground,
-    borderRadius: 12,
-    padding: 20,
+    borderRadius: 16,
+    padding: 24,
     borderWidth: 1,
     borderColor: COLORS.border,
+    width: '100%',
+    maxWidth: 500,
+    shadowColor: '#64748B',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 3,
   },
   label: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: COLORS.primary,
+    fontSize: 13,
+    fontWeight: '700',
+    color: COLORS.textPrimary,
     marginBottom: 8,
-    marginTop: 12,
+    marginTop: 14,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   input: {
-    height: 48,
+    height: 46,
     borderWidth: 1,
     borderColor: COLORS.border,
-    borderRadius: 8,
-    paddingHorizontal: 12,
+    borderRadius: 10,
+    paddingHorizontal: 14,
     backgroundColor: COLORS.white,
     color: COLORS.textPrimary,
-    fontSize: 15,
+    fontSize: 14,
     marginBottom: 8,
   },
   suggestedContainer: {
-    backgroundColor: 'rgba(44, 62, 80, 0.05)',
-    padding: 12,
-    borderRadius: 8,
-    marginBottom: 12,
+    backgroundColor: '#F5F3FF',
+    padding: 14,
+    borderRadius: 12,
+    marginBottom: 14,
     borderWidth: 1,
-    borderColor: COLORS.border,
+    borderColor: '#DDD6FE',
   },
   suggestedTitle: {
-    fontSize: 13,
-    fontWeight: '600',
+    fontSize: 12,
+    fontWeight: 'bold',
     color: COLORS.primary,
     marginBottom: 6,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   suggestedInput: {
     backgroundColor: COLORS.white,
-    borderColor: COLORS.border,
+    borderColor: '#C7D2FE',
   },
   suggestedHelp: {
     fontSize: 11,
@@ -425,67 +441,97 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   button: {
-    height: 48,
-    borderRadius: 8,
+    height: 46,
+    borderRadius: 10,
     backgroundColor: COLORS.primary,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 20,
+    marginTop: 24,
   },
   buttonDisabled: {
     opacity: 0.5,
   },
   buttonText: {
     color: COLORS.white,
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 20,
-    paddingTop: 16,
-    paddingBottom: 8,
+    paddingTop: 20,
+    paddingBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border,
+    backgroundColor: COLORS.white,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+        borderBottomWidth: 0,
+      }
+    })
   },
   headerSubtitle: {
-    fontSize: 12,
+    fontSize: 11,
     color: COLORS.textSecondary,
     textTransform: 'uppercase',
+    fontWeight: 'bold',
+    letterSpacing: 0.5,
   },
   headerTitle: {
-    fontSize: 22,
+    fontSize: 24,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
     marginTop: 2,
   },
   headerBtn: {
     backgroundColor: COLORS.primary,
     paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 6,
+    paddingHorizontal: 14,
+    borderRadius: 8,
   },
   headerBtnText: {
     color: COLORS.white,
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: 'bold',
   },
   addressBar: {
-    backgroundColor: COLORS.cardBackground,
+    backgroundColor: COLORS.white,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+        borderRadius: 12,
+        marginBottom: 16,
+        borderWidth: 1,
+        borderColor: COLORS.border,
+      }
+    })
   },
   addressText: {
     fontSize: 13,
     color: COLORS.textSecondary,
-    fontWeight: '500',
+    fontWeight: '600',
   },
   content: {
     flex: 1,
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingTop: 16,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+      }
+    })
   },
   sectionHeader: {
     flexDirection: 'row',
@@ -496,60 +542,74 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
   },
   addRoomBtn: {
-    backgroundColor: COLORS.accentOrange,
+    backgroundColor: COLORS.primary,
     paddingVertical: 6,
     paddingHorizontal: 12,
-    borderRadius: 6,
+    borderRadius: 8,
   },
   addRoomBtnText: {
     color: COLORS.white,
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: 'bold',
   },
   emptyState: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 40,
+    paddingVertical: 60,
   },
   emptyText: {
-    fontSize: 15,
+    fontSize: 14,
     color: COLORS.textSecondary,
     textAlign: 'center',
   },
   listContainer: {
-    paddingBottom: 20,
+    paddingBottom: 24,
   },
   roomCard: {
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: COLORS.cardBackground,
-    borderRadius: 10,
+    borderRadius: 14,
     paddingRight: 16,
     marginBottom: 12,
     borderWidth: 1,
     borderColor: COLORS.border,
     overflow: 'hidden',
+    shadowColor: '#64748B',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.05,
+    shadowRadius: 8,
+    elevation: 2,
+    ...Platform.select({
+      web: {
+        flex: 1,
+        marginHorizontal: 6,
+        minWidth: '45%',
+      }
+    })
   },
   roomInfoContainer: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 16,
-    paddingLeft: 16,
+    paddingVertical: 18,
+    paddingLeft: 18,
   },
   roomNumber: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
   },
   roomRent: {
-    fontSize: 14,
+    fontSize: 13,
     color: COLORS.textSecondary,
     marginTop: 4,
+    fontWeight: '500',
   },
   rightAction: {
     justifyContent: 'center',
@@ -557,52 +617,53 @@ const styles = StyleSheet.create({
   },
   badge: {
     paddingVertical: 4,
-    paddingHorizontal: 8,
-    borderRadius: 4,
+    paddingHorizontal: 10,
+    borderRadius: 100,
     alignSelf: 'center',
     marginRight: 12,
   },
   badgeVacant: {
-    backgroundColor: 'rgba(39, 174, 96, 0.1)',
+    backgroundColor: '#DEF7EC',
   },
   badgeOccupied: {
-    backgroundColor: 'rgba(211, 84, 0, 0.1)',
+    backgroundColor: '#FEF3C7',
   },
   badgeText: {
-    fontSize: 10,
+    fontSize: 9,
     fontWeight: 'bold',
+    letterSpacing: 0.5,
   },
   badgeTextVacant: {
     color: COLORS.accentGreen,
   },
   badgeTextOccupied: {
-    color: COLORS.accentOrange,
+    color: '#D97706',
   },
   deleteBtn: {
     paddingVertical: 8,
-    paddingHorizontal: 8,
+    paddingHorizontal: 10,
   },
   deleteBtnText: {
     color: COLORS.red,
     fontSize: 12,
-    fontWeight: '600',
+    fontWeight: 'bold',
   },
   modalOverlay: {
     flex: 1,
     justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.4)',
   },
   modalContent: {
     backgroundColor: COLORS.background,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
     padding: 24,
     maxHeight: '90%',
   },
   modalTitle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
     marginBottom: 16,
     textAlign: 'center',
   },
@@ -610,14 +671,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderWidth: 1,
     borderColor: COLORS.border,
-    borderRadius: 8,
+    borderRadius: 10,
     overflow: 'hidden',
     marginTop: 8,
     marginBottom: 24,
   },
   statusToggleBtn: {
     flex: 1,
-    height: 40,
+    height: 42,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: COLORS.white,
@@ -626,9 +687,9 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.primary,
   },
   statusToggleText: {
-    fontSize: 14,
+    fontSize: 13,
     color: COLORS.textPrimary,
-    fontWeight: '500',
+    fontWeight: '600',
   },
   statusToggleTextActive: {
     color: COLORS.white,
@@ -637,11 +698,12 @@ const styles = StyleSheet.create({
   modalActions: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    paddingBottom: 20,
   },
   modalBtn: {
     flex: 1,
-    height: 48,
-    borderRadius: 8,
+    height: 46,
+    borderRadius: 10,
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -671,15 +733,32 @@ const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderTopColor: COLORS.border,
     backgroundColor: COLORS.white,
-    elevation: 4,
+    shadowColor: '#64748B',
+    shadowOffset: { width: 0, height: -3 },
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    elevation: 8,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+        borderWidth: 1,
+        borderColor: COLORS.border,
+        borderRadius: 12,
+        marginBottom: 16,
+      }
+    })
   },
   tabItem: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    borderBottomWidth: 3,
+    borderBottomColor: 'transparent',
   },
   tabItemActive: {
-    backgroundColor: COLORS.cardBackground,
+    borderBottomColor: COLORS.primary,
   },
   tabItemText: {
     fontSize: 13,

@@ -94,6 +94,8 @@ export default function MarketplaceFeed() {
         </View>
       ) : (
         <FlatList
+          key={Platform.OS === 'web' ? 'web-grid' : 'mobile-list'}
+          numColumns={Platform.OS === 'web' ? 2 : 1}
           data={filteredPostings}
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.listContent}
@@ -153,6 +155,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
+    backgroundColor: COLORS.background,
   },
   loadingText: {
     fontSize: 14,
@@ -161,16 +164,24 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
   header: {
-    paddingHorizontal: 16,
-    paddingTop: 16,
+    paddingHorizontal: 20,
+    paddingTop: 20,
     paddingBottom: 12,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border,
+    backgroundColor: COLORS.white,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+      }
+    })
   },
   headerTitle: {
-    fontSize: 18,
+    fontSize: 20,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
   },
   headerSubtitle: {
     fontSize: 13,
@@ -178,75 +189,106 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   filterCard: {
-    backgroundColor: COLORS.cardBackground,
+    backgroundColor: COLORS.white,
+    padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border,
-    padding: 14,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+        borderRadius: 12,
+        marginTop: 16,
+        marginBottom: 16,
+        borderWidth: 1,
+        borderColor: COLORS.border,
+        shadowColor: '#64748B',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.05,
+        shadowRadius: 8,
+      }
+    })
   },
   searchRow: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    marginBottom: 10,
   },
   searchLabel: {
     fontSize: 12,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
     flex: 1,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   searchInput: {
     flex: 2,
-    height: 36,
+    height: 40,
     backgroundColor: COLORS.white,
     borderWidth: 1,
     borderColor: COLORS.border,
-    borderRadius: 6,
-    paddingHorizontal: 10,
+    borderRadius: 8,
+    paddingHorizontal: 12,
     fontSize: 13,
     color: COLORS.textPrimary,
   },
   listContent: {
     padding: 16,
     paddingBottom: 30,
+    ...Platform.select({
+      web: {
+        maxWidth: 1000,
+        width: '100%',
+        alignSelf: 'center',
+      }
+    })
   },
   listingCard: {
-    backgroundColor: COLORS.white,
-    borderRadius: 12,
+    backgroundColor: COLORS.cardBackground,
+    borderRadius: 14,
     borderWidth: 1,
     borderColor: COLORS.border,
-    padding: 16,
+    padding: 18,
     marginBottom: 16,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.05,
-    shadowRadius: 2,
-    elevation: 1,
+    shadowColor: '#64748B',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.06,
+    shadowRadius: 10,
+    elevation: 3,
+    ...Platform.select({
+      web: {
+        flex: 1,
+        marginHorizontal: 6,
+        minWidth: '45%',
+      }
+    })
   },
   cardHeader: {
     flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
-    marginBottom: 10,
+    marginBottom: 12,
   },
   cardTitle: {
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
   },
   cardRoomInfo: {
     fontSize: 12,
     color: COLORS.textSecondary,
     marginTop: 2,
+    fontWeight: '500',
   },
   rentBadge: {
     alignItems: 'flex-end',
-    backgroundColor: 'rgba(39, 174, 96, 0.1)',
-    paddingHorizontal: 8,
+    backgroundColor: '#DEF7EC',
+    paddingHorizontal: 10,
     paddingVertical: 4,
-    borderRadius: 6,
-    borderWidth: 0.5,
-    borderColor: COLORS.accentGreen,
+    borderRadius: 8,
   },
   rentText: {
     fontSize: 14,
@@ -256,20 +298,21 @@ const styles = StyleSheet.create({
   rentPeriod: {
     fontSize: 9,
     color: COLORS.textSecondary,
+    fontWeight: '600',
   },
   cardDescription: {
     fontSize: 13,
     color: COLORS.textPrimary,
     lineHeight: 18,
-    marginBottom: 12,
+    marginBottom: 14,
   },
   cardLocationBox: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 12,
+    marginBottom: 14,
     paddingBottom: 10,
     borderBottomWidth: 1,
-    borderBottomColor: 'rgba(0,0,0,0.05)',
+    borderBottomColor: 'rgba(0,0,0,0.03)',
   },
   locationText: {
     fontSize: 12,
@@ -289,17 +332,18 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     textTransform: 'uppercase',
     fontWeight: 'bold',
+    letterSpacing: 0.5,
   },
   ownerValue: {
     fontSize: 13,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
   },
   callBtn: {
     backgroundColor: COLORS.primary,
-    borderRadius: 6,
+    borderRadius: 8,
     paddingVertical: 8,
-    paddingHorizontal: 12,
+    paddingHorizontal: 14,
   },
   callBtnText: {
     color: COLORS.white,
@@ -310,16 +354,16 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 24,
+    padding: 32,
   },
   emptyTextIcon: {
     fontSize: 48,
-    marginBottom: 10,
+    marginBottom: 12,
   },
   emptyTextTitle: {
-    fontSize: 16,
+    fontSize: 17,
     fontWeight: 'bold',
-    color: COLORS.primary,
+    color: COLORS.textPrimary,
     marginBottom: 6,
   },
   emptyTextSub: {
@@ -327,13 +371,13 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     textAlign: 'center',
     lineHeight: 18,
-    marginBottom: 20,
+    marginBottom: 24,
   },
   retryBtn: {
     backgroundColor: COLORS.primary,
-    paddingHorizontal: 16,
+    paddingHorizontal: 18,
     paddingVertical: 10,
-    borderRadius: 6,
+    borderRadius: 8,
   },
   retryBtnText: {
     color: COLORS.white,
