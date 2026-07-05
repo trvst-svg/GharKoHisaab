@@ -4,7 +4,9 @@ import * as ImagePicker from 'expo-image-picker';
 import NepaliDate from 'nepali-date-converter';
 import * as Crypto from 'expo-crypto';
 import { z } from 'zod';
-import { initConnection } from '../../database/connection';
+import { initConnection, getDrizzleDB } from '../../database/connection';
+import { rooms } from '../../database/schema';
+import { eq } from 'drizzle-orm';
 import {
   initTenantSchema,
   addTenant,
@@ -13,6 +15,7 @@ import {
   Tenant,
   Tenancy,
 } from './TenantModel';
+import { initAgreementSchema, getAgreementForTenancy } from '../agreement/AgreementModel';
 
 export function useTenantController(roomId: string, onSuccess: () => void) {
   const [dbReady, setDbReady] = useState(false);
@@ -25,6 +28,13 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
   const [idPhotoUri, setIdPhotoUri] = useState<string | null>(null);
   const [deposit, setDeposit] = useState('');
 
+  // Agreement modal state
+  const [lastOnboardedTenancyId, setLastOnboardedTenancyId] = useState<string | null>(null);
+  const [lastOnboardedBsDate, setLastOnboardedBsDate] = useState<string>('');
+  const [existingAgreement, setExistingAgreement] = useState<any | null>(null);
+  const [lastOnboardedDeposit, setLastOnboardedDeposit] = useState<number>(0);
+  const [roomBaseRent, setRoomBaseRent] = useState<number>(0);
+
   // Nepali Calendar (Bikram Sambat) Onboarding Fields
   // Default to today's B.S. date
   const [bsYear, setBsYear] = useState('');
@@ -36,12 +46,31 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
       try {
         await initConnection();
         await initTenantSchema();
+        await initAgreementSchema();
         setDbReady(true);
+
+        // Fetch room base rent for the agreement modal
+        try {
+          const drizzle = await getDrizzleDB();
+          const roomRows = await drizzle.select().from(rooms).where(eq(rooms.id, roomId)).limit(1);
+          if (roomRows.length > 0) {
+            setRoomBaseRent(roomRows[0].baseRent);
+          }
+        } catch (e) {
+          // Non-critical — base rent will default to 0
+        }
         
         // Load active tenancy if any
         const tenancy = await getActiveTenancyForRoom(roomId);
         if (tenancy) {
           setActiveTenancy(tenancy);
+          // Load existing agreement for view button
+          try {
+            const agreement = await getAgreementForTenancy(tenancy.id);
+            setExistingAgreement(agreement);
+          } catch (e) {
+            // Agreement may not exist yet — that's fine
+          }
         } else {
           // Initialize B.S. dates for fresh onboarding
           const todayBS = new NepaliDate(new Date());
@@ -168,8 +197,17 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
     try {
       await addTenant(newTenant);
       await addTenancy(newTenancy);
-      Alert.alert('Success', 'Tenant onboarded successfully.');
-      onSuccess();
+
+      // Format B.S. date string for the agreement modal
+      const nepaliDateFormatted = new NepaliDate(
+        parseInt(bsYear), parseInt(bsMonth) - 1, parseInt(bsDay)
+      ).format('YYYY MMMM DD');
+
+      // Set state so the UI can open the agreement modal
+      setLastOnboardedTenancyId(tenancyId);
+      setLastOnboardedBsDate(nepaliDateFormatted);
+      setLastOnboardedDeposit(depositVal);
+      // Don't call onSuccess() yet — let the agreement modal handle the completion
     } catch (error: any) {
       console.error('Onboarding failed:', error);
       if (error.message && error.message.includes('UNIQUE constraint failed')) {
@@ -183,6 +221,7 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
   return {
     dbReady,
     activeTenancy,
+    existingAgreement,
     name,
     setName,
     phone,
@@ -202,5 +241,11 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
     handleTakePhoto,
     handlePickPhoto,
     handleOnboardTenant,
+    // Agreement flow
+    lastOnboardedTenancyId,
+    setLastOnboardedTenancyId,
+    lastOnboardedBsDate,
+    lastOnboardedDeposit,
+    roomBaseRent,
   };
 }

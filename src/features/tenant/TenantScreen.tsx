@@ -17,6 +17,7 @@ import NepaliDate from 'nepali-date-converter';
 import InvoiceSection from '../invoice/InvoiceSection';
 import CheckoutModal from '../checkout/CheckoutModal';
 import { useListingController } from '../postings/PostingController';
+import AgreementModal from '../agreement/AgreementModal';
 
 interface TenantScreenProps {
   roomId: string;
@@ -29,6 +30,7 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
   const {
     dbReady,
     activeTenancy,
+    existingAgreement,
     name,
     setName,
     phone,
@@ -48,9 +50,15 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
     handleTakePhoto,
     handlePickPhoto,
     handleOnboardTenant,
+    lastOnboardedTenancyId,
+    setLastOnboardedTenancyId,
+    lastOnboardedBsDate,
+    lastOnboardedDeposit,
+    roomBaseRent,
   } = useTenantController(roomId, onBack);
 
   const [isCheckoutVisible, setIsCheckoutVisible] = React.useState(false);
+  const [isAgreementVisible, setIsAgreementVisible] = React.useState(false);
   const [vacantTab, setVacantTab] = React.useState<'onboard' | 'post'>('onboard');
 
   const {
@@ -125,6 +133,15 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
             >
               <Text style={styles.checkoutBtnText}>🚪 Checkout / End Tenancy</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.viewAgreementBtn}
+              onPress={() => setIsAgreementVisible(true)}
+            >
+              <Text style={styles.viewAgreementBtnText}>
+                {existingAgreement ? '📄 View Agreement' : '📝 Create Agreement'}
+              </Text>
+            </TouchableOpacity>
           </View>
 
           {activeTenancy.tenant_id_url && (
@@ -157,6 +174,28 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
             baseRent={activeTenancy.base_rent}
             startDate={activeTenancy.start_date}
             securityDeposit={activeTenancy.security_deposit_amount}
+          />
+
+          {/* Agreement modal in read-only view mode for active tenancy */}
+          <AgreementModal
+            visible={isAgreementVisible}
+            onClose={() => setIsAgreementVisible(false)}
+            onSuccess={() => setIsAgreementVisible(false)}
+            tenancyId={activeTenancy.id}
+            baseRent={activeTenancy.base_rent}
+            securityDeposit={activeTenancy.security_deposit_amount}
+            startDateBs={(() => {
+              try {
+                const startAD = new Date(activeTenancy.start_date);
+                return new NepaliDate(startAD).format('YYYY MMMM DD');
+              } catch {
+                return activeTenancy.start_date;
+              }
+            })()}
+            tenantName={activeTenancy.tenant_name}
+            housekeeperName="Landlord"
+            roomNumber={roomNumber}
+            readOnly={!!existingAgreement}
           />
 
           <TouchableOpacity onPress={onBack} style={styles.backButton}>
@@ -331,6 +370,28 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
             <TouchableOpacity style={styles.saveBtn} onPress={handleOnboardTenant}>
               <Text style={styles.saveBtnText}>Save & Onboard Tenant</Text>
             </TouchableOpacity>
+
+            {/* Agreement modal auto-opens after onboarding */}
+            {lastOnboardedTenancyId && (
+              <AgreementModal
+                visible={!!lastOnboardedTenancyId}
+                onClose={() => {
+                  setLastOnboardedTenancyId(null);
+                  onBack();
+                }}
+                onSuccess={() => {
+                  setLastOnboardedTenancyId(null);
+                  onBack();
+                }}
+                tenancyId={lastOnboardedTenancyId}
+                baseRent={roomBaseRent}
+                securityDeposit={lastOnboardedDeposit}
+                startDateBs={lastOnboardedBsDate}
+                tenantName={name}
+                housekeeperName="Landlord"
+                roomNumber={roomNumber}
+              />
+            )}
           </ScrollView>
         ) : (
           <ScrollView contentContainerStyle={styles.contentScroll}>
@@ -628,6 +689,21 @@ const styles = StyleSheet.create({
   },
   checkoutBtnText: {
     color: COLORS.red,
+    fontSize: 13,
+    fontWeight: 'bold',
+  },
+  viewAgreementBtn: {
+    marginTop: 10,
+    height: 40,
+    backgroundColor: COLORS.white,
+    borderWidth: 1.5,
+    borderColor: COLORS.primary,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  viewAgreementBtnText: {
+    color: COLORS.primary,
     fontSize: 13,
     fontWeight: 'bold',
   },

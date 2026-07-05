@@ -64,6 +64,23 @@ export const checkoutSettlements = sqliteTable('checkout_settlements', {
   createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
 });
 
+export const tenancyAgreements = sqliteTable('tenancy_agreements', {
+  id: text('id').primaryKey(),
+  tenancyId: text('tenancy_id').notNull().references(() => tenancies.id, { onDelete: 'cascade' }),
+  baseRent: real('base_rent').notNull(),
+  securityDeposit: real('security_deposit').default(0),
+  startDateBs: text('start_date_bs').notNull(), // e.g. "2083 Ashadh 15"
+  electricityRate: real('electricity_rate').default(12), // Rs. per unit
+  waterRate: real('water_rate').default(50), // Rs. per month flat
+  wasteRate: real('waste_rate').default(100), // Rs. per month flat
+  specialTerms: text('special_terms'),
+  housekeeperSignature: text('housekeeper_signature'), // SVG path data
+  tenantSignature: text('tenant_signature'), // SVG path data
+  signedAt: text('signed_at'),
+  deviceId: text('device_id'),
+  createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
+});
+
 export const invoices = sqliteTable('invoices', {
   id: text('id').primaryKey(),
   tenancyId: text('tenancy_id').notNull().references(() => tenancies.id, { onDelete: 'cascade' }),
