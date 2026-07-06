@@ -55,7 +55,13 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
     lastOnboardedBsDate,
     lastOnboardedDeposit,
     roomBaseRent,
-  } = useTenantController(roomId, onBack);
+    propertyReviewsList,
+    propertyRating,
+    setPropertyRating,
+    propertyComments,
+    setPropertyComments,
+    handleSubmitPropertyReview,
+  } = useTenantController(roomId, houseId, onBack);
 
   const [isCheckoutVisible, setIsCheckoutVisible] = React.useState(false);
   const [isAgreementVisible, setIsAgreementVisible] = React.useState(false);
@@ -106,6 +112,13 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
             <View style={styles.detailRow}>
               <Text style={styles.detailLabel}>Tenant Name</Text>
               <Text style={styles.detailValue}>{activeTenancy.tenant_name}</Text>
+            </View>
+
+            <View style={styles.detailRow}>
+              <Text style={styles.detailLabel}>Tenant Rating (Reputation)</Text>
+              <Text style={[styles.detailValue, { color: '#F59E0B', fontWeight: 'bold' }]}>
+                ⭐ {activeTenancy.tenant_rating ? activeTenancy.tenant_rating.toFixed(1) : '5.0'} / 5.0
+              </Text>
             </View>
 
             <View style={styles.detailRow}>
@@ -160,6 +173,59 @@ export default function TenantScreen({ roomId, roomNumber, houseId, onBack }: Te
             startDate={activeTenancy.start_date}
             tenantPhone={activeTenancy.tenant_phone}
           />
+
+          {/* Submit Property Review Card */}
+          <View style={styles.card}>
+            <Text style={styles.sectionHeader}>⭐ Submit Property Review</Text>
+            <Text style={styles.infoText}>Rate the property condition & landlord responsiveness:</Text>
+            
+            {/* Interactive Stars */}
+            <View style={{ flexDirection: 'row', marginVertical: 12 }}>
+              {[1, 2, 3, 4, 5].map((star) => (
+                <TouchableOpacity
+                  key={star}
+                  onPress={() => setPropertyRating(star)}
+                  style={{ marginRight: 8 }}
+                >
+                  <Text style={{ fontSize: 24, color: star <= propertyRating ? '#F59E0B' : '#E2E8F0' }}>
+                    ★
+                  </Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+
+            <TextInput
+              style={[styles.input, { height: 60, textAlignVertical: 'top', paddingTop: 8, marginBottom: 12 }]}
+              multiline
+              placeholder="Leave feedback on property condition, water supply, electricity, landlord cooperation, etc."
+              value={propertyComments}
+              onChangeText={setPropertyComments}
+            />
+
+            <TouchableOpacity style={styles.submitReviewBtn} onPress={handleSubmitPropertyReview}>
+              <Text style={styles.submitReviewBtnText}>Submit Review</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* Property Reviews List Card */}
+          {propertyReviewsList && propertyReviewsList.length > 0 && (
+            <View style={styles.card}>
+              <Text style={styles.sectionHeader}>📋 Property History & Reviews ({propertyReviewsList.length})</Text>
+              {propertyReviewsList.map((review: any) => (
+                <View key={review.id} style={styles.reviewItem}>
+                  <View style={styles.reviewHeader}>
+                    <Text style={styles.reviewStars}>
+                      {'★'.repeat(Math.round(review.rating))}{'☆'.repeat(5 - Math.round(review.rating))}
+                    </Text>
+                    <Text style={styles.reviewDate}>
+                      {review.created_at ? new Date(review.created_at).toLocaleDateString() : ''}
+                    </Text>
+                  </View>
+                  {review.comments && <Text style={styles.reviewComments}>{review.comments}</Text>}
+                </View>
+              ))}
+            </View>
+          )}
 
           <CheckoutModal
             visible={isCheckoutVisible}
@@ -786,6 +852,48 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginBottom: 40,
+  },
+  submitReviewBtn: {
+    backgroundColor: COLORS.primary,
+    height: 40,
+    borderRadius: 8,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  submitReviewBtnText: {
+    color: COLORS.white,
+    fontSize: 13,
+    fontWeight: 'bold',
+  },
+  reviewItem: {
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.border,
+    paddingVertical: 12,
+  },
+  reviewHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 4,
+  },
+  reviewStars: {
+    color: '#F59E0B',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+  reviewDate: {
+    color: COLORS.textSecondary,
+    fontSize: 11,
+  },
+  reviewComments: {
+    color: COLORS.textPrimary,
+    fontSize: 13,
+    lineHeight: 18,
+  },
+  infoText: {
+    fontSize: 12,
+    color: COLORS.textSecondary,
+    marginBottom: 12,
   },
 });
 

@@ -3,7 +3,9 @@ import { Alert } from 'react-native';
 import NepaliDate from 'nepali-date-converter';
 import * as Crypto from 'expo-crypto';
 import { z } from 'zod';
-import { initConnection } from '../../database/connection';
+import { initConnection, getDrizzleDB } from '../../database/connection';
+import { eq } from 'drizzle-orm';
+import { tenancies } from '../../database/schema';
 import {
   initCheckoutSchema,
   addCheckoutSettlement,
@@ -15,6 +17,7 @@ import {
   addMeterReading,
   MeterReading,
 } from '../invoice/InvoiceModel';
+import { initReviewSchema, addTenantReview } from '../reviews/ReviewModel';
 
 // Utility helper to safely construct a NepaliDate clamped to the target month's maximum day
 function getSafeNepaliDate(year: number, month: number, day: number): NepaliDate {
@@ -81,6 +84,11 @@ export function useCheckoutController(
   const [dbReady, setDbReady] = useState(false);
   const [arrears, setArrears] = useState(0);
   const [lastReading, setLastReading] = useState<MeterReading | null>(null);
+  const [tenantId, setTenantId] = useState('');
+
+  // Rating & Feedback Fields
+  const [tenantRating, setTenantRating] = useState(5);
+  const [tenantComments, setTenantComments] = useState('');
 
   // Form Fields
   const [checkoutYear, setCheckoutYear] = useState('');
@@ -101,6 +109,14 @@ export function useCheckoutController(
       try {
         await initConnection();
         await initCheckoutSchema();
+        await initReviewSchema();
+
+        // Query tenancy to fetch tenantId
+        const db = await getDrizzleDB();
+        const tenancyRows = await db.select().from(tenancies).where(eq(tenancies.id, tenancyId)).limit(1);
+        if (tenancyRows.length > 0) {
+          setTenantId(tenancyRows[0].tenantId);
+        }
         
         // Load outstanding arrears and previous sub-meter reading
         const pastArrears = await calculateArrearsForTenancy(tenancyId);
@@ -276,6 +292,17 @@ export function useCheckoutController(
         depositStatus as any
       );
 
+      // Save tenant review if rating is set
+      if (tenantId && tenantRating > 0) {
+        await addTenantReview({
+          id: Crypto.randomUUID(),
+          tenancyId: tenancyId,
+          tenantId: tenantId,
+          rating: tenantRating,
+          comments: tenantComments,
+        });
+      }
+
       // Save final reading if updated
       if (!isNaN(finalRead) && lastReading && finalRead > lastReading.electricity_reading) {
         const readingId = Crypto.randomUUID();
@@ -327,5 +354,9 @@ export function useCheckoutController(
     getFinalUtilityDue,
     getNetBalanceAndBreakdown,
     handleConfirmCheckout,
+    tenantRating,
+    setTenantRating,
+    tenantComments,
+    setTenantComments,
   };
 }

@@ -65,6 +65,10 @@ export default function CheckoutModal({
     getFinalUtilityDue,
     getNetBalanceAndBreakdown,
     handleConfirmCheckout,
+    tenantRating,
+    setTenantRating,
+    tenantComments,
+    setTenantComments,
   } = useCheckoutController(tenancyId, roomId, baseRent, startDate, securityDeposit, onSuccess);
 
   const [step, setStep] = useState(1);
@@ -358,6 +362,35 @@ export default function CheckoutModal({
                           </Text>
                         </TouchableOpacity>
                       )}
+                      {/* Rate Tenant Section */}
+                      <View style={{ marginTop: 20, borderTopWidth: 1, borderTopColor: COLORS.border, paddingTop: 16 }}>
+                        <Text style={styles.cardHeader}>⭐ Rate & Review Tenant</Text>
+                        <Text style={styles.infoText}>How was your experience managing this tenant?</Text>
+                        
+                        {/* Interactive stars */}
+                        <View style={{ flexDirection: 'row', marginVertical: 12 }}>
+                          {[1, 2, 3, 4, 5].map((star) => (
+                            <TouchableOpacity
+                              key={star}
+                              onPress={() => setTenantRating(star)}
+                              style={{ marginRight: 8 }}
+                            >
+                              <Text style={{ fontSize: 28, color: star <= tenantRating ? '#F59E0B' : '#E2E8F0' }}>
+                                ★
+                              </Text>
+                            </TouchableOpacity>
+                          ))}
+                        </View>
+
+                        <Text style={styles.label}>Review Comments</Text>
+                        <TextInput
+                          style={[styles.input, { height: 60, textAlignVertical: 'top', paddingTop: 8 }]}
+                          multiline
+                          placeholder="e.g., Timely rent payments, clean room upkeep, polite behavior."
+                          value={tenantComments}
+                          onChangeText={setTenantComments}
+                        />
+                      </View>
                     </View>
                   ) : (
                     <View style={styles.errorCard}>

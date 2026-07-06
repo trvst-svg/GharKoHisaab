@@ -86,7 +86,7 @@ export async function addTenancy(tenancy: Tenancy): Promise<void> {
   await db.update(rooms).set({ status: 'occupied' }).where(eq(rooms.id, tenancy.room_id));
 }
 
-export async function getActiveTenancyForRoom(roomId: string): Promise<(Tenancy & { tenant_name: string; tenant_phone: string; tenant_id_url: string | null; tenant_id_type: string; base_rent: number }) | null> {
+export async function getActiveTenancyForRoom(roomId: string): Promise<(Tenancy & { tenant_name: string; tenant_phone: string; tenant_id_url: string | null; tenant_id_type: string; tenant_rating: number; base_rent: number }) | null> {
   const db = await getDrizzleDB();
   const results = await db.select({
     t: tenancies,
@@ -116,6 +116,7 @@ export async function getActiveTenancyForRoom(roomId: string): Promise<(Tenancy 
     tenant_phone: result.tn.phoneNumber,
     tenant_id_url: result.tn.governmentIdUrl,
     tenant_id_type: result.tn.governmentIdType,
+    tenant_rating: result.tn.rating || 5.0,
     base_rent: result.r.baseRent,
   };
 }

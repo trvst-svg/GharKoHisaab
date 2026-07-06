@@ -16,8 +16,9 @@ import {
   Tenancy,
 } from './TenantModel';
 import { initAgreementSchema, getAgreementForTenancy } from '../agreement/AgreementModel';
+import { initReviewSchema, addPropertyReview, getReviewsForProperty } from '../reviews/ReviewModel';
 
-export function useTenantController(roomId: string, onSuccess: () => void) {
+export function useTenantController(roomId: string, houseId: string, onSuccess: () => void) {
   const [dbReady, setDbReady] = useState(false);
   const [activeTenancy, setActiveTenancy] = useState<any | null>(null);
 
@@ -35,6 +36,11 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
   const [lastOnboardedDeposit, setLastOnboardedDeposit] = useState<number>(0);
   const [roomBaseRent, setRoomBaseRent] = useState<number>(0);
 
+  // Property Reviews States
+  const [propertyReviewsList, setPropertyReviewsList] = useState<any[]>([]);
+  const [propertyRating, setPropertyRating] = useState(5);
+  const [propertyComments, setPropertyComments] = useState('');
+
   // Nepali Calendar (Bikram Sambat) Onboarding Fields
   // Default to today's B.S. date
   const [bsYear, setBsYear] = useState('');
@@ -47,7 +53,7 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
         await initConnection();
         await initTenantSchema();
         await initAgreementSchema();
-        setDbReady(true);
+        await initReviewSchema();
 
         // Fetch room base rent for the agreement modal
         try {
@@ -59,7 +65,15 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
         } catch (e) {
           // Non-critical — base rent will default to 0
         }
-        
+
+        // Fetch property reviews
+        try {
+          const reviews = await getReviewsForProperty(houseId);
+          setPropertyReviewsList(reviews);
+        } catch (e) {
+          console.error('Failed to load property reviews:', e);
+        }
+
         // Load active tenancy if any
         const tenancy = await getActiveTenancyForRoom(roomId);
         if (tenancy) {
@@ -78,12 +92,13 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
           setBsMonth((todayBS.getMonth() + 1).toString()); // 1-indexed for display
           setBsDay(todayBS.getDate().toString());
         }
+        setDbReady(true);
       } catch (error) {
         console.error('Tenant feature initialization failed:', error);
       }
     }
     setup();
-  }, [roomId]);
+  }, [roomId, houseId]);
 
   // Request camera and library permissions
   const requestPermissions = async (): Promise<boolean> => {
@@ -218,6 +233,29 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
     }
   };
 
+  const handleSubmitPropertyReview = async () => {
+    if (!activeTenancy) {
+      Alert.alert('Error', 'No active tenancy found to review.');
+      return;
+    }
+    try {
+      await addPropertyReview({
+        id: Crypto.randomUUID(),
+        tenancyId: activeTenancy.id,
+        houseId: houseId,
+        rating: propertyRating,
+        comments: propertyComments,
+      });
+      Alert.alert('Success', 'Property review submitted successfully!');
+      const reviews = await getReviewsForProperty(houseId);
+      setPropertyReviewsList(reviews);
+      setPropertyComments('');
+    } catch (e) {
+      console.error('Failed to submit property review:', e);
+      Alert.alert('Error', 'Failed to submit property review.');
+    }
+  };
+
   return {
     dbReady,
     activeTenancy,
@@ -247,5 +285,11 @@ export function useTenantController(roomId: string, onSuccess: () => void) {
     lastOnboardedBsDate,
     lastOnboardedDeposit,
     roomBaseRent,
+    propertyReviewsList,
+    propertyRating,
+    setPropertyRating,
+    propertyComments,
+    setPropertyComments,
+    handleSubmitPropertyReview,
   };
 }

@@ -116,3 +116,21 @@ export const payments = sqliteTable('payments', {
   signatureData: text('signature_data'),
   createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
 });
+
+export const tenantReviews = sqliteTable('tenant_reviews', {
+  id: text('id').primaryKey(),
+  tenancyId: text('tenancy_id').notNull().references(() => tenancies.id, { onDelete: 'cascade' }),
+  tenantId: text('tenant_id').notNull().references(() => tenants.id, { onDelete: 'cascade' }),
+  rating: real('rating').notNull(),
+  comments: text('comments'),
+  createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
+});
+
+export const propertyReviews = sqliteTable('property_reviews', {
+  id: text('id').primaryKey(),
+  tenancyId: text('tenancy_id').notNull().references(() => tenancies.id, { onDelete: 'cascade' }),
+  houseId: text('house_id').notNull().references(() => houses.id, { onDelete: 'cascade' }),
+  rating: real('rating').notNull(),
+  comments: text('comments'),
+  createdAt: text('created_at').default('CURRENT_TIMESTAMP'),
+});
