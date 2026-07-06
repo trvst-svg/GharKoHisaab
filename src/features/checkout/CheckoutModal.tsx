@@ -875,4 +875,45 @@ const styles = StyleSheet.create({
     color: COLORS.red,
     fontWeight: '500',
   },
+  dateInputsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 8,
+  },
+  dateField: {
+    flex: 1,
+    marginHorizontal: 4,
+  },
+  dateLabel: {
+    fontSize: 10,
+    fontWeight: 'bold',
+    color: COLORS.textSecondary,
+    marginBottom: 4,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+  },
+  calcResultCard: {
+    backgroundColor: COLORS.white,
+    padding: 16,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    marginBottom: 16,
+  },
+  totalRow: {
+    borderTopWidth: 1,
+    borderTopColor: COLORS.border,
+    paddingTop: 12,
+    marginTop: 10,
+  },
+  totalRowLabel: {
+    fontSize: 13,
+    fontWeight: 'bold',
+    color: COLORS.textPrimary,
+  },
+  totalRowVal: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: COLORS.primary,
+  },
 });
