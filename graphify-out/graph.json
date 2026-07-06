@@ -4,156 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "HANDOVER.md",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "handover",
-      "community": 0,
-      "norm_label": "handover.md"
-    },
-    {
-      "label": "GharKoHisaab (\u0918\u0930\u0915\u094b \u0939\u093f\u0938\u093e\u092c) \ud83c\udfe1\ud83d\udcc4",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "community": 0,
-      "norm_label": "gharkohisaab (\u0918\u0930\u0915\u094b \u0939\u093f\u0938\u093e\u092c) \ud83c\udfe1\ud83d\udcc4"
-    },
-    {
-      "label": "Client Handover & Technical Documentation",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "handover_client_handover_technical_documentation",
-      "community": 0,
-      "norm_label": "client handover & technical documentation"
-    },
-    {
-      "label": "\ud83d\udcf1 1. Core Technical Stack & Architecture",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "handover_1_core_technical_stack_architecture",
-      "community": 0,
-      "norm_label": "\ud83d\udcf1 1. core technical stack & architecture"
-    },
-    {
-      "label": "\ud83d\udcc5 2. Nepali Calendar (Bikram Sambat) Billing Cycles",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "handover_2_nepali_calendar_bikram_sambat_billing_cycles",
-      "community": 0,
-      "norm_label": "\ud83d\udcc5 2. nepali calendar (bikram sambat) billing cycles"
-    },
-    {
-      "label": "\ud83d\udd12 3. Key Workflows & Features",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "handover_3_key_workflows_features",
-      "community": 0,
-      "norm_label": "\ud83d\udd12 3. key workflows & features"
-    },
-    {
-      "label": "A. Tenancy Agreement (Dual Digital Signatures)",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "handover_a_tenancy_agreement_dual_digital_signatures",
-      "community": 0,
-      "norm_label": "a. tenancy agreement (dual digital signatures)"
-    },
-    {
-      "label": "B. Double-Confirmation Cash Payments (Anti-Fraud)",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L36",
-      "_origin": "ast",
-      "id": "handover_b_double_confirmation_cash_payments_anti_fraud",
-      "community": 0,
-      "norm_label": "b. double-confirmation cash payments (anti-fraud)"
-    },
-    {
-      "label": "C. 3-Step Checkout Settlement Wizard",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L40",
-      "_origin": "ast",
-      "id": "handover_c_3_step_checkout_settlement_wizard",
-      "community": 0,
-      "norm_label": "c. 3-step checkout settlement wizard"
-    },
-    {
-      "label": "D. Tenant & Property Reviews System",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "handover_d_tenant_property_reviews_system",
-      "community": 0,
-      "norm_label": "d. tenant & property reviews system"
-    },
-    {
-      "label": "\ud83d\uddc3\ufe0f 4. Database Schema Reference",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L53",
-      "_origin": "ast",
-      "id": "handover_4_database_schema_reference",
-      "community": 0,
-      "norm_label": "\ud83d\uddc3\ufe0f 4. database schema reference"
-    },
-    {
-      "label": "\ud83d\udee0\ufe0f 5. Developer & Handover Operations",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L85",
-      "_origin": "ast",
-      "id": "handover_5_developer_handover_operations",
-      "community": 0,
-      "norm_label": "\ud83d\udee0\ufe0f 5. developer & handover operations"
-    },
-    {
-      "label": "A. Environment Configuration & Setup",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L87",
-      "_origin": "ast",
-      "id": "handover_a_environment_configuration_setup",
-      "community": 0,
-      "norm_label": "a. environment configuration & setup"
-    },
-    {
-      "label": "B. Verification Procedures",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L99",
-      "_origin": "ast",
-      "id": "handover_b_verification_procedures",
-      "community": 0,
-      "norm_label": "b. verification procedures"
-    },
-    {
-      "label": "\ud83d\udcdd 6. Client Operation Guide",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L112",
-      "_origin": "ast",
-      "id": "handover_6_client_operation_guide",
-      "community": 0,
-      "norm_label": "\ud83d\udcdd 6. client operation guide"
-    },
-    {
       "label": "App.test.tsx",
       "file_type": "code",
       "source_file": "App.test.tsx",
@@ -539,7 +389,7 @@
       "source_file": "package.json",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "react",
       "id": "package_dependencies_react"
     },
@@ -1279,7 +1129,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L520",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": "getdrizzledb()",
       "id": "src_database_connection_getdrizzledb"
     },
@@ -1289,7 +1139,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L528",
       "_origin": "ast",
-      "community": 7,
+      "community": 4,
       "norm_label": "initconnection()",
       "id": "src_database_connection_initconnection"
     },
@@ -1299,7 +1149,7 @@
       "source_file": "src/database/dbIntegration.test.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "dbintegration.test.ts",
       "id": "src_database_dbintegration_test"
     },
@@ -1309,7 +1159,7 @@
       "source_file": "src/database/dbIntegration.test.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "store",
       "id": "src_database_dbintegration_test_store"
     },
@@ -1329,7 +1179,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "houses",
       "id": "src_database_schema_houses"
     },
@@ -1349,7 +1199,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "roompostings",
       "id": "src_database_schema_roompostings"
     },
@@ -1369,7 +1219,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "tenancies",
       "id": "src_database_schema_tenancies"
     },
@@ -1619,7 +1469,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "checkoutmodal.tsx",
       "id": "src_features_checkout_checkoutmodal"
     },
@@ -1629,7 +1479,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "checkoutmodalprops",
       "id": "src_features_checkout_checkoutmodal_checkoutmodalprops"
     },
@@ -1639,7 +1489,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "checkoutmodal()",
       "id": "src_features_checkout_checkoutmodal_checkoutmodal"
     },
@@ -1649,7 +1499,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L439",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "styles",
       "id": "src_features_checkout_checkoutmodal_styles"
     },
@@ -1659,7 +1509,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "checkoutmodel.ts",
       "id": "src_features_checkout_checkoutmodel"
     },
@@ -1669,7 +1519,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "checkoutsettlement",
       "id": "src_features_checkout_checkoutmodel_checkoutsettlement"
     },
@@ -1679,7 +1529,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "initcheckoutschema()",
       "id": "src_features_checkout_checkoutmodel_initcheckoutschema"
     },
@@ -1699,7 +1549,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 11,
+      "community": 4,
       "norm_label": "getcheckoutsettlement()",
       "id": "src_features_checkout_checkoutmodel_getcheckoutsettlement"
     },
@@ -1829,7 +1679,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "invoicesection.tsx",
       "id": "src_features_invoice_invoicesection"
     },
@@ -1839,7 +1689,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "invoicesectionprops",
       "id": "src_features_invoice_invoicesection_invoicesectionprops"
     },
@@ -1849,7 +1699,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "invoicesection()",
       "id": "src_features_invoice_invoicesection_invoicesection"
     },
@@ -1859,7 +1709,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L330",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "styles",
       "id": "src_features_invoice_invoicesection_styles"
     },
@@ -1869,7 +1719,7 @@
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "paymentcontroller.ts",
       "id": "src_features_payment_paymentcontroller"
     },
@@ -1879,7 +1729,7 @@
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "usepaymentcontroller()",
       "id": "src_features_payment_paymentcontroller_usepaymentcontroller"
     },
@@ -1929,7 +1779,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "paymentmodel.ts",
       "id": "src_features_payment_paymentmodel"
     },
@@ -1939,7 +1789,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "payment",
       "id": "src_features_payment_paymentmodel_payment"
     },
@@ -1949,7 +1799,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "initpaymentschema()",
       "id": "src_features_payment_paymentmodel_initpaymentschema"
     },
@@ -1959,7 +1809,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "addpayment()",
       "id": "src_features_payment_paymentmodel_addpayment"
     },
@@ -1969,7 +1819,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "getpaymentsforinvoice()",
       "id": "src_features_payment_paymentmodel_getpaymentsforinvoice"
     },
@@ -1979,7 +1829,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "gettotalpaidforinvoice()",
       "id": "src_features_payment_paymentmodel_gettotalpaidforinvoice"
     },
@@ -1989,7 +1839,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 18,
+      "community": 8,
       "norm_label": "syncinvoicestatus()",
       "id": "src_features_payment_paymentmodel_syncinvoicestatus"
     },
@@ -1999,7 +1849,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "marketplacefeed.tsx",
       "id": "src_features_postings_marketplacefeed"
     },
@@ -2009,7 +1859,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "marketplacefeed()",
       "id": "src_features_postings_marketplacefeed_marketplacefeed"
     },
@@ -2019,7 +1869,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L148",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "styles",
       "id": "src_features_postings_marketplacefeed_styles"
     },
@@ -2359,7 +2209,7 @@
       "source_file": "src/features/reviews/ReviewModel.ts",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 4,
+      "community": 11,
       "norm_label": "addtenantreview()",
       "id": "src_features_reviews_reviewmodel_addtenantreview"
     },
@@ -2489,7 +2339,7 @@
       "source_file": "src/features/tenant/TenantScreen.test.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "tenantscreen.test.tsx",
       "id": "src_features_tenant_tenantscreen_test"
     },
@@ -2499,7 +2349,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "tenantscreen.tsx",
       "id": "src_features_tenant_tenantscreen"
     },
@@ -2509,7 +2359,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "tenantscreenprops",
       "id": "src_features_tenant_tenantscreen_tenantscreenprops"
     },
@@ -2519,7 +2369,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": "tenantscreen()",
       "id": "src_features_tenant_tenantscreen_tenantscreen"
     },
@@ -2529,7 +2379,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L532",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "styles",
       "id": "src_features_tenant_tenantscreen_styles"
     },
@@ -2539,7 +2389,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": "nepali-date-converter.d.ts",
       "id": "src_types_nepali_date_converter_d"
     },
@@ -2549,7 +2399,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": "nepali-date-converter",
       "id": "src_types_nepali_date_converter_d_nepali_date_converter"
     },
@@ -2559,7 +2409,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": "nepalidate",
       "id": "src_types_nepali_date_converter_d_nepalidate"
     },
@@ -2569,7 +2419,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".constructor()",
       "id": "src_types_nepali_date_converter_d_nepalidate_constructor"
     },
@@ -2609,7 +2459,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".getday()",
       "id": "src_types_nepali_date_converter_d_nepalidate_getday"
     },
@@ -2619,7 +2469,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".setyear()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setyear"
     },
@@ -2629,7 +2479,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".setmonth()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setmonth"
     },
@@ -2639,7 +2489,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".setdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setdate"
     },
@@ -2649,7 +2499,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 6,
+      "community": 7,
       "norm_label": ".format()",
       "id": "src_types_nepali_date_converter_d_nepalidate_format"
     },
@@ -2659,7 +2509,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".tojsdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_tojsdate"
     },
@@ -2669,7 +2519,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".parse()",
       "id": "src_types_nepali_date_converter_d_nepalidate_parse"
     },
@@ -3015,146 +2865,6 @@
     }
   ],
   "links": [
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "source": "handover",
-      "target": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_1_core_technical_stack_architecture",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_2_nepali_calendar_bikram_sambat_billing_cycles",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_3_key_workflows_features",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L53",
-      "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_4_database_schema_reference",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L85",
-      "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_5_developer_handover_operations",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L112",
-      "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_6_client_operation_guide",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_client_handover_technical_documentation",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_a_tenancy_agreement_dual_digital_signatures",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L36",
-      "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_b_double_confirmation_cash_payments_anti_fraud",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L40",
-      "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_c_3_step_checkout_settlement_wizard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L47",
-      "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_d_tenant_property_reviews_system",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L87",
-      "weight": 1.0,
-      "source": "handover_5_developer_handover_operations",
-      "target": "handover_a_environment_configuration_setup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L99",
-      "weight": 1.0,
-      "source": "handover_5_developer_handover_operations",
-      "target": "handover_b_verification_procedures",
-      "confidence_score": 1.0
-    },
     {
       "relation": "imports",
       "context": "import",
@@ -9360,5 +9070,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "05ce4ca3529cb66598f2eca5c1514b9a16ff985b"
+  "built_at_commit": "986f7e2a9093ff769799142b68c59dcf7cad6a8d"
 }

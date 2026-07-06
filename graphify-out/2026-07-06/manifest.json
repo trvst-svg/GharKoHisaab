@@ -248,5 +248,10 @@
     "mtime": 1783312713.1038857,
     "ast_hash": "ea88d96a5d4dcce1f9acc9f9ef52195b",
     "semantic_hash": ""
+  },
+  "HANDOVER.md": {
+    "mtime": 1783313937.8219304,
+    "ast_hash": "645fb6e5e37f6e3ed38a2b77b08fbca1",
+    "semantic_hash": ""
   }
 }

@@ -1,5 +1,4 @@
 {
-  "0": "GharKoHisaab (घरको हिसाब) 🏡📄",
   "1": "SQLite Database Connection",
   "2": "Production Dependencies",
   "3": "UI Components & Invoice View",
@@ -16,6 +15,5 @@
   "14": "AGENTS.md",
   "15": "graphify.md",
   "16": "graphify.md",
-  "17": "CLAUDE.md",
-  "18": "PaymentModel.ts"
+  "17": "CLAUDE.md"
 }
