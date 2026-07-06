@@ -248,5 +248,10 @@
     "mtime": 1783312713.1038857,
     "ast_hash": "ea88d96a5d4dcce1f9acc9f9ef52195b",
     "semantic_hash": ""
+  },
+  "src/features/E2ECompleteUI.test.tsx": {
+    "mtime": 1783315073.1592667,
+    "ast_hash": "2943fd4b4c738e57e6c966e8799a6f5e",
+    "semantic_hash": ""
   }
 }

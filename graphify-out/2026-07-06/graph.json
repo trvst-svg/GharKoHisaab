@@ -4,154 +4,204 @@
   "graph": {},
   "nodes": [
     {
-      "label": "HANDOVER.md",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
+      "label": "E2ECompleteUI.test.tsx",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "handover",
-      "community": 0,
-      "norm_label": "handover.md"
+      "id": "src_features_e2ecompleteui_test",
+      "community": 18,
+      "norm_label": "e2ecompleteui.test.tsx"
     },
     {
-      "label": "GharKoHisaab (\u0918\u0930\u0915\u094b \u0939\u093f\u0938\u093e\u092c) \ud83c\udfe1\ud83d\udcc4",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L1",
+      "label": "mockCreateProperty",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L22",
       "_origin": "ast",
-      "id": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "community": 0,
-      "norm_label": "gharkohisaab (\u0918\u0930\u0915\u094b \u0939\u093f\u0938\u093e\u092c) \ud83c\udfe1\ud83d\udcc4"
+      "id": "src_features_e2ecompleteui_test_mockcreateproperty",
+      "community": 18,
+      "norm_label": "mockcreateproperty"
     },
     {
-      "label": "Client Handover & Technical Documentation",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L2",
+      "label": "mockCreateRoom",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L23",
       "_origin": "ast",
-      "id": "handover_client_handover_technical_documentation",
-      "community": 0,
-      "norm_label": "client handover & technical documentation"
+      "id": "src_features_e2ecompleteui_test_mockcreateroom",
+      "community": 18,
+      "norm_label": "mockcreateroom"
     },
     {
-      "label": "\ud83d\udcf1 1. Core Technical Stack & Architecture",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L8",
+      "label": "mockDeleteRoom",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L24",
       "_origin": "ast",
-      "id": "handover_1_core_technical_stack_architecture",
-      "community": 0,
-      "norm_label": "\ud83d\udcf1 1. core technical stack & architecture"
+      "id": "src_features_e2ecompleteui_test_mockdeleteroom",
+      "community": 18,
+      "norm_label": "mockdeleteroom"
     },
     {
-      "label": "\ud83d\udcc5 2. Nepali Calendar (Bikram Sambat) Billing Cycles",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L21",
+      "label": "mockSetAddress",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L25",
       "_origin": "ast",
-      "id": "handover_2_nepali_calendar_bikram_sambat_billing_cycles",
-      "community": 0,
-      "norm_label": "\ud83d\udcc5 2. nepali calendar (bikram sambat) billing cycles"
+      "id": "src_features_e2ecompleteui_test_mocksetaddress",
+      "community": 18,
+      "norm_label": "mocksetaddress"
     },
     {
-      "label": "\ud83d\udd12 3. Key Workflows & Features",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L30",
+      "label": "mockSetRoomNumber",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L26",
       "_origin": "ast",
-      "id": "handover_3_key_workflows_features",
-      "community": 0,
-      "norm_label": "\ud83d\udd12 3. key workflows & features"
+      "id": "src_features_e2ecompleteui_test_mocksetroomnumber",
+      "community": 18,
+      "norm_label": "mocksetroomnumber"
     },
     {
-      "label": "A. Tenancy Agreement (Dual Digital Signatures)",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L32",
+      "label": "mockSetBaseRent",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L27",
       "_origin": "ast",
-      "id": "handover_a_tenancy_agreement_dual_digital_signatures",
-      "community": 0,
-      "norm_label": "a. tenancy agreement (dual digital signatures)"
+      "id": "src_features_e2ecompleteui_test_mocksetbaserent",
+      "community": 18,
+      "norm_label": "mocksetbaserent"
     },
     {
-      "label": "B. Double-Confirmation Cash Payments (Anti-Fraud)",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L36",
+      "label": "mockSetHousekeeperName",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L28",
       "_origin": "ast",
-      "id": "handover_b_double_confirmation_cash_payments_anti_fraud",
-      "community": 0,
-      "norm_label": "b. double-confirmation cash payments (anti-fraud)"
+      "id": "src_features_e2ecompleteui_test_mocksethousekeepername",
+      "community": 18,
+      "norm_label": "mocksethousekeepername"
     },
     {
-      "label": "C. 3-Step Checkout Settlement Wizard",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L40",
+      "label": "mockOnboardTenant",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L59",
       "_origin": "ast",
-      "id": "handover_c_3_step_checkout_settlement_wizard",
-      "community": 0,
-      "norm_label": "c. 3-step checkout settlement wizard"
+      "id": "src_features_e2ecompleteui_test_mockonboardtenant",
+      "community": 18,
+      "norm_label": "mockonboardtenant"
     },
     {
-      "label": "D. Tenant & Property Reviews System",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L47",
+      "label": "mockSetName",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L60",
       "_origin": "ast",
-      "id": "handover_d_tenant_property_reviews_system",
-      "community": 0,
-      "norm_label": "d. tenant & property reviews system"
+      "id": "src_features_e2ecompleteui_test_mocksetname",
+      "community": 18,
+      "norm_label": "mocksetname"
     },
     {
-      "label": "\ud83d\uddc3\ufe0f 4. Database Schema Reference",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L53",
+      "label": "mockSetPhone",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L61",
       "_origin": "ast",
-      "id": "handover_4_database_schema_reference",
-      "community": 0,
-      "norm_label": "\ud83d\uddc3\ufe0f 4. database schema reference"
+      "id": "src_features_e2ecompleteui_test_mocksetphone",
+      "community": 18,
+      "norm_label": "mocksetphone"
     },
     {
-      "label": "\ud83d\udee0\ufe0f 5. Developer & Handover Operations",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L85",
+      "label": "mockSetDeposit",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L62",
       "_origin": "ast",
-      "id": "handover_5_developer_handover_operations",
-      "community": 0,
-      "norm_label": "\ud83d\udee0\ufe0f 5. developer & handover operations"
+      "id": "src_features_e2ecompleteui_test_mocksetdeposit",
+      "community": 18,
+      "norm_label": "mocksetdeposit"
     },
     {
-      "label": "A. Environment Configuration & Setup",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L87",
+      "label": "mockSubmitPropertyReview",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L63",
       "_origin": "ast",
-      "id": "handover_a_environment_configuration_setup",
-      "community": 0,
-      "norm_label": "a. environment configuration & setup"
+      "id": "src_features_e2ecompleteui_test_mocksubmitpropertyreview",
+      "community": 18,
+      "norm_label": "mocksubmitpropertyreview"
     },
     {
-      "label": "B. Verification Procedures",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L99",
+      "label": "mockSetPropertyRating",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L64",
       "_origin": "ast",
-      "id": "handover_b_verification_procedures",
-      "community": 0,
-      "norm_label": "b. verification procedures"
+      "id": "src_features_e2ecompleteui_test_mocksetpropertyrating",
+      "community": 18,
+      "norm_label": "mocksetpropertyrating"
     },
     {
-      "label": "\ud83d\udcdd 6. Client Operation Guide",
-      "file_type": "document",
-      "source_file": "HANDOVER.md",
-      "source_location": "L112",
+      "label": "mockSetPropertyComments",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L65",
       "_origin": "ast",
-      "id": "handover_6_client_operation_guide",
-      "community": 0,
-      "norm_label": "\ud83d\udcdd 6. client operation guide"
+      "id": "src_features_e2ecompleteui_test_mocksetpropertycomments",
+      "community": 18,
+      "norm_label": "mocksetpropertycomments"
+    },
+    {
+      "label": "mockConfirmAgreement",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "src_features_e2ecompleteui_test_mockconfirmagreement",
+      "community": 18,
+      "norm_label": "mockconfirmagreement"
+    },
+    {
+      "label": "mockConfirmCheckout",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L184",
+      "_origin": "ast",
+      "id": "src_features_e2ecompleteui_test_mockconfirmcheckout",
+      "community": 18,
+      "norm_label": "mockconfirmcheckout"
+    },
+    {
+      "label": "mockSetTenantRating",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L185",
+      "_origin": "ast",
+      "id": "src_features_e2ecompleteui_test_mocksettenantrating",
+      "community": 18,
+      "norm_label": "mocksettenantrating"
+    },
+    {
+      "label": "mockSetTenantComments",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L186",
+      "_origin": "ast",
+      "id": "src_features_e2ecompleteui_test_mocksettenantcomments",
+      "community": 18,
+      "norm_label": "mocksettenantcomments"
+    },
+    {
+      "label": "mockConfirmPayment",
+      "file_type": "code",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L242",
+      "_origin": "ast",
+      "id": "src_features_e2ecompleteui_test_mockconfirmpayment",
+      "community": 18,
+      "norm_label": "mockconfirmpayment"
     },
     {
       "label": "App.test.tsx",
@@ -1289,7 +1339,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L528",
       "_origin": "ast",
-      "community": 7,
+      "community": 0,
       "norm_label": "initconnection()",
       "id": "src_database_connection_initconnection"
     },
@@ -1299,7 +1349,7 @@
       "source_file": "src/database/dbIntegration.test.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "dbintegration.test.ts",
       "id": "src_database_dbintegration_test"
     },
@@ -1309,7 +1359,7 @@
       "source_file": "src/database/dbIntegration.test.ts",
       "source_location": "L4",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "store",
       "id": "src_database_dbintegration_test_store"
     },
@@ -1329,7 +1379,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "houses",
       "id": "src_database_schema_houses"
     },
@@ -1349,7 +1399,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "roompostings",
       "id": "src_database_schema_roompostings"
     },
@@ -1369,7 +1419,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "tenancies",
       "id": "src_database_schema_tenancies"
     },
@@ -1379,7 +1429,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L53",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "checkoutsettlements",
       "id": "src_database_schema_checkoutsettlements"
     },
@@ -1449,7 +1499,7 @@
       "source_file": "src/features/agreement/AgreementController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 8,
       "norm_label": "agreementcontroller.ts",
       "id": "src_features_agreement_agreementcontroller"
     },
@@ -1459,7 +1509,7 @@
       "source_file": "src/features/agreement/AgreementController.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 4,
+      "community": 8,
       "norm_label": "agreementcontrollerargs",
       "id": "src_features_agreement_agreementcontroller_agreementcontrollerargs"
     },
@@ -1529,7 +1579,7 @@
       "source_file": "src/features/agreement/AgreementModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 4,
+      "community": 8,
       "norm_label": "agreement",
       "id": "src_features_agreement_agreementmodel_agreement"
     },
@@ -1549,7 +1599,7 @@
       "source_file": "src/features/agreement/AgreementModel.ts",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 4,
+      "community": 8,
       "norm_label": "saveagreement()",
       "id": "src_features_agreement_agreementmodel_saveagreement"
     },
@@ -1579,7 +1629,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "checkoutcontroller.ts",
       "id": "src_features_checkout_checkoutcontroller"
     },
@@ -1609,7 +1659,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "usecheckoutcontroller()",
       "id": "src_features_checkout_checkoutcontroller_usecheckoutcontroller"
     },
@@ -1659,7 +1709,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "checkoutmodel.ts",
       "id": "src_features_checkout_checkoutmodel"
     },
@@ -1669,7 +1719,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "checkoutsettlement",
       "id": "src_features_checkout_checkoutmodel_checkoutsettlement"
     },
@@ -1679,7 +1729,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "initcheckoutschema()",
       "id": "src_features_checkout_checkoutmodel_initcheckoutschema"
     },
@@ -1689,7 +1739,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "addcheckoutsettlement()",
       "id": "src_features_checkout_checkoutmodel_addcheckoutsettlement"
     },
@@ -1699,7 +1749,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "getcheckoutsettlement()",
       "id": "src_features_checkout_checkoutmodel_getcheckoutsettlement"
     },
@@ -1709,7 +1759,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "terminatetenancy()",
       "id": "src_features_checkout_checkoutmodel_terminatetenancy"
     },
@@ -1719,7 +1769,7 @@
       "source_file": "src/features/invoice/InvoiceController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "invoicecontroller.ts",
       "id": "src_features_invoice_invoicecontroller"
     },
@@ -1729,7 +1779,7 @@
       "source_file": "src/features/invoice/InvoiceController.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "useinvoicecontroller()",
       "id": "src_features_invoice_invoicecontroller_useinvoicecontroller"
     },
@@ -1739,7 +1789,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "invoicemodel.ts",
       "id": "src_features_invoice_invoicemodel"
     },
@@ -1749,7 +1799,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "invoice",
       "id": "src_features_invoice_invoicemodel_invoice"
     },
@@ -1759,7 +1809,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "meterreading",
       "id": "src_features_invoice_invoicemodel_meterreading"
     },
@@ -1769,7 +1819,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "initinvoiceschema()",
       "id": "src_features_invoice_invoicemodel_initinvoiceschema"
     },
@@ -1779,7 +1829,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "getinvoicesfortenancy()",
       "id": "src_features_invoice_invoicemodel_getinvoicesfortenancy"
     },
@@ -1789,7 +1839,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L82",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "getlastmeterreading()",
       "id": "src_features_invoice_invoicemodel_getlastmeterreading"
     },
@@ -1799,7 +1849,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L104",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "addmeterreading()",
       "id": "src_features_invoice_invoicemodel_addmeterreading"
     },
@@ -1809,7 +1859,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L117",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "addinvoice()",
       "id": "src_features_invoice_invoicemodel_addinvoice"
     },
@@ -1819,7 +1869,7 @@
       "source_file": "src/features/invoice/InvoiceModel.ts",
       "source_location": "L135",
       "_origin": "ast",
-      "community": 11,
+      "community": 0,
       "norm_label": "calculatearrearsfortenancy()",
       "id": "src_features_invoice_invoicemodel_calculatearrearsfortenancy"
     },
@@ -1869,7 +1919,7 @@
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "paymentcontroller.ts",
       "id": "src_features_payment_paymentcontroller"
     },
@@ -1879,7 +1929,7 @@
       "source_file": "src/features/payment/PaymentController.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "usepaymentcontroller()",
       "id": "src_features_payment_paymentcontroller_usepaymentcontroller"
     },
@@ -1929,7 +1979,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "paymentmodel.ts",
       "id": "src_features_payment_paymentmodel"
     },
@@ -1939,7 +1989,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "payment",
       "id": "src_features_payment_paymentmodel_payment"
     },
@@ -1949,7 +1999,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "initpaymentschema()",
       "id": "src_features_payment_paymentmodel_initpaymentschema"
     },
@@ -1959,7 +2009,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "addpayment()",
       "id": "src_features_payment_paymentmodel_addpayment"
     },
@@ -1969,7 +2019,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "getpaymentsforinvoice()",
       "id": "src_features_payment_paymentmodel_getpaymentsforinvoice"
     },
@@ -1979,7 +2029,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L80",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "gettotalpaidforinvoice()",
       "id": "src_features_payment_paymentmodel_gettotalpaidforinvoice"
     },
@@ -1989,7 +2039,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L90",
       "_origin": "ast",
-      "community": 18,
+      "community": 19,
       "norm_label": "syncinvoicestatus()",
       "id": "src_features_payment_paymentmodel_syncinvoicestatus"
     },
@@ -1999,7 +2049,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "marketplacefeed.tsx",
       "id": "src_features_postings_marketplacefeed"
     },
@@ -2009,7 +2059,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "marketplacefeed()",
       "id": "src_features_postings_marketplacefeed_marketplacefeed"
     },
@@ -2019,7 +2069,7 @@
       "source_file": "src/features/postings/MarketplaceFeed.tsx",
       "source_location": "L148",
       "_origin": "ast",
-      "community": 8,
+      "community": 7,
       "norm_label": "styles",
       "id": "src_features_postings_marketplacefeed_styles"
     },
@@ -2539,7 +2589,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": "nepali-date-converter.d.ts",
       "id": "src_types_nepali_date_converter_d"
     },
@@ -2549,7 +2599,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": "nepali-date-converter",
       "id": "src_types_nepali_date_converter_d_nepali_date_converter"
     },
@@ -2559,7 +2609,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L2",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": "nepalidate",
       "id": "src_types_nepali_date_converter_d_nepalidate"
     },
@@ -2569,7 +2619,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L3",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".constructor()",
       "id": "src_types_nepali_date_converter_d_nepalidate_constructor"
     },
@@ -2609,7 +2659,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L9",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".getday()",
       "id": "src_types_nepali_date_converter_d_nepalidate_getday"
     },
@@ -2619,7 +2669,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".setyear()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setyear"
     },
@@ -2629,7 +2679,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".setmonth()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setmonth"
     },
@@ -2639,7 +2689,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L13",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".setdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_setdate"
     },
@@ -2659,7 +2709,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".tojsdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_tojsdate"
     },
@@ -2669,7 +2719,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 6,
+      "community": 11,
       "norm_label": ".parse()",
       "id": "src_types_nepali_date_converter_d_nepalidate_parse"
     },
@@ -3018,141 +3068,191 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L1",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L146",
       "weight": 1.0,
-      "source": "handover",
-      "target": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mockconfirmagreement",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L8",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L184",
       "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_1_core_technical_stack_architecture",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mockconfirmcheckout",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L21",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L242",
       "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_2_nepali_calendar_bikram_sambat_billing_cycles",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mockconfirmpayment",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L30",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L22",
       "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_3_key_workflows_features",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mockcreateproperty",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L53",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L23",
       "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_4_database_schema_reference",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mockcreateroom",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L85",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L24",
       "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_5_developer_handover_operations",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mockdeleteroom",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L112",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L59",
       "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_6_client_operation_guide",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mockonboardtenant",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L2",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L25",
       "weight": 1.0,
-      "source": "handover_gharkohisaab_\u0918\u0930\u0915_\u0939_\u0938_\u092c",
-      "target": "handover_client_handover_technical_documentation",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetaddress",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L32",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L27",
       "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_a_tenancy_agreement_dual_digital_signatures",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetbaserent",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L36",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L62",
       "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_b_double_confirmation_cash_payments_anti_fraud",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetdeposit",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L40",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L28",
       "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_c_3_step_checkout_settlement_wizard",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksethousekeepername",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L47",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L60",
       "weight": 1.0,
-      "source": "handover_3_key_workflows_features",
-      "target": "handover_d_tenant_property_reviews_system",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetname",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L87",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L61",
       "weight": 1.0,
-      "source": "handover_5_developer_handover_operations",
-      "target": "handover_a_environment_configuration_setup",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetphone",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "HANDOVER.md",
-      "source_location": "L99",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L65",
       "weight": 1.0,
-      "source": "handover_5_developer_handover_operations",
-      "target": "handover_b_verification_procedures",
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetpropertycomments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetpropertyrating",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksetroomnumber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L186",
+      "weight": 1.0,
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksettenantcomments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L185",
+      "weight": 1.0,
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksettenantrating",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/E2ECompleteUI.test.tsx",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "src_features_e2ecompleteui_test",
+      "target": "src_features_e2ecompleteui_test_mocksubmitpropertyreview",
       "confidence_score": 1.0
     },
     {
@@ -9360,5 +9460,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "05ce4ca3529cb66598f2eca5c1514b9a16ff985b"
+  "built_at_commit": "a6cb72ee0500109edb307c2d97593f44e4a0d621"
 }

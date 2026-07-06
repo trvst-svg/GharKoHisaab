@@ -1,21 +1,21 @@
 # Graph Report - GharKoHisaab  (2026-07-06)
 
 ## Corpus Check
-- 45 files · ~43,404 words
+- 45 files · ~43,535 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 301 nodes · 600 edges · 19 communities (15 shown, 4 thin omitted)
+- 306 nodes · 605 edges · 20 communities (16 shown, 4 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `05ce4ca3`
+- Built from commit: `a6cb72ee`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_GharKoHisaab (घरको हिसाब) 🏡📄|GharKoHisaab (घरको हिसाब) 🏡📄]]
+- [[_COMMUNITY_dbIntegration.test.ts|dbIntegration.test.ts]]
 - [[_COMMUNITY_SQLite Database Connection|SQLite Database Connection]]
 - [[_COMMUNITY_Production Dependencies|Production Dependencies]]
 - [[_COMMUNITY_UI Components & Invoice View|UI Components & Invoice View]]
@@ -31,6 +31,7 @@
 - [[_COMMUNITY_AGENTS|AGENTS.md]]
 - [[_COMMUNITY_graphify|graphify.md]]
 - [[_COMMUNITY_graphify|graphify.md]]
+- [[_COMMUNITY_E2ECompleteUI.test.tsx|E2ECompleteUI.test.tsx]]
 - [[_COMMUNITY_PaymentModel.ts|PaymentModel.ts]]
 
 ## God Nodes (most connected - your core abstractions)
@@ -60,11 +61,11 @@
 ## Import Cycles
 - None detected.
 
-## Communities (19 total, 4 thin omitted)
+## Communities (20 total, 4 thin omitted)
 
-### Community 0 - "GharKoHisaab (घरको हिसाब) 🏡📄"
-Cohesion: 0.13
-Nodes (14): 📱 1. Core Technical Stack & Architecture, 📅 2. Nepali Calendar (Bikram Sambat) Billing Cycles, 🔒 3. Key Workflows & Features, 🗃️ 4. Database Schema Reference, 🛠️ 5. Developer & Handover Operations, 📝 6. Client Operation Guide, A. Environment Configuration & Setup, A. Tenancy Agreement (Dual Digital Signatures) (+6 more)
+### Community 0 - "dbIntegration.test.ts"
+Cohesion: 0.21
+Nodes (19): initConnection(), store, checkoutSettlements, tenancies, useCheckoutController(), addCheckoutSettlement(), CheckoutSettlement, getCheckoutSettlement() (+11 more)
 
 ### Community 1 - "SQLite Database Connection"
 Cohesion: 0.13
@@ -79,43 +80,47 @@ Cohesion: 0.08
 Nodes (23): devDependencies, drizzle-kit, jest, jest-expo, react-test-renderer, @testing-library/react-native, @types/jest, @types/react (+15 more)
 
 ### Community 4 - "Expo Mobile Config"
-Cohesion: 0.13
-Nodes (33): getDB(), getDrizzleDB(), checkoutSettlements, houses, invoices, meterReadings, payments, propertyReviews (+25 more)
+Cohesion: 0.16
+Nodes (27): getDB(), getDrizzleDB(), invoices, meterReadings, payments, propertyReviews, rooms, tenancyAgreements (+19 more)
 
 ### Community 5 - "Property Management & Dashboard"
 Cohesion: 0.10
 Nodes (19): backgroundColor, backgroundImage, foregroundImage, monochromeImage, adaptiveIcon, predictiveBackGestureEnabled, expo, android (+11 more)
 
 ### Community 6 - "Marketplace & Room Listings"
-Cohesion: 0.07
-Nodes (18): dependencies, drizzle-orm, expo, expo-asset, expo-crypto, expo-image-picker, expo-sqlite, expo-status-bar (+10 more)
+Cohesion: 0.12
+Nodes (16): dependencies, drizzle-orm, expo, expo-asset, expo-crypto, expo-image-picker, expo-sqlite, expo-status-bar (+8 more)
 
 ### Community 7 - "Tenant Onboarding Features"
-Cohesion: 0.33
-Nodes (11): initConnection(), useListingController(), useMarketplaceController(), addRoomPosting(), deleteRoomPosting(), getAllPublicPostings(), getPostingForRoom(), initPostingSchema() (+3 more)
+Cohesion: 0.23
+Nodes (14): houses, roomPostings, MarketplaceFeed(), styles, useListingController(), useMarketplaceController(), addRoomPosting(), deleteRoomPosting() (+6 more)
 
 ### Community 8 - "Bikram Sambat Date Converters"
 Cohesion: 0.10
-Nodes (20): SignaturePadProps, styles, COLORS, useAgreementController(), AgreementModal(), AgreementModalProps, styles, CheckoutModal() (+12 more)
+Nodes (21): SignaturePadProps, styles, COLORS, AgreementControllerArgs, useAgreementController(), AgreementModal(), AgreementModalProps, styles (+13 more)
 
 ### Community 9 - "Web SQL Query Driver"
 Cohesion: 0.10
 Nodes (20): 💬 Community Verification & Profiles, For App Users, For Non-App Users, 🚀 Getting Started, GharKoHisaab (घरको हिसाब) 🏡📄, 📌 Highlights, Installation, 🎛️ Intelligent Billing & Meter Calculations (+12 more)
 
 ### Community 11 - "TypeScript Configuration"
-Cohesion: 0.17
-Nodes (19): store, tenancies, getCycleDates(), getSafeNepaliDate(), useCheckoutController(), addCheckoutSettlement(), CheckoutSettlement, getCheckoutSettlement() (+11 more)
+Cohesion: 0.15
+Nodes (4): getCycleDates(), getSafeNepaliDate(), nepali-date-converter, NepaliDate
 
 ### Community 12 - "Jest Test Setup"
 Cohesion: 0.33
 Nodes (5): compilerOptions, strict, types, extends, include
 
-### Community 18 - "PaymentModel.ts"
+### Community 18 - "E2ECompleteUI.test.tsx"
+Cohesion: 0.10
+Nodes (19): mockConfirmAgreement, mockConfirmCheckout, mockConfirmPayment, mockCreateProperty, mockCreateRoom, mockDeleteRoom, mockOnboardTenant, mockSetAddress (+11 more)
+
+### Community 19 - "PaymentModel.ts"
 Cohesion: 0.50
 Nodes (7): usePaymentController(), addPayment(), getPaymentsForInvoice(), getTotalPaidForInvoice(), initPaymentSchema(), Payment, syncInvoiceStatus()
 
 ## Knowledge Gaps
-- **101 isolated node(s):** `Client Handover & Technical Documentation`, `📱 1. Core Technical Stack & Architecture`, `📅 2. Nepali Calendar (Bikram Sambat) Billing Cycles`, `A. Tenancy Agreement (Dual Digital Signatures)`, `B. Double-Confirmation Cash Payments (Anti-Fraud)` (+96 more)
+- **109 isolated node(s):** `mockCreateProperty`, `mockCreateRoom`, `mockDeleteRoom`, `mockSetAddress`, `mockSetRoomNumber` (+104 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -123,16 +128,16 @@ Nodes (7): usePaymentController(), addPayment(), getPaymentsForInvoice(), getTot
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `TenantScreen()` connect `Marketplace & Room Listings` to `Bikram Sambat Date Converters`, `Expo Mobile Config`, `Tenant Onboarding Features`?**
-  _High betweenness centrality (0.171) - this node is a cross-community bridge._
+  _High betweenness centrality (0.165) - this node is a cross-community bridge._
 - **Why does `dependencies` connect `Marketplace & Room Listings` to `UI Components & Invoice View`?**
-  _High betweenness centrality (0.168) - this node is a cross-community bridge._
-- **What connects `Client Handover & Technical Documentation`, `📱 1. Core Technical Stack & Architecture`, `📅 2. Nepali Calendar (Bikram Sambat) Billing Cycles` to the rest of the system?**
-  _101 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `GharKoHisaab (घरको हिसाब) 🏡📄` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+  _High betweenness centrality (0.162) - this node is a cross-community bridge._
+- **What connects `mockCreateProperty`, `mockCreateRoom`, `mockDeleteRoom` to the rest of the system?**
+  _109 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `SQLite Database Connection` be split into smaller, more focused modules?**
   _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
 - **Should `UI Components & Invoice View` be split into smaller, more focused modules?**
   _Cohesion score 0.08333333333333333 - nodes in this community are weakly interconnected._
-- **Should `Expo Mobile Config` be split into smaller, more focused modules?**
-  _Cohesion score 0.1282051282051282 - nodes in this community are weakly interconnected._
+- **Should `Property Management & Dashboard` be split into smaller, more focused modules?**
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Marketplace & Room Listings` be split into smaller, more focused modules?**
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
