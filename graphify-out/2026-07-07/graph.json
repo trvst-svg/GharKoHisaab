@@ -4,296 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "package.json",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "package",
-      "community": 6,
-      "norm_label": "package.json"
-    },
-    {
-      "label": "name",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "package_name",
-      "community": 6,
-      "norm_label": "name"
-    },
-    {
-      "label": "version",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "package_version",
-      "community": 6,
-      "norm_label": "version"
-    },
-    {
-      "label": "main",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "package_main",
-      "community": 6,
-      "norm_label": "main"
-    },
-    {
-      "label": "dependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "package_dependencies",
-      "community": 6,
-      "norm_label": "dependencies"
-    },
-    {
-      "label": "drizzle-orm",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "package_dependencies_drizzle_orm",
-      "community": 6,
-      "norm_label": "drizzle-orm"
-    },
-    {
-      "label": "expo",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "package_dependencies_expo",
-      "community": 6,
-      "norm_label": "expo"
-    },
-    {
-      "label": "expo-crypto",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_crypto",
-      "community": 6,
-      "norm_label": "expo-crypto"
-    },
-    {
-      "label": "expo-image-picker",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_image_picker",
-      "community": 6,
-      "norm_label": "expo-image-picker"
-    },
-    {
-      "label": "expo-sqlite",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_sqlite",
-      "community": 6,
-      "norm_label": "expo-sqlite"
-    },
-    {
-      "label": "expo-status-bar",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_status_bar",
-      "community": 6,
-      "norm_label": "expo-status-bar"
-    },
-    {
-      "label": "nepali-date-converter",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "package_dependencies_nepali_date_converter",
-      "community": 6,
-      "norm_label": "nepali-date-converter"
-    },
-    {
-      "label": "react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "package_dependencies_react",
-      "community": 6,
-      "norm_label": "react"
-    },
-    {
-      "label": "react-dom",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "package_dependencies_react_dom",
-      "community": 6,
-      "norm_label": "react-dom"
-    },
-    {
-      "label": "react-native",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "package_dependencies_react_native",
-      "community": 6,
-      "norm_label": "react-native"
-    },
-    {
-      "label": "react-native-svg",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "package_dependencies_react_native_svg",
-      "community": 6,
-      "norm_label": "react-native-svg"
-    },
-    {
-      "label": "react-native-web",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "package_dependencies_react_native_web",
-      "community": 6,
-      "norm_label": "react-native-web"
-    },
-    {
-      "label": "zod",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "package_dependencies_zod",
-      "community": 6,
-      "norm_label": "zod"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "package_devdependencies",
-      "community": 6,
-      "norm_label": "devdependencies"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "package_devdependencies_types_react",
-      "community": 6,
-      "norm_label": "@types/react"
-    },
-    {
-      "label": "@types/sqlstring",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "package_devdependencies_types_sqlstring",
-      "community": 6,
-      "norm_label": "@types/sqlstring"
-    },
-    {
-      "label": "drizzle-kit",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "package_devdependencies_drizzle_kit",
-      "community": 6,
-      "norm_label": "drizzle-kit"
-    },
-    {
-      "label": "typescript",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "package_devdependencies_typescript",
-      "community": 6,
-      "norm_label": "typescript"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "package_scripts",
-      "community": 6,
-      "norm_label": "scripts"
-    },
-    {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "package_scripts_start",
-      "community": 6,
-      "norm_label": "start"
-    },
-    {
-      "label": "android",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "package_scripts_android",
-      "community": 6,
-      "norm_label": "android"
-    },
-    {
-      "label": "ios",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "package_scripts_ios",
-      "community": 6,
-      "norm_label": "ios"
-    },
-    {
-      "label": "web",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "package_scripts_web",
-      "community": 6,
-      "norm_label": "web"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L32",
-      "_origin": "ast",
-      "id": "package_private",
-      "community": 6,
-      "norm_label": "private"
-    },
-    {
       "label": "App.tsx",
       "file_type": "code",
       "source_file": "App.tsx",
@@ -522,6 +232,396 @@
       "community": 2,
       "norm_label": "index.ts",
       "id": "index"
+    },
+    {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "package.json",
+      "id": "package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "name",
+      "id": "package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "version",
+      "id": "package_version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "main",
+      "id": "package_main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "dependencies",
+      "id": "package_dependencies"
+    },
+    {
+      "label": "drizzle-orm",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "drizzle-orm",
+      "id": "package_dependencies_drizzle_orm"
+    },
+    {
+      "label": "expo",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo",
+      "id": "package_dependencies_expo"
+    },
+    {
+      "label": "expo-asset",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-asset",
+      "id": "package_dependencies_expo_asset"
+    },
+    {
+      "label": "expo-crypto",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-crypto",
+      "id": "package_dependencies_expo_crypto"
+    },
+    {
+      "label": "expo-image-picker",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-image-picker",
+      "id": "package_dependencies_expo_image_picker"
+    },
+    {
+      "label": "expo-sqlite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-sqlite",
+      "id": "package_dependencies_expo_sqlite"
+    },
+    {
+      "label": "expo-status-bar",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-status-bar",
+      "id": "package_dependencies_expo_status_bar"
+    },
+    {
+      "label": "nepali-date-converter",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "nepali-date-converter",
+      "id": "package_dependencies_nepali_date_converter"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react",
+      "id": "package_dependencies_react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-dom",
+      "id": "package_dependencies_react_dom"
+    },
+    {
+      "label": "react-native",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-native",
+      "id": "package_dependencies_react_native"
+    },
+    {
+      "label": "react-native-svg",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-native-svg",
+      "id": "package_dependencies_react_native_svg"
+    },
+    {
+      "label": "react-native-web",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-native-web",
+      "id": "package_dependencies_react_native_web"
+    },
+    {
+      "label": "zod",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "zod",
+      "id": "package_dependencies_zod"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "devdependencies",
+      "id": "package_devdependencies"
+    },
+    {
+      "label": "@testing-library/react-native",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "@testing-library/react-native",
+      "id": "package_devdependencies_testing_library_react_native"
+    },
+    {
+      "label": "@types/jest",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "@types/jest",
+      "id": "package_devdependencies_types_jest"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "@types/react",
+      "id": "package_devdependencies_types_react"
+    },
+    {
+      "label": "@types/sqlstring",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "@types/sqlstring",
+      "id": "package_devdependencies_types_sqlstring"
+    },
+    {
+      "label": "drizzle-kit",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "drizzle-kit",
+      "id": "package_devdependencies_drizzle_kit"
+    },
+    {
+      "label": "jest",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "jest",
+      "id": "package_devdependencies_jest"
+    },
+    {
+      "label": "jest-expo",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "jest-expo",
+      "id": "package_devdependencies_jest_expo"
+    },
+    {
+      "label": "react-test-renderer",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "react-test-renderer",
+      "id": "package_devdependencies_react_test_renderer"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "typescript",
+      "id": "package_devdependencies_typescript"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "scripts",
+      "id": "package_scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "start",
+      "id": "package_scripts_start"
+    },
+    {
+      "label": "android",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "android",
+      "id": "package_scripts_android"
+    },
+    {
+      "label": "ios",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "ios",
+      "id": "package_scripts_ios"
+    },
+    {
+      "label": "web",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "web",
+      "id": "package_scripts_web"
+    },
+    {
+      "label": "test",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "test",
+      "id": "package_scripts_test"
+    },
+    {
+      "label": "jest",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "jest",
+      "id": "package_jest"
+    },
+    {
+      "label": "preset",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "preset",
+      "id": "package_jest_preset"
+    },
+    {
+      "label": "setupFilesAfterEnv",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "setupfilesafterenv",
+      "id": "package_jest_setupfilesafterenv"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "_origin": "ast",
+      "community": 3,
+      "norm_label": "private",
+      "id": "package_private"
     },
     {
       "label": "SignaturePad.tsx",
@@ -1079,7 +1179,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "tenancies",
       "id": "src_database_schema_tenancies"
     },
@@ -1099,7 +1199,7 @@
       "source_file": "src/database/schema.ts",
       "source_location": "L67",
       "_origin": "ast",
-      "community": 8,
+      "community": 4,
       "norm_label": "tenancyagreements",
       "id": "src_database_schema_tenancyagreements"
     },
@@ -1159,7 +1259,7 @@
       "source_file": "src/features/agreement/AgreementController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 4,
       "norm_label": "agreementcontroller.ts",
       "id": "src_features_agreement_agreementcontroller"
     },
@@ -1169,7 +1269,7 @@
       "source_file": "src/features/agreement/AgreementController.ts",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 8,
+      "community": 4,
       "norm_label": "agreementcontrollerargs",
       "id": "src_features_agreement_agreementcontroller_agreementcontrollerargs"
     },
@@ -1229,7 +1329,7 @@
       "source_file": "src/features/agreement/AgreementModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 4,
       "norm_label": "agreementmodel.ts",
       "id": "src_features_agreement_agreementmodel"
     },
@@ -1239,7 +1339,7 @@
       "source_file": "src/features/agreement/AgreementModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 8,
+      "community": 4,
       "norm_label": "agreement",
       "id": "src_features_agreement_agreementmodel_agreement"
     },
@@ -1259,7 +1359,7 @@
       "source_file": "src/features/agreement/AgreementModel.ts",
       "source_location": "L50",
       "_origin": "ast",
-      "community": 8,
+      "community": 4,
       "norm_label": "saveagreement()",
       "id": "src_features_agreement_agreementmodel_saveagreement"
     },
@@ -1269,7 +1369,7 @@
       "source_file": "src/features/agreement/AgreementModel.ts",
       "source_location": "L73",
       "_origin": "ast",
-      "community": 8,
+      "community": 4,
       "norm_label": "getagreementfortenancy()",
       "id": "src_features_agreement_agreementmodel_getagreementfortenancy"
     },
@@ -1279,7 +1379,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "checkoutcontroller.ts",
       "id": "src_features_checkout_checkoutcontroller"
     },
@@ -1309,7 +1409,7 @@
       "source_file": "src/features/checkout/CheckoutController.ts",
       "source_location": "L76",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "usecheckoutcontroller()",
       "id": "src_features_checkout_checkoutcontroller_usecheckoutcontroller"
     },
@@ -1319,7 +1419,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 0,
       "norm_label": "checkoutmodal.tsx",
       "id": "src_features_checkout_checkoutmodal"
     },
@@ -1329,7 +1429,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 8,
+      "community": 0,
       "norm_label": "checkoutmodalprops",
       "id": "src_features_checkout_checkoutmodal_checkoutmodalprops"
     },
@@ -1339,7 +1439,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 8,
+      "community": 0,
       "norm_label": "checkoutmodal()",
       "id": "src_features_checkout_checkoutmodal_checkoutmodal"
     },
@@ -1349,7 +1449,7 @@
       "source_file": "src/features/checkout/CheckoutModal.tsx",
       "source_location": "L439",
       "_origin": "ast",
-      "community": 8,
+      "community": 0,
       "norm_label": "styles",
       "id": "src_features_checkout_checkoutmodal_styles"
     },
@@ -1359,7 +1459,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "checkoutmodel.ts",
       "id": "src_features_checkout_checkoutmodel"
     },
@@ -1369,7 +1469,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L5",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "checkoutsettlement",
       "id": "src_features_checkout_checkoutmodel_checkoutsettlement"
     },
@@ -1379,7 +1479,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "initcheckoutschema()",
       "id": "src_features_checkout_checkoutmodel_initcheckoutschema"
     },
@@ -1389,7 +1489,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "addcheckoutsettlement()",
       "id": "src_features_checkout_checkoutmodel_addcheckoutsettlement"
     },
@@ -1399,7 +1499,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L56",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "getcheckoutsettlement()",
       "id": "src_features_checkout_checkoutmodel_getcheckoutsettlement"
     },
@@ -1409,7 +1509,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L81",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "terminatetenancy()",
       "id": "src_features_checkout_checkoutmodel_terminatetenancy"
     },
@@ -1649,7 +1749,7 @@
       "source_file": "src/features/payment/PaymentModel.ts",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 19,
+      "community": 4,
       "norm_label": "initpaymentschema()",
       "id": "src_features_payment_paymentmodel_initpaymentschema"
     },
@@ -2039,7 +2139,7 @@
       "source_file": "src/features/reviews/ReviewModel.ts",
       "source_location": "L52",
       "_origin": "ast",
-      "community": 4,
+      "community": 0,
       "norm_label": "addtenantreview()",
       "id": "src_features_reviews_reviewmodel_addtenantreview"
     },
@@ -2329,7 +2429,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 4,
+      "community": 11,
       "norm_label": ".tojsdate()",
       "id": "src_types_nepali_date_converter_d_nepalidate_tojsdate"
     },
@@ -2688,297 +2788,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_dependencies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L20",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_devdependencies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_name",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L32",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_private",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L26",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_scripts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_version",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_drizzle_orm",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_crypto",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_image_picker",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_sqlite",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_status_bar",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_nepali_date_converter",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_native",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_native_svg",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_native_web",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_zod",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L66",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen_tenantscreen",
-      "target": "package_dependencies_react"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_drizzle_kit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_sqlstring",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_android",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_ios",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_start",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_web",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "App.tsx",
       "source_location": "L5",
       "weight": 1.0,
@@ -3197,6 +3006,397 @@
       "confidence_score": 1.0,
       "source": "app_expo_web",
       "target": "app_web_favicon"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_devdependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_jest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_private"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_drizzle_orm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_asset"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_crypto"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_image_picker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_sqlite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_status_bar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_nepali_date_converter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_native"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_native_svg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_native_web"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod"
+    },
+    {
+      "relation": "references",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantscreen_tenantscreen",
+      "target": "package_dependencies_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_drizzle_kit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_jest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_jest_expo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_react_test_renderer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_testing_library_react_native"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_jest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_sqlstring"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_android"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_ios"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L37",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_test"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_web"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L40",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_jest",
+      "target": "package_jest_preset"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_jest",
+      "target": "package_jest_setupfilesafterenv"
     },
     {
       "relation": "contains",
@@ -8308,5 +8508,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "735a38ad27a553423da0d8cba4097500d7f7a7c1"
+  "built_at_commit": "3c19bdbcc4aec76e4b5f25043e7c97b29379d606"
 }

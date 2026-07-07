@@ -20,9 +20,9 @@
     "semantic_hash": "33caa6d28d87fc7e637c033d0d7124b1"
   },
   "package.json": {
-    "mtime": 1783410306.7276483,
-    "ast_hash": "6c3ea95b0a5a979c413e818fc0de60b2",
-    "semantic_hash": ""
+    "mtime": 1783281345.871234,
+    "ast_hash": "5f88199f7ffd79f596efef1684b2500d",
+    "semantic_hash": "5f88199f7ffd79f596efef1684b2500d"
   },
   "src/components/SignaturePad.tsx": {
     "mtime": 1783149441.4637563,

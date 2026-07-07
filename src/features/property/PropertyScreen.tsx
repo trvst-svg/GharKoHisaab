@@ -16,6 +16,7 @@ import { COLORS } from '../../constants/colors';
 import { usePropertyController } from './PropertyController';
 import TenantScreen from '../tenant/TenantScreen';
 import MarketplaceFeed from '../postings/MarketplaceFeed';
+import SettingsScreen from '../settings/SettingsScreen';
 
 export default function PropertyScreen() {
   const {
@@ -46,7 +47,7 @@ export default function PropertyScreen() {
 
   // Navigation/Routing state for active room tenant management
   const [activeRoomForTenant, setActiveRoomForTenant] = useState<{ id: string; roomNumber: string } | null>(null);
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'marketplace'>('dashboard');
+  const [activeTab, setActiveTab] = useState<'dashboard' | 'marketplace' | 'settings'>('dashboard');
 
   if (!dbReady) {
     return (
@@ -234,8 +235,10 @@ export default function PropertyScreen() {
               )}
             </View>
           </>
-        ) : (
+        ) : activeTab === 'marketplace' ? (
           <MarketplaceFeed />
+        ) : (
+          <SettingsScreen />
         )}
       </View>
 
@@ -255,6 +258,14 @@ export default function PropertyScreen() {
         >
           <Text style={[styles.tabItemText, activeTab === 'marketplace' && styles.tabItemTextActive]}>
             🌐 Marketplace
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={[styles.tabItem, activeTab === 'settings' && styles.tabItemActive]}
+          onPress={() => setActiveTab('settings')}
+        >
+          <Text style={[styles.tabItemText, activeTab === 'settings' && styles.tabItemTextActive]}>
+            ⚙️ Settings
           </Text>
         </TouchableOpacity>
       </View>
