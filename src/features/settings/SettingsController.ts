@@ -15,6 +15,17 @@ export function useSettingsController() {
   const [pinConfirm, setPinConfirm] = useState('');
   const [pinError, setPinError] = useState('');
 
+  // Khalti integration states
+  const [isKhaltiLinked, setIsKhaltiLinked] = useState(false);
+  const [isKhaltiModalVisible, setIsKhaltiModalVisible] = useState(false);
+  const [khaltiPhone, setKhaltiPhone] = useState('');
+  const [khaltiPublicKey, setKhaltiPublicKey] = useState('');
+  const [khaltiError, setKhaltiError] = useState('');
+
+  // Temp form fields for Khalti modal input
+  const [tempKhaltiPhone, setTempKhaltiPhone] = useState('');
+  const [tempKhaltiKey, setTempKhaltiKey] = useState('');
+
   useEffect(() => {
     async function loadSettings() {
       try {
@@ -24,6 +35,13 @@ export function useSettingsController() {
         // Load lock state
         const enabledStr = await getSetting('app_lock_enabled', 'false');
         setIsAppLockEnabled(enabledStr === 'true');
+
+        // Load Khalti configuration
+        const savedPhone = await getSetting('khalti_phone', '');
+        const savedKey = await getSetting('khalti_public_key', '');
+        setKhaltiPhone(savedPhone);
+        setKhaltiPublicKey(savedKey);
+        setIsKhaltiLinked(savedPhone.length === 10 && savedKey.length > 0);
 
         // Check biometrics capabilities
         const hasHardware = await LocalAuthentication.hasHardwareAsync();
@@ -117,6 +135,52 @@ export function useSettingsController() {
     }
   };
 
+  // Open Khalti settings config modal
+  const handleOpenKhaltiModal = () => {
+    setTempKhaltiPhone(khaltiPhone);
+    setTempKhaltiKey(khaltiPublicKey);
+    setKhaltiError('');
+    setIsKhaltiModalVisible(true);
+  };
+
+  // Save merchant Khalti connection settings
+  const handleSaveKhalti = async () => {
+    if (tempKhaltiPhone.length !== 10 || isNaN(parseInt(tempKhaltiPhone))) {
+      setKhaltiError('Khalti ID must be a 10-digit phone number.');
+      return;
+    }
+    if (tempKhaltiKey.trim().length === 0) {
+      setKhaltiError('API Public Key is required.');
+      return;
+    }
+
+    try {
+      await setSetting('khalti_phone', tempKhaltiPhone);
+      await setSetting('khalti_public_key', tempKhaltiKey.trim());
+      
+      setKhaltiPhone(tempKhaltiPhone);
+      setKhaltiPublicKey(tempKhaltiKey.trim());
+      setIsKhaltiLinked(true);
+      setIsKhaltiModalVisible(false);
+    } catch (e) {
+      setKhaltiError('Failed to save Khalti configuration.');
+      console.error(e);
+    }
+  };
+
+  // Unlink active Khalti account
+  const handleUnlinkKhalti = async () => {
+    try {
+      await setSetting('khalti_phone', '');
+      await setSetting('khalti_public_key', '');
+      setKhaltiPhone('');
+      setKhaltiPublicKey('');
+      setIsKhaltiLinked(false);
+    } catch (e) {
+      console.error('Failed to unlink Khalti account:', e);
+    }
+  };
+
   return {
     dbReady,
     isAppLockEnabled,
@@ -134,5 +198,21 @@ export function useSettingsController() {
     handleToggleLock,
     handleSavePin,
     authenticateUser,
+
+    // Khalti states & handlers
+    isKhaltiLinked,
+    isKhaltiModalVisible,
+    khaltiPhone,
+    khaltiPublicKey,
+    khaltiError,
+    setKhaltiError,
+    tempKhaltiPhone,
+    tempKhaltiKey,
+    setIsKhaltiModalVisible,
+    setTempKhaltiPhone,
+    setTempKhaltiKey,
+    handleOpenKhaltiModal,
+    handleSaveKhalti,
+    handleUnlinkKhalti,
   };
 }

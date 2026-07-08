@@ -17,6 +17,8 @@ import { usePropertyController } from './PropertyController';
 import TenantScreen from '../tenant/TenantScreen';
 import MarketplaceFeed from '../postings/MarketplaceFeed';
 import SettingsScreen from '../settings/SettingsScreen';
+import { useTheme } from '../../context/ThemeContext';
+import { t } from '../../constants/translations';
 
 export default function PropertyScreen() {
   const {
@@ -44,6 +46,8 @@ export default function PropertyScreen() {
     triggerAddAnotherHouse,
     loadRooms,
   } = usePropertyController();
+
+  const { colors, language } = useTheme();
 
   // Navigation/Routing state for active room tenant management
   const [activeRoomForTenant, setActiveRoomForTenant] = useState<{ id: string; roomNumber: string } | null>(null);
@@ -243,29 +247,29 @@ export default function PropertyScreen() {
       </View>
 
       {/* Bottom Navigation Tab Bar */}
-      <View style={styles.bottomTabBar}>
+      <View style={[styles.bottomTabBar, { backgroundColor: colors.cardBackground, borderTopColor: colors.border }]}>
         <TouchableOpacity
-          style={[styles.tabItem, activeTab === 'dashboard' && styles.tabItemActive]}
+          style={[styles.tabItem, activeTab === 'dashboard' && { borderBottomColor: colors.primary }]}
           onPress={() => setActiveTab('dashboard')}
         >
-          <Text style={[styles.tabItemText, activeTab === 'dashboard' && styles.tabItemTextActive]}>
-            🏠 Dashboard
+          <Text style={[styles.tabItemText, { color: colors.textSecondary }, activeTab === 'dashboard' && { color: colors.primary, fontWeight: 'bold' }]}>
+            {t('dashboard', language)}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.tabItem, activeTab === 'marketplace' && styles.tabItemActive]}
+          style={[styles.tabItem, activeTab === 'marketplace' && { borderBottomColor: colors.primary }]}
           onPress={() => setActiveTab('marketplace')}
         >
-          <Text style={[styles.tabItemText, activeTab === 'marketplace' && styles.tabItemTextActive]}>
-            🌐 Marketplace
+          <Text style={[styles.tabItemText, { color: colors.textSecondary }, activeTab === 'marketplace' && { color: colors.primary, fontWeight: 'bold' }]}>
+            {t('marketplace', language)}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[styles.tabItem, activeTab === 'settings' && styles.tabItemActive]}
+          style={[styles.tabItem, activeTab === 'settings' && { borderBottomColor: colors.primary }]}
           onPress={() => setActiveTab('settings')}
         >
-          <Text style={[styles.tabItemText, activeTab === 'settings' && styles.tabItemTextActive]}>
-            ⚙️ Settings
+          <Text style={[styles.tabItemText, { color: colors.textSecondary }, activeTab === 'settings' && { color: colors.primary, fontWeight: 'bold' }]}>
+            {t('settings', language)}
           </Text>
         </TouchableOpacity>
       </View>
