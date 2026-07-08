@@ -5,8 +5,8 @@
     "semantic_hash": "dc580fca35a0e98ed20777ede5e545a1"
   },
   "App.tsx": {
-    "mtime": 1783457034.3783793,
-    "ast_hash": "039bda9d8535db0e9269bf26259124d3",
+    "mtime": 1783500528.50164,
+    "ast_hash": "6d59435ee77f1ce4c2911110be55c2f0",
     "semantic_hash": ""
   },
   "app.json": {
@@ -30,8 +30,8 @@
     "semantic_hash": "b570abd0626dfac6061531d979aaf947"
   },
   "src/constants/colors.ts": {
-    "mtime": 1783291844.074408,
-    "ast_hash": "cf187aff23982d27aec1962cc23402d1",
+    "mtime": 1783500435.0896952,
+    "ast_hash": "d301b0d691b9b22fbce0c3b792b58af3",
     "semantic_hash": ""
   },
   "src/database/connection.ts": {
@@ -115,8 +115,8 @@
     "semantic_hash": "dcaa63220c77caee52cf1fa60442c117"
   },
   "src/features/property/PropertyScreen.tsx": {
-    "mtime": 1783457028.1729198,
-    "ast_hash": "ce5bb704690dc6e2a9b3c84b5403cd69",
+    "mtime": 1783500577.0191438,
+    "ast_hash": "d0279b43805f65a7eef6a5679c73844b",
     "semantic_hash": ""
   },
   "src/features/tenant/TenantController.ts": {
@@ -225,8 +225,8 @@
     "semantic_hash": ""
   },
   "src/features/settings/SettingsController.ts": {
-    "mtime": 1783456987.015304,
-    "ast_hash": "68e128b3b02505e7d1af3743fab83cff",
+    "mtime": 1783500657.0323722,
+    "ast_hash": "e0b668a8796d07406cad152f68db9dc9",
     "semantic_hash": ""
   },
   "src/features/settings/SettingsModel.ts": {
@@ -235,8 +235,18 @@
     "semantic_hash": ""
   },
   "src/features/settings/SettingsScreen.tsx": {
-    "mtime": 1783457017.7665968,
-    "ast_hash": "d73aae39ba57acc79ddc8d6a8693c67a",
+    "mtime": 1783500727.779678,
+    "ast_hash": "759250f6ac8ab130cb8b28c6e5f17626",
+    "semantic_hash": ""
+  },
+  "src/constants/translations.ts": {
+    "mtime": 1783500416.4327786,
+    "ast_hash": "716f60dfa39522c49d52bea96ab6f3c4",
+    "semantic_hash": ""
+  },
+  "src/context/ThemeContext.tsx": {
+    "mtime": 1783500452.2612853,
+    "ast_hash": "fe8400628cb760a579072e4b7572b7be",
     "semantic_hash": ""
   }
 }

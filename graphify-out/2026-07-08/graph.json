@@ -17,351 +17,141 @@
       "label": "App()",
       "file_type": "code",
       "source_file": "App.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "_origin": "ast",
       "id": "app_app",
       "community": 0,
       "norm_label": "app()"
     },
     {
-      "label": "package.json",
+      "label": "colors.ts",
       "file_type": "code",
-      "source_file": "package.json",
+      "source_file": "src/constants/colors.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "package",
-      "community": 6,
-      "norm_label": "package.json"
+      "id": "src_constants_colors",
+      "community": 0,
+      "norm_label": "colors.ts"
     },
     {
-      "label": "name",
+      "label": "THEMES",
       "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L2",
+      "source_file": "src/constants/colors.ts",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "package_name",
-      "community": 6,
-      "norm_label": "name"
+      "id": "src_constants_colors_themes",
+      "community": 0,
+      "norm_label": "themes"
     },
     {
-      "label": "version",
+      "label": "ThemeName",
       "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L3",
+      "source_file": "src/constants/colors.ts",
+      "source_location": "L45",
       "_origin": "ast",
-      "id": "package_version",
-      "community": 6,
-      "norm_label": "version"
+      "id": "src_constants_colors_themename",
+      "community": 0,
+      "norm_label": "themename"
     },
     {
-      "label": "main",
+      "label": "ThemeColorsType",
       "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L4",
+      "source_file": "src/constants/colors.ts",
+      "source_location": "L46",
       "_origin": "ast",
-      "id": "package_main",
-      "community": 6,
-      "norm_label": "main"
+      "id": "src_constants_colors_themecolorstype",
+      "community": 0,
+      "norm_label": "themecolorstype"
     },
     {
-      "label": "dependencies",
+      "label": "translations.ts",
       "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L5",
+      "source_file": "src/constants/translations.ts",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "package_dependencies",
-      "community": 6,
-      "norm_label": "dependencies"
+      "id": "src_constants_translations",
+      "community": 0,
+      "norm_label": "translations.ts"
     },
     {
-      "label": "drizzle-orm",
+      "label": "TRANSLATIONS",
       "file_type": "code",
-      "source_file": "package.json",
+      "source_file": "src/constants/translations.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_constants_translations_translations",
+      "community": 0,
+      "norm_label": "translations"
+    },
+    {
+      "label": "LanguageType",
+      "file_type": "code",
+      "source_file": "src/constants/translations.ts",
+      "source_location": "L108",
+      "_origin": "ast",
+      "id": "src_constants_translations_languagetype",
+      "community": 0,
+      "norm_label": "languagetype"
+    },
+    {
+      "label": "t()",
+      "file_type": "code",
+      "source_file": "src/constants/translations.ts",
+      "source_location": "L110",
+      "_origin": "ast",
+      "id": "src_constants_translations_t",
+      "community": 0,
+      "norm_label": "t()"
+    },
+    {
+      "label": "ThemeContext.tsx",
+      "file_type": "code",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "src_context_themecontext",
+      "community": 0,
+      "norm_label": "themecontext.tsx"
+    },
+    {
+      "label": "ThemeContextType",
+      "file_type": "code",
+      "source_file": "src/context/ThemeContext.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "id": "package_dependencies_drizzle_orm",
-      "community": 6,
-      "norm_label": "drizzle-orm"
+      "id": "src_context_themecontext_themecontexttype",
+      "community": 0,
+      "norm_label": "themecontexttype"
     },
     {
-      "label": "expo",
+      "label": "ThemeContext",
       "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "_origin": "ast",
-      "id": "package_dependencies_expo",
-      "community": 6,
-      "norm_label": "expo"
-    },
-    {
-      "label": "expo-crypto",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_crypto",
-      "community": 6,
-      "norm_label": "expo-crypto"
-    },
-    {
-      "label": "expo-image-picker",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_image_picker",
-      "community": 6,
-      "norm_label": "expo-image-picker"
-    },
-    {
-      "label": "expo-local-authentication",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_local_authentication",
-      "community": 6,
-      "norm_label": "expo-local-authentication"
-    },
-    {
-      "label": "expo-sqlite",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_sqlite",
-      "community": 6,
-      "norm_label": "expo-sqlite"
-    },
-    {
-      "label": "expo-status-bar",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "package_dependencies_expo_status_bar",
-      "community": 6,
-      "norm_label": "expo-status-bar"
-    },
-    {
-      "label": "nepali-date-converter",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "package_dependencies_nepali_date_converter",
-      "community": 6,
-      "norm_label": "nepali-date-converter"
-    },
-    {
-      "label": "react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L14",
-      "_origin": "ast",
-      "id": "package_dependencies_react",
-      "community": 6,
-      "norm_label": "react"
-    },
-    {
-      "label": "react-dom",
-      "file_type": "code",
-      "source_file": "package.json",
+      "source_file": "src/context/ThemeContext.tsx",
       "source_location": "L15",
       "_origin": "ast",
-      "id": "package_dependencies_react_dom",
-      "community": 6,
-      "norm_label": "react-dom"
+      "id": "src_context_themecontext_themecontext",
+      "community": 0,
+      "norm_label": "themecontext"
     },
     {
-      "label": "react-native",
+      "label": "ThemeProvider()",
       "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "package_dependencies_react_native",
-      "community": 6,
-      "norm_label": "react-native"
-    },
-    {
-      "label": "react-native-svg",
-      "file_type": "code",
-      "source_file": "package.json",
+      "source_file": "src/context/ThemeContext.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "package_dependencies_react_native_svg",
-      "community": 6,
-      "norm_label": "react-native-svg"
-    },
-    {
-      "label": "react-native-web",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "_origin": "ast",
-      "id": "package_dependencies_react_native_web",
-      "community": 6,
-      "norm_label": "react-native-web"
-    },
-    {
-      "label": "zod",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L19",
-      "_origin": "ast",
-      "id": "package_dependencies_zod",
-      "community": 6,
-      "norm_label": "zod"
-    },
-    {
-      "label": "devDependencies",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "package_devdependencies",
-      "community": 6,
-      "norm_label": "devdependencies"
-    },
-    {
-      "label": "@types/react",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "_origin": "ast",
-      "id": "package_devdependencies_types_react",
-      "community": 6,
-      "norm_label": "@types/react"
-    },
-    {
-      "label": "@types/sqlstring",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "package_devdependencies_types_sqlstring",
-      "community": 6,
-      "norm_label": "@types/sqlstring"
-    },
-    {
-      "label": "drizzle-kit",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L24",
-      "_origin": "ast",
-      "id": "package_devdependencies_drizzle_kit",
-      "community": 6,
-      "norm_label": "drizzle-kit"
-    },
-    {
-      "label": "typescript",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "_origin": "ast",
-      "id": "package_devdependencies_typescript",
-      "community": 6,
-      "norm_label": "typescript"
-    },
-    {
-      "label": "scripts",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "_origin": "ast",
-      "id": "package_scripts",
-      "community": 6,
-      "norm_label": "scripts"
-    },
-    {
-      "label": "start",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "_origin": "ast",
-      "id": "package_scripts_start",
-      "community": 6,
-      "norm_label": "start"
-    },
-    {
-      "label": "android",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "_origin": "ast",
-      "id": "package_scripts_android",
-      "community": 6,
-      "norm_label": "android"
-    },
-    {
-      "label": "ios",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "package_scripts_ios",
-      "community": 6,
-      "norm_label": "ios"
-    },
-    {
-      "label": "web",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L31",
-      "_origin": "ast",
-      "id": "package_scripts_web",
-      "community": 6,
-      "norm_label": "web"
-    },
-    {
-      "label": "private",
-      "file_type": "code",
-      "source_file": "package.json",
-      "source_location": "L33",
-      "_origin": "ast",
-      "id": "package_private",
-      "community": 6,
-      "norm_label": "private"
-    },
-    {
-      "label": "AppLockOverlay.tsx",
-      "file_type": "code",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_components_applockoverlay",
+      "id": "src_context_themecontext_themeprovider",
       "community": 0,
-      "norm_label": "applockoverlay.tsx"
+      "norm_label": "themeprovider()"
     },
     {
-      "label": "AppLockOverlayProps",
+      "label": "useTheme()",
       "file_type": "code",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L16",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L71",
       "_origin": "ast",
-      "id": "src_components_applockoverlay_applockoverlayprops",
+      "id": "src_context_themecontext_usetheme",
       "community": 0,
-      "norm_label": "applockoverlayprops"
-    },
-    {
-      "label": "AppLockOverlay()",
-      "file_type": "code",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "src_components_applockoverlay_applockoverlay",
-      "community": 0,
-      "norm_label": "applockoverlay()"
-    },
-    {
-      "label": "styles",
-      "file_type": "code",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L202",
-      "_origin": "ast",
-      "id": "src_components_applockoverlay_styles",
-      "community": 0,
-      "norm_label": "styles"
+      "norm_label": "usetheme()"
     },
     {
       "label": "PropertyScreen.tsx",
@@ -377,7 +167,7 @@
       "label": "PropertyScreen()",
       "file_type": "code",
       "source_file": "src/features/property/PropertyScreen.tsx",
-      "source_location": "L21",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "src_features_property_propertyscreen_propertyscreen",
       "community": 0,
@@ -387,7 +177,7 @@
       "label": "styles",
       "file_type": "code",
       "source_file": "src/features/property/PropertyScreen.tsx",
-      "source_location": "L358",
+      "source_location": "L362",
       "_origin": "ast",
       "id": "src_features_property_propertyscreen_styles",
       "community": 0,
@@ -414,46 +204,6 @@
       "norm_label": "usesettingscontroller()"
     },
     {
-      "label": "SettingsModel.ts",
-      "file_type": "code",
-      "source_file": "src/features/settings/SettingsModel.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_features_settings_settingsmodel",
-      "community": 0,
-      "norm_label": "settingsmodel.ts"
-    },
-    {
-      "label": "initSettingsSchema()",
-      "file_type": "code",
-      "source_file": "src/features/settings/SettingsModel.ts",
-      "source_location": "L5",
-      "_origin": "ast",
-      "id": "src_features_settings_settingsmodel_initsettingsschema",
-      "community": 0,
-      "norm_label": "initsettingsschema()"
-    },
-    {
-      "label": "getSetting()",
-      "file_type": "code",
-      "source_file": "src/features/settings/SettingsModel.ts",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "src_features_settings_settingsmodel_getsetting",
-      "community": 0,
-      "norm_label": "getsetting()"
-    },
-    {
-      "label": "setSetting()",
-      "file_type": "code",
-      "source_file": "src/features/settings/SettingsModel.ts",
-      "source_location": "L41",
-      "_origin": "ast",
-      "id": "src_features_settings_settingsmodel_setsetting",
-      "community": 0,
-      "norm_label": "setsetting()"
-    },
-    {
       "label": "SettingsScreen.tsx",
       "file_type": "code",
       "source_file": "src/features/settings/SettingsScreen.tsx",
@@ -467,71 +217,21 @@
       "label": "SettingsScreen()",
       "file_type": "code",
       "source_file": "src/features/settings/SettingsScreen.tsx",
-      "source_location": "L17",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "src_features_settings_settingsscreen_settingsscreen",
       "community": 0,
       "norm_label": "settingsscreen()"
     },
     {
-      "label": "styles",
+      "label": "getStyles()",
       "file_type": "code",
       "source_file": "src/features/settings/SettingsScreen.tsx",
-      "source_location": "L174",
+      "source_location": "L377",
       "_origin": "ast",
-      "id": "src_features_settings_settingsscreen_styles",
+      "id": "src_features_settings_settingsscreen_getstyles",
       "community": 0,
-      "norm_label": "styles"
-    },
-    {
-      "label": "tsconfig.json",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "tsconfig",
-      "community": 12,
-      "norm_label": "tsconfig.json"
-    },
-    {
-      "label": "extends",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L2",
-      "_origin": "ast",
-      "id": "tsconfig_extends",
-      "community": 12,
-      "norm_label": "extends"
-    },
-    {
-      "label": "compilerOptions",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions",
-      "community": 12,
-      "norm_label": "compileroptions"
-    },
-    {
-      "label": "strict",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "_origin": "ast",
-      "id": "tsconfig_compileroptions_strict",
-      "community": 12,
-      "norm_label": "strict"
-    },
-    {
-      "label": "include",
-      "file_type": "code",
-      "source_file": "tsconfig.json",
-      "source_location": "L6",
-      "_origin": "ast",
-      "id": "tsconfig_include",
-      "community": 12,
-      "norm_label": "include"
+      "norm_label": "getstyles()"
     },
     {
       "label": "app.json",
@@ -744,12 +444,352 @@
       "id": "index"
     },
     {
+      "label": "package.json",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "package.json",
+      "id": "package"
+    },
+    {
+      "label": "name",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "name",
+      "id": "package_name"
+    },
+    {
+      "label": "version",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "version",
+      "id": "package_version"
+    },
+    {
+      "label": "main",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "main",
+      "id": "package_main"
+    },
+    {
+      "label": "dependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "dependencies",
+      "id": "package_dependencies"
+    },
+    {
+      "label": "drizzle-orm",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "drizzle-orm",
+      "id": "package_dependencies_drizzle_orm"
+    },
+    {
+      "label": "expo",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo",
+      "id": "package_dependencies_expo"
+    },
+    {
+      "label": "expo-crypto",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-crypto",
+      "id": "package_dependencies_expo_crypto"
+    },
+    {
+      "label": "expo-image-picker",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-image-picker",
+      "id": "package_dependencies_expo_image_picker"
+    },
+    {
+      "label": "expo-local-authentication",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-local-authentication",
+      "id": "package_dependencies_expo_local_authentication"
+    },
+    {
+      "label": "expo-sqlite",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-sqlite",
+      "id": "package_dependencies_expo_sqlite"
+    },
+    {
+      "label": "expo-status-bar",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "expo-status-bar",
+      "id": "package_dependencies_expo_status_bar"
+    },
+    {
+      "label": "nepali-date-converter",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "nepali-date-converter",
+      "id": "package_dependencies_nepali_date_converter"
+    },
+    {
+      "label": "react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "_origin": "ast",
+      "community": 7,
+      "norm_label": "react",
+      "id": "package_dependencies_react"
+    },
+    {
+      "label": "react-dom",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-dom",
+      "id": "package_dependencies_react_dom"
+    },
+    {
+      "label": "react-native",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-native",
+      "id": "package_dependencies_react_native"
+    },
+    {
+      "label": "react-native-svg",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-native-svg",
+      "id": "package_dependencies_react_native_svg"
+    },
+    {
+      "label": "react-native-web",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "react-native-web",
+      "id": "package_dependencies_react_native_web"
+    },
+    {
+      "label": "zod",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "zod",
+      "id": "package_dependencies_zod"
+    },
+    {
+      "label": "devDependencies",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "devdependencies",
+      "id": "package_devdependencies"
+    },
+    {
+      "label": "@types/react",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "@types/react",
+      "id": "package_devdependencies_types_react"
+    },
+    {
+      "label": "@types/sqlstring",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "@types/sqlstring",
+      "id": "package_devdependencies_types_sqlstring"
+    },
+    {
+      "label": "drizzle-kit",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "drizzle-kit",
+      "id": "package_devdependencies_drizzle_kit"
+    },
+    {
+      "label": "typescript",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "typescript",
+      "id": "package_devdependencies_typescript"
+    },
+    {
+      "label": "scripts",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "scripts",
+      "id": "package_scripts"
+    },
+    {
+      "label": "start",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "start",
+      "id": "package_scripts_start"
+    },
+    {
+      "label": "android",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "android",
+      "id": "package_scripts_android"
+    },
+    {
+      "label": "ios",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "ios",
+      "id": "package_scripts_ios"
+    },
+    {
+      "label": "web",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "web",
+      "id": "package_scripts_web"
+    },
+    {
+      "label": "private",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "_origin": "ast",
+      "community": 6,
+      "norm_label": "private",
+      "id": "package_private"
+    },
+    {
+      "label": "AppLockOverlay.tsx",
+      "file_type": "code",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "applockoverlay.tsx",
+      "id": "src_components_applockoverlay"
+    },
+    {
+      "label": "AppLockOverlayProps",
+      "file_type": "code",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "applockoverlayprops",
+      "id": "src_components_applockoverlay_applockoverlayprops"
+    },
+    {
+      "label": "AppLockOverlay()",
+      "file_type": "code",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "applockoverlay()",
+      "id": "src_components_applockoverlay_applockoverlay"
+    },
+    {
+      "label": "styles",
+      "file_type": "code",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L202",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "styles",
+      "id": "src_components_applockoverlay_styles"
+    },
+    {
       "label": "SignaturePad.tsx",
       "file_type": "code",
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 3,
       "norm_label": "signaturepad.tsx",
       "id": "src_components_signaturepad"
     },
@@ -759,7 +799,7 @@
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 8,
+      "community": 3,
       "norm_label": "signaturepadprops",
       "id": "src_components_signaturepad_signaturepadprops"
     },
@@ -769,7 +809,7 @@
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 8,
+      "community": 3,
       "norm_label": "signaturepad()",
       "id": "src_components_signaturepad_signaturepad"
     },
@@ -779,29 +819,9 @@
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L91",
       "_origin": "ast",
-      "community": 8,
+      "community": 3,
       "norm_label": "styles",
       "id": "src_components_signaturepad_styles"
-    },
-    {
-      "label": "colors.ts",
-      "file_type": "code",
-      "source_file": "src/constants/colors.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "colors.ts",
-      "id": "src_constants_colors"
-    },
-    {
-      "label": "COLORS",
-      "file_type": "code",
-      "source_file": "src/constants/colors.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "norm_label": "colors",
-      "id": "src_constants_colors_colors"
     },
     {
       "label": "connection.ts",
@@ -1219,7 +1239,7 @@
       "source_file": "src/database/connection.ts",
       "source_location": "L506",
       "_origin": "ast",
-      "community": 4,
+      "community": 8,
       "norm_label": "getdb()",
       "id": "src_database_connection_getdb"
     },
@@ -1599,7 +1619,7 @@
       "source_file": "src/features/checkout/CheckoutModel.ts",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 4,
+      "community": 8,
       "norm_label": "initcheckoutschema()",
       "id": "src_features_checkout_checkoutmodel_initcheckoutschema"
     },
@@ -1749,7 +1769,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "invoicesection.tsx",
       "id": "src_features_invoice_invoicesection"
     },
@@ -1759,7 +1779,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L19",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "invoicesectionprops",
       "id": "src_features_invoice_invoicesection_invoicesectionprops"
     },
@@ -1769,7 +1789,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "invoicesection()",
       "id": "src_features_invoice_invoicesection_invoicesection"
     },
@@ -1779,7 +1799,7 @@
       "source_file": "src/features/invoice/InvoiceSection.tsx",
       "source_location": "L330",
       "_origin": "ast",
-      "community": 8,
+      "community": 11,
       "norm_label": "styles",
       "id": "src_features_invoice_invoicesection_styles"
     },
@@ -2264,6 +2284,46 @@
       "id": "src_features_reviews_reviewmodel_getreviewsforproperty"
     },
     {
+      "label": "SettingsModel.ts",
+      "file_type": "code",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "settingsmodel.ts",
+      "id": "src_features_settings_settingsmodel"
+    },
+    {
+      "label": "initSettingsSchema()",
+      "file_type": "code",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L5",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "initsettingsschema()",
+      "id": "src_features_settings_settingsmodel_initsettingsschema"
+    },
+    {
+      "label": "getSetting()",
+      "file_type": "code",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "getsetting()",
+      "id": "src_features_settings_settingsmodel_getsetting"
+    },
+    {
+      "label": "setSetting()",
+      "file_type": "code",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L41",
+      "_origin": "ast",
+      "community": 8,
+      "norm_label": "setsetting()",
+      "id": "src_features_settings_settingsmodel_setsetting"
+    },
+    {
       "label": "TenantController.ts",
       "file_type": "code",
       "source_file": "src/features/tenant/TenantController.ts",
@@ -2359,7 +2419,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "tenantscreen.tsx",
       "id": "src_features_tenant_tenantscreen"
     },
@@ -2369,7 +2429,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "tenantscreenprops",
       "id": "src_features_tenant_tenantscreen_tenantscreenprops"
     },
@@ -2379,7 +2439,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "tenantscreen()",
       "id": "src_features_tenant_tenantscreen_tenantscreen"
     },
@@ -2389,7 +2449,7 @@
       "source_file": "src/features/tenant/TenantScreen.tsx",
       "source_location": "L532",
       "_origin": "ast",
-      "community": 4,
+      "community": 7,
       "norm_label": "styles",
       "id": "src_features_tenant_tenantscreen_styles"
     },
@@ -2509,7 +2569,7 @@
       "source_file": "src/types/nepali-date-converter.d.ts",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 11,
+      "community": 7,
       "norm_label": ".format()",
       "id": "src_types_nepali_date_converter_d_nepalidate_format"
     },
@@ -2532,6 +2592,56 @@
       "community": 11,
       "norm_label": ".parse()",
       "id": "src_types_nepali_date_converter_d_nepalidate_parse"
+    },
+    {
+      "label": "tsconfig.json",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "tsconfig.json",
+      "id": "tsconfig"
+    },
+    {
+      "label": "extends",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "extends",
+      "id": "tsconfig_extends"
+    },
+    {
+      "label": "compilerOptions",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "compileroptions",
+      "id": "tsconfig_compileroptions"
+    },
+    {
+      "label": "strict",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "strict",
+      "id": "tsconfig_compileroptions_strict"
+    },
+    {
+      "label": "include",
+      "file_type": "code",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "include",
+      "id": "tsconfig_include"
     },
     {
       "label": "graphify.md",
@@ -2819,7 +2929,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "source": "app",
       "target": "app_app",
@@ -2830,10 +2940,21 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "App.tsx",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "source": "app",
-      "target": "src_components_applockoverlay",
+      "target": "src_context_themecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "app",
+      "target": "src_context_themecontext_themeprovider",
       "confidence_score": 1.0
     },
     {
@@ -2859,356 +2980,327 @@
       "target": "app_app"
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_dependencies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L21",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_devdependencies",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_main",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_name",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_private",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_scripts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "package",
-      "target": "package_version",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_drizzle_orm",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L7",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L8",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_crypto",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L9",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_image_picker",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L10",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_local_authentication",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L11",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_sqlite",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_expo_status_bar",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_nepali_date_converter",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
+      "source_file": "src/components/AppLockOverlay.tsx",
       "source_location": "L14",
       "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_dom",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L16",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_native",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_native_svg",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L18",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_react_native_web",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L19",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_zod",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "call",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L66",
-      "weight": 1.0,
-      "source": "src_features_tenant_tenantscreen_tenantscreen",
-      "target": "package_dependencies_react"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_drizzle_kit",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_react",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L23",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_types_sqlstring",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L25",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_typescript",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_android",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_ios",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L28",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_start",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L31",
-      "weight": 1.0,
-      "source": "package_scripts",
-      "target": "package_scripts_web",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L20",
-      "weight": 1.0,
       "source": "src_components_applockoverlay",
-      "target": "src_components_applockoverlay_applockoverlay",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/SignaturePad.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_signaturepad",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/colors.ts",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "src_constants_colors",
+      "target": "src_constants_colors_themecolorstype",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L16",
+      "source_file": "src/constants/colors.ts",
+      "source_location": "L45",
       "weight": 1.0,
-      "source": "src_components_applockoverlay",
-      "target": "src_components_applockoverlay_applockoverlayprops",
+      "source": "src_constants_colors",
+      "target": "src_constants_colors_themename",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L202",
+      "source_file": "src/constants/colors.ts",
+      "source_location": "L1",
       "weight": 1.0,
-      "source": "src_components_applockoverlay",
-      "target": "src_components_applockoverlay_styles",
+      "source": "src_constants_colors",
+      "target": "src_constants_colors_themes",
       "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L13",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L2",
       "weight": 1.0,
-      "source": "src_components_applockoverlay",
-      "target": "src_features_settings_settingsmodel",
+      "source": "src_context_themecontext",
+      "target": "src_constants_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/agreement/AgreementModal.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_agreement_agreementmodal",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/checkout/CheckoutModal.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_checkout_checkoutmodal",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/invoice/InvoiceSection.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_invoice_invoicesection",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/payment/PaymentModal.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_payment_paymentmodal",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/postings/MarketplaceFeed.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_postings_marketplacefeed",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_constants_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_constants_colors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_tenant_tenantscreen",
+      "target": "src_constants_colors"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_constants_colors_themes",
       "confidence_score": 1.0
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L13",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L2",
       "weight": 1.0,
-      "source": "src_components_applockoverlay",
-      "target": "src_features_settings_settingsmodel_getsetting",
+      "source": "src_context_themecontext",
+      "target": "src_constants_colors_themename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_context_themecontext_themecontexttype",
+      "target": "src_constants_colors_themename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_constants_colors_themename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_constants_colors_themecolorstype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "src_context_themecontext_themecontexttype",
+      "target": "src_constants_colors_themecolorstype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_constants_colors_themecolorstype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/translations.ts",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "src_constants_translations",
+      "target": "src_constants_translations_languagetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/translations.ts",
+      "source_location": "L110",
+      "weight": 1.0,
+      "source": "src_constants_translations",
+      "target": "src_constants_translations_t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/constants/translations.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "src_constants_translations",
+      "target": "src_constants_translations_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_constants_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_constants_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_constants_translations",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_constants_translations_languagetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "src_context_themecontext_themecontexttype",
+      "target": "src_constants_translations_languagetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_constants_translations_t",
       "confidence_score": 1.0
     },
     {
@@ -3216,17 +3308,145 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/components/AppLockOverlay.tsx",
-      "source_location": "L31",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L256",
       "weight": 1.0,
-      "source": "src_components_applockoverlay_applockoverlay",
-      "target": "src_features_settings_settingsmodel_getsetting"
+      "source": "src_features_property_propertyscreen_propertyscreen",
+      "target": "src_constants_translations_t"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_constants_translations_t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen_settingsscreen",
+      "target": "src_constants_translations_t"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_context_themecontext_themecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_context_themecontext_themecontexttype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_context_themecontext_themeprovider",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/context/ThemeContext.tsx",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "src_context_themecontext",
+      "target": "src_context_themecontext_usetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_context_themecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_context_themecontext",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "src_features_property_propertyscreen",
+      "target": "src_context_themecontext_usetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/property/PropertyScreen.tsx",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "src_features_property_propertyscreen_propertyscreen",
+      "target": "src_context_themecontext_usetheme"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_context_themecontext_usetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsscreen_settingsscreen",
+      "target": "src_context_themecontext_usetheme"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/property/PropertyScreen.tsx",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "src_features_property_propertyscreen",
       "target": "src_features_property_propertyscreen_propertyscreen",
@@ -3236,7 +3456,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/property/PropertyScreen.tsx",
-      "source_location": "L358",
+      "source_location": "L362",
       "weight": 1.0,
       "source": "src_features_property_propertyscreen",
       "target": "src_features_property_propertyscreen_styles",
@@ -3267,74 +3487,19 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/settings/SettingsController.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "src_features_settings_settingscontroller",
-      "target": "src_features_settings_settingsmodel",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/settings/SettingsController.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "src_features_settings_settingscontroller",
-      "target": "src_features_settings_settingsmodel_getsetting",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/settings/SettingsController.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "src_features_settings_settingscontroller",
-      "target": "src_features_settings_settingsmodel_initsettingsschema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/settings/SettingsController.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "src_features_settings_settingscontroller",
-      "target": "src_features_settings_settingsmodel_setsetting",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/features/settings/SettingsScreen.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "src_features_settings_settingsscreen",
       "target": "src_features_settings_settingscontroller",
       "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/features/settings/SettingsController.ts",
-      "source_location": "L70",
-      "weight": 1.0,
-      "source": "src_features_settings_settingscontroller_usesettingscontroller",
-      "target": "src_features_settings_settingsmodel_setsetting"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "src/features/settings/SettingsScreen.tsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "src_features_settings_settingsscreen",
       "target": "src_features_settings_settingscontroller_usesettingscontroller",
@@ -3346,7 +3511,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/features/settings/SettingsScreen.tsx",
-      "source_location": "L34",
+      "source_location": "L55",
       "weight": 1.0,
       "source": "src_features_settings_settingsscreen_settingsscreen",
       "target": "src_features_settings_settingscontroller_usesettingscontroller"
@@ -3354,91 +3519,32 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/features/settings/SettingsModel.ts",
-      "source_location": "L21",
+      "source_file": "src/features/settings/SettingsScreen.tsx",
+      "source_location": "L377",
       "weight": 1.0,
-      "source": "src_features_settings_settingsmodel",
-      "target": "src_features_settings_settingsmodel_getsetting",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/settings/SettingsModel.ts",
-      "source_location": "L5",
-      "weight": 1.0,
-      "source": "src_features_settings_settingsmodel",
-      "target": "src_features_settings_settingsmodel_initsettingsschema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/settings/SettingsModel.ts",
-      "source_location": "L41",
-      "weight": 1.0,
-      "source": "src_features_settings_settingsmodel",
-      "target": "src_features_settings_settingsmodel_setsetting",
+      "source": "src_features_settings_settingsscreen",
+      "target": "src_features_settings_settingsscreen_getstyles",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/features/settings/SettingsScreen.tsx",
-      "source_location": "L17",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "src_features_settings_settingsscreen",
       "target": "src_features_settings_settingsscreen_settingsscreen",
       "confidence_score": 1.0
     },
     {
-      "relation": "contains",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/features/settings/SettingsScreen.tsx",
-      "source_location": "L174",
+      "source_location": "L57",
       "weight": 1.0,
-      "source": "src_features_settings_settingsscreen",
-      "target": "src_features_settings_settingsscreen_styles",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L3",
-      "weight": 1.0,
-      "source": "tsconfig",
-      "target": "tsconfig_compileroptions",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "source": "tsconfig",
-      "target": "tsconfig_extends",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L6",
-      "weight": 1.0,
-      "source": "tsconfig",
-      "target": "tsconfig_include",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "tsconfig.json",
-      "source_location": "L4",
-      "weight": 1.0,
-      "source": "tsconfig_compileroptions",
-      "target": "tsconfig_compileroptions_strict",
+      "source": "src_features_settings_settingsscreen_settingsscreen",
+      "target": "src_features_settings_settingsscreen_getstyles",
       "confidence_score": 1.0
     },
     {
@@ -3634,6 +3740,370 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_dependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_devdependencies"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_main"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_name"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_private"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_scripts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package",
+      "target": "package_version"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_drizzle_orm"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_crypto"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_image_picker"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_local_authentication"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_sqlite"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_expo_status_bar"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_nepali_date_converter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_dom"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_native"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_native_svg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_react_native_web"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_zod"
+    },
+    {
+      "relation": "references",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/tenant/TenantScreen.tsx",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "src_features_tenant_tenantscreen_tenantscreen",
+      "target": "package_dependencies_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_drizzle_kit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_react"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_sqlstring"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_typescript"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_android"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_ios"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_start"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "package_scripts",
+      "target": "package_scripts_web"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_applockoverlay",
+      "target": "src_components_applockoverlay_applockoverlay"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_applockoverlay",
+      "target": "src_components_applockoverlay_applockoverlayprops"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L202",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_applockoverlay",
+      "target": "src_components_applockoverlay_styles"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_applockoverlay",
+      "target": "src_features_settings_settingsmodel"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_components_applockoverlay",
+      "target": "src_features_settings_settingsmodel_getsetting"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/components/AppLockOverlay.tsx",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "src_components_applockoverlay_applockoverlay",
+      "target": "src_features_settings_settingsmodel_getsetting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/components/SignaturePad.tsx",
       "source_location": "L10",
       "weight": 1.0,
@@ -3665,28 +4135,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/SignaturePad.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_signaturepad",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/SignaturePad.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_components_signaturepad",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "src/features/agreement/AgreementModal.tsx",
       "source_location": "L16",
       "weight": 1.0,
@@ -3704,148 +4152,6 @@
       "confidence_score": 1.0,
       "source": "src_features_payment_paymentmodal",
       "target": "src_components_signaturepad"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/constants/colors.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_constants_colors",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_agreement_agreementmodal",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/checkout/CheckoutModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_checkout_checkoutmodal",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/postings/MarketplaceFeed.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_postings_marketplacefeed",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_constants_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/agreement/AgreementModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_agreement_agreementmodal",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/checkout/CheckoutModal.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_checkout_checkoutmodal",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/invoice/InvoiceSection.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_invoice_invoicesection",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/payment/PaymentModal.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_payment_paymentmodal",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/postings/MarketplaceFeed.tsx",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_postings_marketplacefeed",
-      "target": "src_constants_colors_colors"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/features/tenant/TenantScreen.tsx",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "src_features_tenant_tenantscreen",
-      "target": "src_constants_colors_colors"
     },
     {
       "relation": "contains",
@@ -4149,6 +4455,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "src_features_reviews_reviewmodel",
+      "target": "src_database_connection"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_settings_settingsmodel",
       "target": "src_database_connection"
     },
     {
@@ -4957,6 +5274,50 @@
       "source_location": "L25",
       "weight": 1.0,
       "source": "src_features_reviews_reviewmodel_initreviewschema",
+      "target": "src_database_connection_getdb"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_settings_settingsmodel",
+      "target": "src_database_connection_getdb"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsmodel_getsetting",
+      "target": "src_database_connection_getdb"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsmodel_initsettingsschema",
+      "target": "src_database_connection_getdb"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "src_features_settings_settingsmodel_setsetting",
       "target": "src_database_connection_getdb"
     },
     {
@@ -7981,6 +8342,36 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_settings_settingsmodel",
+      "target": "src_features_settings_settingsmodel_getsetting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_settings_settingsmodel",
+      "target": "src_features_settings_settingsmodel_initsettingsschema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/features/settings/SettingsModel.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "src_features_settings_settingsmodel",
+      "target": "src_features_settings_settingsmodel_setsetting"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "src/features/tenant/TenantController.ts",
       "source_location": "L21",
       "weight": 1.0,
@@ -8365,6 +8756,46 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_compileroptions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_extends"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig",
+      "target": "tsconfig_include"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "tsconfig.json",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "tsconfig_compileroptions",
+      "target": "tsconfig_compileroptions_strict"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": ".agents/rules/graphify.md",
       "source_location": "L6",
       "weight": 1.0,
@@ -8594,5 +9025,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "f324aca15ad65cdf891c7bcaa7a02b0f02902369"
+  "built_at_commit": "9d88ca798702201542e83da6cb2509106e7871f4"
 }
